@@ -1,5 +1,5 @@
 <div class="footer">
-    <div class="bg-newsletter py-5 text-center align-items-center text-white">
+    <div class="bg-blue py-5 text-center align-items-center text-white">
         <h1 class="font-weight-bold news-letter-font">Join Our Newsletter</h1>
         <p>Get the latest trends and updates on our crypto community.</p>
         <form action="#" method="post" class="mb-4">

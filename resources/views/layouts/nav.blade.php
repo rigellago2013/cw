@@ -24,7 +24,6 @@
                 <a class="nav-link" href="#">Crypto News</a>
             </li>
             <li class="nav-item">
-         
                 <a class="nav-link" href="{{ route('static.crypto_feeds') }}">Crypto Youtube</a>
             </li>
             <li class="nav-item">
