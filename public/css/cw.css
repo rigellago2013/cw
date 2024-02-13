@@ -1036,3 +1036,38 @@
     .footer-credits-padding {
         padding: 0px 37px 0px;
     }
+
+    .bg-newsletter {
+        background: #1662FF;
+    }
+
+    .bg-black {
+        background: #000000;
+    }
+
+    .btn-subscribe { 
+        padding: 14.3px, 18.2px, 14.3px, 18.2px;
+        border-radius: 8px;
+        border: none; 
+        background: #CCE5FD;
+        color: #1662FF;
+        transition: box-shadow 0.3s, transform 0.3s, color 0.3s;
+        font-weight: 600;
+    }
+    
+    .btn-subscribe:hover { 
+        background: #CCE5FD !important; /* Maintain background color on hover */
+        color: #1662FF !important;
+        box-shadow: 3px 3px white; /* Solid white shadow on bottom on hover */
+    }
+
+    .news-letter-font {
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: 900 !important;
+    }
+
+    .pointer-icon {
+        position: absolute;
+    margin-left: 100px;
+    margin-top: -15px;
+    }
