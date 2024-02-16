@@ -21,7 +21,7 @@
                 <a class="nav-link" href="{{ route('index') }}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Crypto News</a>
+                <a class="nav-link" href="{{ route('cryptonews') }}">Crypto News</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('static.crypto_feeds') }}">Crypto Youtube</a>

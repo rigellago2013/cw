@@ -31,13 +31,13 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <h1> >>>>> Advertise Here </h1>
         </div>
     </div>
-    <div class="row mx-auto">
+    <div class="row mx-auto mt-3">
         <div class="col-lg-12">
             <h1 class="crptohome-header-text">Latest News</h1>
         </div>
         <div class="col-lg-3">
             <div class="card cw-bg-card border-0">
-                <div class="px-1">
+                <div class="px-2">
                 <img src="https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM=" class="card-img-top" alt="...">
                 </div>
                 <div class="card-body pb-0">
@@ -52,9 +52,9 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
         </div>
     </div>
 
-    <div class="row mx-auto">
-        <div class="col-lg-12">
-            <h1 class="crptohome-header-text"> Banner </h1>
+    <div class="row">
+        <div class="col-lg-12 p-0">
+            <img src="{{ asset('img/svg/banner.svg') }}" style="width: 100%;">
         </div>
     </div>
 
@@ -75,57 +75,15 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     <div class="text-bold px-3">                                                     
                         <h3> <strong> Basic how to ride your skateboard comfortly Lorem Ipsum  </strong></h3>
                     </div>
+                    <div class="d-flex flex-row card-footer border-0 cw-bg-card pt-0">          
+                        <a href="https://google.com" class="ml-auto"> <i  class="fa fa-arrow-right" aria-hidden="true"></i> </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3">
-            <div class="cw-bg-card rounded">
-                <div class="px-2 pb-3">
-                    <div>
-                        <img class="rounded" src="https://media.licdn.com/dms/image/D4D12AQGQFiOvxvA20g/article-cover_image-shrink_720_1280/0/1682758304423?e=2147483647&v=beta&t=T_m6Cj_F9IDuPjn1NL9TBgcpjIxCctnghbXhHAxSK2k" alt="Image" style="max-width: 100%;">
-                    </div>
 
-                    <div class="d-flex justify-content-between">
-                    <h5 class="mt-3 px-3">Andy Williams</h5>               
-                    </div>
-                    <div class="text-bold px-3">                                                     
-                        <h3> <strong> Basic how to ride your skateboard comfortly Lorem Ipsum  </strong></h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="cw-bg-card rounded">
-                <div class="px-2 pb-3">
-                    <div>
-                        <img class="rounded" src="https://media.licdn.com/dms/image/D4D12AQGQFiOvxvA20g/article-cover_image-shrink_720_1280/0/1682758304423?e=2147483647&v=beta&t=T_m6Cj_F9IDuPjn1NL9TBgcpjIxCctnghbXhHAxSK2k" alt="Image" style="max-width: 100%;">
-                    </div>
 
-                    <div class="d-flex justify-content-between">
-                    <h5 class="mt-3 px-3">Andy Williams</h5>               
-                    </div>
-                    <div class="text-bold px-3">                                                     
-                        <h3> <strong> Basic how to ride your skateboard comfortly Lorem Ipsum  </strong></h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="cw-bg-card rounded">
-                <div class="px-2 pb-3">
-                    <div>
-                        <img class="rounded" src="https://media.licdn.com/dms/image/D4D12AQGQFiOvxvA20g/article-cover_image-shrink_720_1280/0/1682758304423?e=2147483647&v=beta&t=T_m6Cj_F9IDuPjn1NL9TBgcpjIxCctnghbXhHAxSK2k" alt="Image" style="max-width: 100%;">
-                    </div>
 
-                    <div class="d-flex justify-content-between">
-                    <h5 class="mt-3 px-3">Andy Williams</h5>               
-                    </div>
-                    <div class="text-bold px-3">                                                     
-                        <h3> <strong> Basic how to ride your skateboard comfortly Lorem Ipsum  </strong></h3>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="col-lg-12 text-center mt-3">
             <button class="btn btn-primary">Read all</button>
         </div>
@@ -146,6 +104,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     <p>13 hours </p>
                     <p>Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes. Background utilities do not set color, so in some cases you’ll want to use .text-* utilities.</p>
                 </div>
+                
             </div>
         </div>
 
@@ -154,28 +113,32 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <div class="cw-bg-card rounded">
-                        <div class="px-3 pb-1">
+                        <div class="px-2 pb-1">
                             <div>
                                 <img class="rounded" src="https://media.licdn.com/dms/image/D4D12AQGQFiOvxvA20g/article-cover_image-shrink_720_1280/0/1682758304423?e=2147483647&v=beta&t=T_m6Cj_F9IDuPjn1NL9TBgcpjIxCctnghbXhHAxSK2k" alt="Image" style="max-width: 100%;">
                             </div>
                             <div class="mt-3">
                                 <h2 class="font-weight-bold">Jack Dorsey Is Over Performance Reviews And Names New CTO.</h2>
-                                <p>13 hours </p>
-
+                            </div>
+                            <div class="d-flex flex-row card-footer border-0 cw-bg-card p-0">
+                                <p>13 hours ago </p>
+                                <a href="https://google.com" class="ml-auto"> <i  class="fa fa-arrow-right" aria-hidden="true"></i> </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
                     <div class="cw-bg-card rounded">
-                        <div class="px-3 pb-1">
+                        <div class="px-2 pb-1">
                             <div>
                                 <img class="rounded" src="https://media.licdn.com/dms/image/D4D12AQGQFiOvxvA20g/article-cover_image-shrink_720_1280/0/1682758304423?e=2147483647&v=beta&t=T_m6Cj_F9IDuPjn1NL9TBgcpjIxCctnghbXhHAxSK2k" alt="Image" style="max-width: 100%;">
                             </div>
                             <div class="mt-3">
                                 <h2 class="font-weight-bold">Jack Dorsey Is Over Performance Reviews And Names New CTO.</h2>
-                                <p>13 hours </p>
-
+                            </div>
+                            <div class="d-flex flex-row card-footer border-0 cw-bg-card p-0">
+                                <p>13 hours ago </p>
+                                <a href="https://google.com" class="ml-auto"> <i  class="fa fa-arrow-right" aria-hidden="true"></i> </a>
                             </div>
                         </div>
                     </div>
@@ -184,28 +147,32 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <div class="cw-bg-card rounded">
-                        <div class="px-3 pb-1">
+                        <div class="px-2 pb-1">
                             <div>
                                 <img class="rounded" src="https://media.licdn.com/dms/image/D4D12AQGQFiOvxvA20g/article-cover_image-shrink_720_1280/0/1682758304423?e=2147483647&v=beta&t=T_m6Cj_F9IDuPjn1NL9TBgcpjIxCctnghbXhHAxSK2k" alt="Image" style="max-width: 100%;">
                             </div>
                             <div class="mt-3">
                                 <h2 class="font-weight-bold">Jack Dorsey Is Over Performance Reviews And Names New CTO.</h2>
-                                <p>13 hours </p>
-
+                            </div>
+                            <div class="d-flex flex-row card-footer border-0 cw-bg-card p-0">
+                                <p>13 hours ago </p>
+                                <a href="https://google.com" class="ml-auto"> <i  class="fa fa-arrow-right" aria-hidden="true"></i> </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
                     <div class="cw-bg-card rounded">
-                        <div class="px-3 pb-1">
+                        <div class="px-2 pb-1">
                             <div>
                                 <img class="rounded" src="https://media.licdn.com/dms/image/D4D12AQGQFiOvxvA20g/article-cover_image-shrink_720_1280/0/1682758304423?e=2147483647&v=beta&t=T_m6Cj_F9IDuPjn1NL9TBgcpjIxCctnghbXhHAxSK2k" alt="Image" style="max-width: 100%;">
                             </div>
                             <div class="mt-3">
                                 <h2 class="font-weight-bold">Jack Dorsey Is Over Performance Reviews And Names New CTO.</h2>
-                                <p>13 hours </p>
-
+                            </div>
+                            <div class="d-flex flex-row card-footer border-0 cw-bg-card p-0">
+                                <p>13 hours ago </p>
+                                <a href="https://google.com" class="ml-auto"> <i  class="fa fa-arrow-right" aria-hidden="true"></i> </a>
                             </div>
                         </div>
                     </div>
