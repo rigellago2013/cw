@@ -1072,12 +1072,22 @@
         margin-top: -15px;
     }
 
-    .industry-awards-text {
-        font-family:Arial, Helvetica, sans-serif;
-        font-weight: 900 !important;
-    }
-
     hr {
         height: 2px !important;
     }
 
+    .crptohome-header-text{
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: 900 !important;
+    }
+
+    .cw-bg-card {
+        background: #F3F8FD;
+    }
+
+    .crypto-youtube-icon {
+        width: 69px;
+        height: 69px;
+        margin-top: -30px;
+        margin-right: 20px;
+    }

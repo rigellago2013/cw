@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>@yield('title')</title>
@@ -67,9 +68,9 @@
 </head>
 
 <body>
-  <div id="app">
+  <div id="app" class="bg-white">
     @include('layouts.nav')
-    <main class="py-4">
+    <main class="px-5">
       @yield('content')
     </main>
     @include('layouts.footer')
