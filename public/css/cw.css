@@ -1091,3 +1091,22 @@
         margin-top: -30px;
         margin-right: 20px;
     }
+
+    .cw-landing-page-btn-view-all {
+        display: inline-block; /* Make the link behave like a block element */
+        background-size: cover; /* Cover the entire link */
+        color: #fff; /* White text color */
+        text-decoration: none; /* Remove underline */
+        padding: 10px 20px; /* Padding */
+        border-radius: 5px; /* Rounded corners */
+      }
+
+    .cw-landing-main-card-bg {
+        background: #CCE5FD;
+    }
+
+
+    .cw-landing-scrollable-content {
+        height:300px;
+        overflow-y: scroll;
+    }
