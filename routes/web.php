@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,37 +17,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/get-users',"HomeController@getUsers")->name('get-users');
 
-Route::get('/', function () {
-    $agent = new \Jenssegers\Agent\Agent;
-    $mobile = $agent->isMobile();
-    $tab = $agent->isTablet();
-    //dd($result);
-
-    
-    $desk = $agent->isDesktop();
-  
-   // exit();
-    //createfundingdeals
-    if($desk){
-            $funding_deals=DB::table('tblfundingdeals')->orderBy('rank', 'desc')->paginate(12);
-            $newsletter=DB::table('tblnewsletter')->orderBy('sr_no', 'desc')->paginate(6);
-           // $domains= DB::table('domains')->orderBy('sr_no', 'desc')->paginate//(10);
-             $domains= DB::table('blog')
-            ->join('users', 'blog.blog_user', '=', 'users.id')->where('status', 1)->orderBy('published_on', 'desc')->paginate(6);
-            $topstories= DB::table('crypto_feeds')->orderBy('upload_date', 'desc')->orderBy('sr_no', 'desc')->paginate(4);
-        return view('cryptohome',["blogs"=>$domains,"funding_deals"=>$funding_deals,"topstories"=>$topstories,"newsletters"=>$newsletter]);
-    }else{
-        return view('mobile_view');
-    }
-
-})->name('index');
+Route::get('/','StaticSiteController@cryptoHome')->name('index');
 
 
 Route::get('/crypto-youtube', 'StaticSiteController@crypto_feeds')->name('static.crypto_feeds');
 
-
-
-
+Route::get('cryptonews', 'StaticSiteController@cryptoNews')->name('cryptonews');
 
 Route::get('/fetchYoutube20_ajax', 'StaticSiteController@fetchYoutube20_ajax')->name('static.fetchYoutube20_ajax'); 
 
