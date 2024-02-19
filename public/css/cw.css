@@ -1111,4 +1111,12 @@
         overflow-y: scroll;
     }
 
-    
+    .px-6 {
+        padding-left: 5rem; 
+        padding-right: 5rem;
+    }
+
+    .px-7 {
+        padding-left: 6rem; 
+        padding-right: 6rem;
+    }
