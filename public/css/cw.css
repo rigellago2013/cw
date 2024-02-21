@@ -1196,6 +1196,33 @@
      
     }
       
-      
+    /* News Components */
+    .card .info-box {
+        background-color: rgba(0,0,0,0.2);
+    }
+    .card .info-box span {
+        color: #fff;
+    }
+    .cat-btn {
+        background-color: #5095F1;
+        border-radius: 6px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #fff;
+        border: 1px solid transparent;
+        text-decoration: none;
+    }
+    .cat-btn:hover {
+        background-color: #fff;
+        color: #5095F1;
+        border: 1px solid #5095F1;
+    }
 
-      
+    .tag-btn {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .card-deck .card {
+        background-color: #F3F8FD;
+    }
