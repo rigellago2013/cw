@@ -24,16 +24,16 @@
                 <a class="nav-link" href="{{ route('cryptonews') }}">Crypto News</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('static.crypto_feeds') }}">Crypto Youtube</a>
+                <a class="nav-link" href="{{ route('cryptoyoutube') }}">Crypto Youtube</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('static.investorzone') }}">Investor Zone</a>
+                <a class="nav-link" href="{{ route('investor-zone') }}">Investor Zone</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('static.newsletter') }}">Newsletter</a>
+                <a class="nav-link" href="{{ route('news-letter') }}">Newsletter</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('static.funding.deals') }}">Funding Deals</a>
+                <a class="nav-link" href="{{ route('funding-deals') }}">Funding Deals</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Awards</a>

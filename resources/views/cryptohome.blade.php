@@ -9,20 +9,35 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 @section('revisit-after', 'content="3 days')
 
 @section('content')
-<div class="container-fluid px-5 bg-white">
-    <div class="row mt-5 mb-3 d-flex">
-        <div class="col-lg-3 px-0">
-            <div class="col-lg-12 px-0 flex-fill">
-                <div class="cw-bg-card rounded p-3 h-100">
-                    <h2 class="crptohome-header-text">Top News</h2>
+<div class="container-fluid px-7 bg-white">
+    <div class="row mt-5 mb-4">
+        <div class="col-lg-3 d-flex flex-column">
+            <div class="col-lg-12 cw-bg-card  px-0 mb-2 flex-fill h-100">
+                <div class="rounded p-3">
+                    <h2 class="cryptohome-header-text ml-2">Top News</h2>
                     <hr>
-                    <div class="cw-landing-scrollable-content">
-
+                    <div class="cw-landing-scrollable-content cw-scrollbar">
+                        <div class="pl-2">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <img src="{{ asset('img/png/cw-icon.png') }}" alt="cw-icon"> just now
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-n-10">
+                                <div class="col-md-12">
+                                    <div class="mb-3 ml-2 pl-3 pt-0 border-left border-info border-1">
+                                        Wallet Of Satoshi Is No Longer Available For US Customers
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <a href="#" class="read-more-link">Read more latest news <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="#" class="read-more-link font-weight-bold">Read more latest news <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
-            <div class="col-lg-12 mt-3 px-0 flex-fill">
+            <div class="col-lg-12 mt-auto px-0 flex-fill">
                 <div class="card border-0 bg-blue text-white h-100">
                     <img class="card-img-top" src="https://miro.medium.com/v2/resize:fit:900/1*wnYZ2svg4x1OE7CrtZ1rWA.jpeg" alt="Card image cap">
                     <div class="card-body">
@@ -33,56 +48,112 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 </div>
             </div>
         </div>
+
         <div class="col-lg-6">
             <div class="card h-100">
-                <img src="https://bitpanda-academy.imgix.net/2fe0c1ee-9c2b-4ed9-927d-43f835193cd4/bitpanda-academy-intermediate-22-bitcoin-halving-header-NEW.png?auto=compress%2Cformat&fit=min&fm=jpg&q=80&w=2100" class="card-img-top" alt="...">
+            <div class="cw-landing-main-card-bg">
+                <div class="mask-center-big">
+                <div class="mask-center-small ">
+                    
+                    </div>
+
+                </div>
+
+            </div>
                 <div class="card-body cw-landing-main-card-bg">
-                    <h5 class="card-title">News Highlight</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <h3 class="card-title cryptohome-header-text">News Highlight</h3>
+                    <h2 class="cryptohome-header-text mt-4">Argentina Will Have A New Bitcoin Friendly President</h2>
+                    <p class="card-text">In a historic triumph, Javier Milei has secured the presidential seat in Argentina, indicating a potential significant change in the economic landscape of the nation going forward. Milei, renowned for fervently supporting Bitcoin and strongly criticizing.</p>
+                    <a href="">Read more</a>
                 </div>
             </div>
         </div>
         <div class="col-lg-3">
             <div class="col-lg-12 px-0 h-100">
-                <div class="cw-bg-card rounded p-3 flex-fill h-100 ">
-                    <h2 class="crptohome-header-text">Funding Deals</h2>
-                    <hr>
+                <div class="cw-bg-card rounded p-3 flex-fill h-100">
+                    <h2 class="cryptohome-header-text mb-3">Funding Deals</h2>
                     <div class="d-block d-flex flex-column">
-                        <p>
-                            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                Collapse Button
-                            </a>
-                        </p>
-                        <div class="collapse" id="collapseExample">
-                            <div class="card card-body">
-                                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        <div class="row">
+                            <div class="col" id="fundingDealCollapse">
+                            @foreach($funding_deals as $index => $deal)
+                            <div style="@if($index > 0) margin-top: 5px; @endif">
+                            <div class="d-flex py-2 px-3 rounded bg-white text-primary">
+                                <a type="button" >
+                                    <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">{{ $deal->company }}
+                                </a>
+                                <div class="ml-auto text-dark">
+                                    {{ $deal->funding}}
+                                    <a data-toggle="collapse" data-target="#collapseDeal{{ $index }}" aria-expanded="false" aria-controls="collapseDeal{{ $index }}"> <i class="fa fa-angle-down"></i> </a>
+                                </div>
+                            </div>                                       
+                            <div id="collapseDeal{{ $index }}" class="collapse" data-parent="#fundingDealCollapse">
+                                <div class="card card-body border-left-0 border-right-0 border-bottom-0 rounded-0">                             
+                                    <div class="d-flex border-bottom border-bottom-gray ">
+                                        <div>
+                                            Country: 
+                                        </div>
+                                        <div class="ml-auto">
+                                            {{ $deal->country}}
+                                        </div>
+                                    </div>          
+                                    <div class="d-flex border-bottom border-bottom-gray ">
+                                        <div>
+                                            Funding Type: 
+                                        </div>
+                                        <div class="ml-auto">
+                                            {{ $deal->funding_type}}
+                                        </div>
+                                    </div>   
+                                    <div class="d-flex border-bottom border-bottom-gray ">
+                                        <div>
+                                            Lead Investor: 
+                                        </div>
+                                        <div class="ml-auto">
+                                            {{ $deal->lead_investor }}
+                                        </div>
+                                    </div> 
+                                    <div class="d-flex">
+                                        <div>
+                                            Completion Date: 
+                                        </div>
+                                        <div class="ml-auto">
+                                            {{ $deal->completion_date }}
+                                        </div>
+                                    </div>               
+                                </div>
+                            </div>
+                            </div>
+                                @endforeach
+                            </div>
                             </div>
                         </div>
-
-
-
-                    </div>
-                    <div class="float-right bottom-0">
-                        <a href="#">See Full List</a>
+                    <div class="d-flex justify-content-end">
+                        <a href="#" class="mr-3 font-weight-bold mt-2">See Full List</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row bg-blue text-white rounded">
-        <div>
-            <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
-        </div>
-        <div class="mt-4 pr-3 ml-auto">
-            <h1> >>>>> Advertise Here </h1>
+    <!-- Advertise Here -->
+    <div class="row mx-auto">
+        <div class="col-lg-12 bg-blue text-white rounded d-flex justify-content-between align-items-center">
+            <div>
+                <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
+            </div>
+            <div class="mt-4 ml-3">
+                <h1> >>>>> Advertise Here </h1>
+            </div>
         </div>
     </div>
-    <div class="mt-5 mb-5 row border border-secondary border-top-3">
+     <!-- End Advertise Here -->
+    <!-- Border -->
+    <div class="mt-4 mb-4 mx-auto row border border-secondary border-top-3">
     </div>
+    <!-- End Border -->
+    <!--LATEST NEWS SECTION -->
     <div class="row">
-        <div class="col-lg-12 p-0 mb-4">
-            <h1 class="crptohome-header-text">Latest News</h1>
+        <div class="col-lg-12 mb-4">
+            <h1 class="cryptohome-header-text">Latest News</h1>
         </div>
         <div class="col-lg-3 ">
             <div class="card cw-bg-card border-0">
@@ -146,10 +217,14 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     <a href="https://google.com" class="ml-auto"> <i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
                 </div>
             </div>
+        </div>
+        <div class="col-lg-12 text-center mt-5">
+        <a href="" class=" mx-auto"> <img src="{{  asset('img/svg/read-all-btn.svg') }}" alt=""> </a>
         </div>
     </div>
+     <!--END LATEST NEWS SECTION -->
 
-    <div class="row mt-5 mb-5">
+    <div class="row mt-4 mb-4">
         <div class="col-lg-12">
             <img src="{{ asset('img/svg/banner.svg') }}" style="width: 100%;">
         </div>
@@ -157,8 +232,8 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 
     <!--CRYPTO VIDEOS SECTION -->
     <div class="row">
-        <div class="col-lg-12 p-0 mb-4">
-            <h1 class="crptohome-header-text">Crypto Videos</h1>
+        <div class="col-lg-12 mb-4">
+            <h1 class="cryptohome-header-text">Crypto Videos</h1>
         </div>
 
         <div class="col-lg-3">
@@ -236,15 +311,15 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             </div>
         </div>
 
-        <div class="col-lg-12 text-center mt-3">
-            <a class="btn cw-landing-page-btn-view-all" href="#" role="button" style=""></a>
+        <div class="col-lg-12 text-center mt-5">
+        <a href="https://google.com" class=" mx-auto"> <img src="{{  asset('img/svg/view-all-btn.svg') }}" alt=""> </a>
         </div>
     </div>
     <!--END CRYPTO VIDEOS SECTION -->
     <!--PRESS RELEASE SECTION -->
-    <div class="row mb-2">
+    <div class="row mb-2 mx-auto">
         <div class="col-lg-12 p-0 mb-4">
-            <h1 class="crptohome-header-text">Press Releases</h1>
+            <h1 class="cryptohome-header-text">Press Releases</h1>
         </div>
         <div class="col-lg-6 cw-bg-card rounded">
             <div class="px-3 pt-4">
@@ -259,7 +334,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 
             </div>
         </div>
-        <div class="col-lg-6 ml-auto pr-0">
+        <div class="col-lg-6">
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <div class="cw-bg-card rounded">
@@ -329,20 +404,27 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 </div>
             </div>
         </div>
-    </div>
-    <!--PRESS RELEASE SECTION -->
-    <div class="row justify-content-between bg-blue text-white rounded">
-        <div>
-            <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
-        </div>
-        <div class="mt-4 mr-4">
-            <h1> >>>>> Advertise Here </h1>
+        <div class="col-lg-12 text-center mt-5 mb-3">
+        <a href="https://google.com" class=" mx-auto"> <img src="{{  asset('img/svg/read-all-btn.svg') }}" alt=""> </a>
         </div>
     </div>
-    <div class="mt-5 mb-5 row border border-secondary border-top-3">
+    <!--END PRESS RELEASE SECTION -->
+    <!-- Advertise Here -->
+    <div class="row mx-auto mt-4">
+        <div class="col-lg-12 bg-blue text-white rounded d-flex justify-content-between align-items-center">
+            <div>
+                <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
+            </div>
+            <div class="mt-4 ml-3">
+                <h1> >>>>> Advertise Here </h1>
+            </div>
+        </div>
     </div>
-    <div class="row flex-column align-items-center pb-5">
-        <h1 class="crptohome-header-text">Industry Awards</h1>
+     <!-- End Advertise Here -->
+    <div class="mt-4 mb-4 row border border-secondary border-top-3 mx-auto">
+    </div>
+    <div class="row flex-column align-items-center pb-5 mt-5">
+        <h1 class="cryptohome-header-text">Industry Awards</h1>
         <p>Top crypto figures</p>
         <div class="d-flex flex-wrap justify-content-center award-container">
             <div class="award-item">

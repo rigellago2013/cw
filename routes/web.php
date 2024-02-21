@@ -23,6 +23,10 @@ Route::get('/','StaticSiteController@cryptoHome')->name('index');
 Route::get('/crypto-youtube', 'StaticSiteController@crypto_feeds')->name('static.crypto_feeds');
 
 Route::get('cryptonews', 'StaticSiteController@cryptoNews')->name('cryptonews');
+Route::get('cryptoyoutube', 'StaticSiteController@cryptoYoutube')->name('cryptoyoutube');
+Route::get('investor-zone', 'StaticSiteController@investorZone')->name('investor-zone');
+Route::get('news-letter', 'StaticSiteController@newsLetterV2')->name('news-letter');
+Route::get('funding-deals', 'StaticSiteController@fundingDeals')->name('funding-deals');
 
 Route::get('/fetchYoutube20_ajax', 'StaticSiteController@fetchYoutube20_ajax')->name('static.fetchYoutube20_ajax'); 
 

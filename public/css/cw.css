@@ -1076,7 +1076,7 @@
         height: 2px !important;
     }
 
-    .crptohome-header-text{
+    .cryptohome-header-text{
         font-family:Arial, Helvetica, sans-serif;
         font-weight: 900 !important;
     }
@@ -1107,8 +1107,9 @@
 
 
     .cw-landing-scrollable-content {
-        height:300px;
+        height: 300px;
         overflow-y: scroll;
+        overflow-x: hidden;
     }
 
     .px-6 {
@@ -1120,3 +1121,81 @@
         padding-left: 6rem; 
         padding-right: 6rem;
     }
+
+    .mt-n-10{
+        margin-top: -10px;
+    }
+    
+    .no-gutter>[class^="col-"]{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .py-7 {
+        padding-top: 6rem; 
+        padding-bottom: 6rem;
+    }
+
+    .py-6 {
+        padding-top: 5rem; 
+        padding-bottom: 5rem;
+    }
+
+    .border-bottom-gray {
+        border-bottom: 1px solid #CCCCC9;
+    }
+
+    .cw-scrollbar::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    .cw-scrollbar::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+    
+    .cw-scrollbar::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #007bff;
+    }
+    
+    .cw-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: #0056b3;
+    }
+
+    .funding-deal-container {
+        height: 700px;
+        overflow-y: scroll !important;
+    }
+
+    .cw-center {
+        position: relative;
+        width: 700px;
+        height: 496px;
+        overflow: hidden;
+      }
+    
+      .mask-center-big {
+        top: 5px;
+        left: 0;
+        width: 100%;
+        height: 600px;
+        background: #3297F8;
+        clip-path: polygon(0% 15%,0% 0%,15% 0%,85% 0%,100% 0%,100% 15%,100% 85%,85% 85%,79% 100%,46% 100%,40% 85%,0% 85%);
+       
+
+    }
+
+        
+    .mask-center-small {
+        top: 5px;
+        left: 0;
+        width: 100%;
+        height: 98%;
+        background: white;
+        clip-path: polygon(0% 15%,0% 0%,15% 0%,85% 0%,100% 0%,100% 15%,100% 85%,85% 85%,79% 100%,46% 100%,40% 85%,0% 85%);
+     
+    }
+      
+      
+
+      

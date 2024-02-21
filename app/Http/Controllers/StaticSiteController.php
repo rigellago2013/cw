@@ -574,10 +574,10 @@ class StaticSiteController extends Controller
     $desk = $agent->isDesktop();
   
     if($desk){
-        $funding_deals=DB::table('tblfundingdeals')->orderBy('rank', 'desc')->paginate(12);
-        $newsletter=DB::table('tblnewsletter')->orderBy('sr_no', 'desc')->paginate(6);
-        $domains= DB::table('blog')->join('users', 'blog.blog_user', '=', 'users.id')->where('status', 1)->orderBy('published_on', 'desc')->paginate(6);
-        $topstories= DB::table('crypto_feeds')->orderBy('upload_date', 'desc')->orderBy('sr_no', 'desc')->paginate(4);
+        $funding_deals = DB::table('tblfundingdeals')->orderBy('rank', 'desc')->paginate(15);
+        $newsletter = DB::table('tblnewsletter')->orderBy('sr_no', 'desc')->paginate(6);
+        $domains = DB::table('blog')->join('users', 'blog.blog_user', '=', 'users.id')->where('status', 1)->orderBy('published_on', 'desc')->paginate(6);
+        $topstories = DB::table('crypto_feeds')->orderBy('upload_date', 'desc')->orderBy('sr_no', 'desc')->paginate(4);
         return view('cryptohome',["blogs"=>$domains,"funding_deals"=>$funding_deals,"topstories"=>$topstories,"newsletters"=>$newsletter]);
     }else{
         return view('mobile_view');
@@ -587,5 +587,25 @@ class StaticSiteController extends Controller
   public function cryptoNews()
   {
     return view('cryptonews');
+  }
+
+  public function cryptoYoutube()
+  {
+    return view('cryptoyoutube');
+  }
+
+  public function investorZone()
+  {
+    return view('investor-zone');
+  }
+
+  public function newsLetterV2()
+  {
+    return view('news-letter');
+  }
+
+  public function fundingDeals()
+  {
+    return view('funding-deals');
   }
 }
