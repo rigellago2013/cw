@@ -10,7 +10,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 
 @section('content')
 
-<div class="container-fluid px-7 mt-5">
+<div class="container-fluid mt-5">
     <div class="row">
         <div class="col">
             <div class="page-title-bar">
@@ -35,7 +35,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             </div>
             <div class="featured-news-container">
                 <div class="row">
-                    <div class="col-sm-6 featured-news-main">
+                    <div class="col-lg-6 featured-news-main">
                         <div class="card bg-dark text-white p-0 rounded-lg">
                             <img src="{{ asset('img/crypto_news/Rectangle 7.png') }}" class="card-img" alt="...">
                             <div class="card-img-overlay info d-flex flex-column justify-content-between p-0 rounded-lg">
@@ -51,75 +51,76 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5 featured-news-list">
+                    <div class="col-lg-6 featured-news-list">
                         <div class="card mb-4 border-0 ">
-                            <div class="row no-gutters align-items-start">
-                                <div class="col-md-3">
-                                    <!-- <img src="https://www.shutterstock.com/image-vector/cryptocurrency-financial-items-altcoins-collection-600nw-2025103145.jpg" class="card-img" alt="..."> -->
-                                    <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                            <div class="d-flex align-items-start">
+                                <div class="img-col">
+                                    <div class="news-img">
+                                        <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                                    </div>
                                 </div>
-                                <div class="col-md-9">
+                                <div class="content-col">
                                     <div class="card-body pt-0 pb-0">
                                         <h5 class="card-title font-weight-bold" style="color: #1663FF;">DeFi</h5>
                                         <h5 class="card-title font-weight-bold">Pink stairs leading to the sky</h5>
                                         <p class="card-text"><small class="text-muted">13 hours ago <span class="pl-4"> Sep 4, 2023</span></small></p>
                                         <p class="card-text">In my opinion, Ui/Ux design is the foundation of a product, its face and soul. You can create an infinitely high-quality heart, and organize the simulation of breathing, but we <span class="font-weight-bold" style="color: #1663FF;">...read more</span></p>
-                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card mb-4 border-0 ">
-                            <div class="row no-gutters align-items-start">
-                                <div class="col-md-3">
-                                    <!-- <img src="https://www.shutterstock.com/image-vector/cryptocurrency-financial-items-altcoins-collection-600nw-2025103145.jpg" class="card-img" alt="..."> -->
-                                    <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                            <div class="d-flex align-items-start">
+                                <div class="img-col">
+                                    <div class="news-img">
+                                        <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                                    </div>
                                 </div>
-                                <div class="col-md-9">
+                                <div class="content-col">
                                     <div class="card-body pt-0 pb-0">
                                         <h5 class="card-title font-weight-bold" style="color: #1663FF;">DeFi</h5>
                                         <h5 class="card-title font-weight-bold">Pink stairs leading to the sky</h5>
                                         <p class="card-text"><small class="text-muted">13 hours ago <span class="pl-4"> Sep 4, 2023</span></small></p>
                                         <p class="card-text">In my opinion, Ui/Ux design is the foundation of a product, its face and soul. You can create an infinitely high-quality heart, and organize the simulation of breathing, but we <span class="font-weight-bold" style="color: #1663FF;">...read more</span></p>
-                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card mb-4 border-0 ">
-                            <div class="row no-gutters align-items-start">
-                                <div class="col-md-3">
-                                    <!-- <img src="https://www.shutterstock.com/image-vector/cryptocurrency-financial-items-altcoins-collection-600nw-2025103145.jpg" class="card-img" alt="..."> -->
-                                    <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                            <div class="d-flex align-items-start">
+                                <div class="img-col">
+                                    <div class="news-img">
+                                        <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                                    </div>
                                 </div>
-                                <div class="col-md-9">
+                                <div class="content-col">
                                     <div class="card-body pt-0 pb-0">
                                         <h5 class="card-title font-weight-bold" style="color: #1663FF;">DeFi</h5>
                                         <h5 class="card-title font-weight-bold">Pink stairs leading to the sky</h5>
                                         <p class="card-text"><small class="text-muted">13 hours ago <span class="pl-4"> Sep 4, 2023</span></small></p>
                                         <p class="card-text">In my opinion, Ui/Ux design is the foundation of a product, its face and soul. You can create an infinitely high-quality heart, and organize the simulation of breathing, but we <span class="font-weight-bold" style="color: #1663FF;">...read more</span></p>
-                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card mb-4 border-0 ">
-                            <div class="row no-gutters align-items-start">
-                                <div class="col-md-3">
-                                    <!-- <img src="https://www.shutterstock.com/image-vector/cryptocurrency-financial-items-altcoins-collection-600nw-2025103145.jpg" class="card-img" alt="..."> -->
-                                    <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                            <div class="d-flex align-items-start">
+                                <div class="img-col">
+                                    <div class="news-img">
+                                        <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                                    </div>
                                 </div>
-                                <div class="col-md-9">
+                                <div class="content-col">
                                     <div class="card-body pt-0 pb-0">
                                         <h5 class="card-title font-weight-bold" style="color: #1663FF;">DeFi</h5>
                                         <h5 class="card-title font-weight-bold">Pink stairs leading to the sky</h5>
                                         <p class="card-text"><small class="text-muted">13 hours ago <span class="pl-4"> Sep 4, 2023</span></small></p>
                                         <p class="card-text">In my opinion, Ui/Ux design is the foundation of a product, its face and soul. You can create an infinitely high-quality heart, and organize the simulation of breathing, but we <span class="font-weight-bold" style="color: #1663FF;">...read more</span></p>
-                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -165,73 +166,81 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
         </div>
     </div>
     <div class="row py-5">
-        <div class="col-lg-5 featured-news-list">
+        <div class="col-lg-7 featured-news-list">
             <div class="card mb-4 border-0 ">
-                <div class="row no-gutters align-items-start">
-                    <div class="col-md-3">
-                        <!-- <img src="https://www.shutterstock.com/image-vector/cryptocurrency-financial-items-altcoins-collection-600nw-2025103145.jpg" class="card-img" alt="..."> -->
-                        <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                <div class="d-flex align-items-start">
+                    <div class="img-col">
+                        <div class="news-img">
+                            <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                        </div>
                     </div>
-                    <div class="col-md-9">
+                    <div class="content-col">
                         <div class="card-body pt-0 pb-0">
                             <h5 class="card-title font-weight-bold" style="color: #1663FF;">DeFi</h5>
                             <h5 class="card-title font-weight-bold">Pink stairs leading to the sky</h5>
-                            <p class="date-time d-flex align-items-center align-middle"><span class="text-primary mr-4"><img src="{{ asset('img/crypto_news/clock.png') }}" class="mr-1 mb-1" alt="..."> 3 mins</span>13 hours ago <span class="ml-4"> Sep 4, 2023</span></p>
+                            <p class="card-text"><small class="text-muted">13 hours ago <span class="pl-4"> Sep 4, 2023</span></small></p>
                             <p class="card-text">In my opinion, Ui/Ux design is the foundation of a product, its face and soul. You can create an infinitely high-quality heart, and organize the simulation of breathing, but we <span class="font-weight-bold" style="color: #1663FF;">...read more</span></p>
-                            
                         </div>
                     </div>
                 </div>
             </div>
             <div class="card mb-4 border-0 ">
-                <div class="row no-gutters align-items-start">
-                    <div class="col-md-3">
-                        <!-- <img src="https://www.shutterstock.com/image-vector/cryptocurrency-financial-items-altcoins-collection-600nw-2025103145.jpg" class="card-img" alt="..."> -->
-                        <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                <div class="d-flex align-items-start">
+                    <div class="img-col">
+                        <div class="news-img">
+                            <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                        </div>
                     </div>
-                    <div class="col-md-9">
+                    <div class="content-col">
                         <div class="card-body pt-0 pb-0">
                             <h5 class="card-title font-weight-bold" style="color: #1663FF;">DeFi</h5>
                             <h5 class="card-title font-weight-bold">Pink stairs leading to the sky</h5>
-                            <p class="date-time d-flex align-items-center align-middle"><span class="text-primary mr-4"><img src="{{ asset('img/crypto_news/clock.png') }}" class="mr-1 mb-1" alt="..."> 3 mins</span>13 hours ago <span class="ml-4"> Sep 4, 2023</span></p>
+                            <p class="card-text"><small class="text-muted">13 hours ago <span class="pl-4"> Sep 4, 2023</span></small></p>
                             <p class="card-text">In my opinion, Ui/Ux design is the foundation of a product, its face and soul. You can create an infinitely high-quality heart, and organize the simulation of breathing, but we <span class="font-weight-bold" style="color: #1663FF;">...read more</span></p>
-                            
                         </div>
                     </div>
                 </div>
             </div>
             <div class="card mb-4 border-0 ">
-                <div class="row no-gutters align-items-start">
-                    <div class="col-md-3">
-                        <!-- <img src="https://www.shutterstock.com/image-vector/cryptocurrency-financial-items-altcoins-collection-600nw-2025103145.jpg" class="card-img" alt="..."> -->
-                        <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                <div class="d-flex align-items-start">
+                    <div class="img-col">
+                        <div class="news-img">
+                            <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                        </div>
                     </div>
-                    <div class="col-md-9">
+                    <div class="content-col">
                         <div class="card-body pt-0 pb-0">
                             <h5 class="card-title font-weight-bold" style="color: #1663FF;">DeFi</h5>
                             <h5 class="card-title font-weight-bold">Pink stairs leading to the sky</h5>
-                            <p class="date-time d-flex align-items-center align-middle"><span class="text-primary mr-4"><img src="{{ asset('img/crypto_news/clock.png') }}" class="mr-1 mb-1" alt="..."> 3 mins</span>13 hours ago <span class="ml-4"> Sep 4, 2023</span></p>
+                            <p class="card-text"><small class="text-muted">13 hours ago <span class="pl-4"> Sep 4, 2023</span></small></p>
                             <p class="card-text">In my opinion, Ui/Ux design is the foundation of a product, its face and soul. You can create an infinitely high-quality heart, and organize the simulation of breathing, but we <span class="font-weight-bold" style="color: #1663FF;">...read more</span></p>
-                            
                         </div>
                     </div>
                 </div>
             </div>
             <div class="card mb-4 border-0 ">
-                <div class="row no-gutters align-items-start">
-                    <div class="col-md-3">
-                        <!-- <img src="https://www.shutterstock.com/image-vector/cryptocurrency-financial-items-altcoins-collection-600nw-2025103145.jpg" class="card-img" alt="..."> -->
-                        <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                <div class="d-flex align-items-start">
+                    <div class="img-col">
+                        <div class="news-img">
+                            <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                        </div>
                     </div>
-                    <div class="col-md-9">
+                    <div class="content-col">
                         <div class="card-body pt-0 pb-0">
                             <h5 class="card-title font-weight-bold" style="color: #1663FF;">DeFi</h5>
                             <h5 class="card-title font-weight-bold">Pink stairs leading to the sky</h5>
-                            <p class="date-time d-flex align-items-center align-middle"><span class="text-primary mr-4"><img src="{{ asset('img/crypto_news/clock.png') }}" class="mr-1 mb-1" alt="..."> 3 mins</span>13 hours ago <span class="ml-4"> Sep 4, 2023</span></p>
+                            <p class="card-text"><small class="text-muted">13 hours ago <span class="pl-4"> Sep 4, 2023</span></small></p>
                             <p class="card-text">In my opinion, Ui/Ux design is the foundation of a product, its face and soul. You can create an infinitely high-quality heart, and organize the simulation of breathing, but we <span class="font-weight-bold" style="color: #1663FF;">...read more</span></p>
-                            
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 advertise">
+            <div class="ad-box p-3 rounded d-flex">
+                <h3 class="text-light"><strong>>>>>> Advertise Here</strong></h3>
+                <div class="position-absolute acc-img">
+                    <img src="{{ asset('img/crypto_news/Layer_1.png') }}" class="" alt="...">
                 </div>
             </div>
         </div>
