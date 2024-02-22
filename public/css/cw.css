@@ -1245,3 +1245,23 @@
         bottom: 0;
         right: 0;
     }
+
+    .newsletter .hero-img {
+        margin-bottom: -10px;
+    }
+
+    .newsletter-form {
+        max-width: 880px;
+        margin: 0 auto;
+    }
+
+    .newsletter-form input {
+        max-width: 315px;
+        border-radius: 10px;
+    }
+
+    .newsletter-form .btn-primary {
+        background-color: #CCE5FD;
+        color: #1663FF;
+        border-radius: 10px;
+    }

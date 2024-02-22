@@ -13,8 +13,28 @@ Cryptocurrency Newsletter | Crypto Newsletter Subscription | CryptoWeekly
 
 @section('content')
 
-<div class="container-fluid px-7 mt-5">
-  
+<div class="container-fluid mt-5 newsletter">
+    <div class="row">
+        <div class="col">
+            <div class="hero d-flex justify-content-center border-bottom">
+                <div class="hero-img">
+                    <img src="{{ asset('img/crypto_news/newsletter-hero.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row py-5">
+        <div class="col">
+            <div class="newsletter-form d-flex flex-column">
+                <h2 class="text-center"><strong>Newsletters</strong></h2>
+                <p class="text-center mb-3">Crpytoweekly’s regular newsletters bring you the latest news and analysis of the fast-moving crypto and DeFi markets.</p>
+                <form class="d-flex justify-content-center align-items-center">
+                    <input type="email" class="form-control mr-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email Address">
+                    <button type="submit" class="btn btn-primary">Subscribe Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
 @endsection
