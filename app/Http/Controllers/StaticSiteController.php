@@ -566,19 +566,21 @@ class StaticSiteController extends Controller
     }
   }
 
-  public function cryptoHome()
+  public function cryptoHome(Request $request)
   {
     $agent = new \Jenssegers\Agent\Agent;
     $mobile = $agent->isMobile();
     $tab = $agent->isTablet();
     $desk = $agent->isDesktop();
-  
+    $page = $request->page;
+
     if($desk){
         $funding_deals = DB::table('tblfundingdeals')->orderBy('rank', 'desc')->paginate(15);
-        $newsletter = DB::table('tblnewsletter')->orderBy('sr_no', 'desc')->paginate(6);
-        $domains = DB::table('blog')->join('users', 'blog.blog_user', '=', 'users.id')->where('status', 1)->orderBy('published_on', 'desc')->paginate(6);
-        $topstories = DB::table('crypto_feeds')->orderBy('upload_date', 'desc')->orderBy('sr_no', 'desc')->paginate(4);
-        return view('cryptohome',["blogs"=>$domains,"funding_deals"=>$funding_deals,"topstories"=>$topstories,"newsletters"=>$newsletter]);
+        $newsletters = DB::table('tblnewsletter')->orderBy('new_newsletter_date', 'DESC')->paginate(50, ['*'], 'page', $page);
+        $domains = DB::table('blog')->join('users', 'blog.blog_user', '=', 'users.id')->where('status', 1)->orderBy('published_on', 'desc')->limit(4)->get();
+        $cryptoVideos = DB::table('crypto_feeds')->orderBy('upload_date', 'DESC')->orderBy('sr_no', 'desc')->limit(4)->get();
+      
+        return view('cryptohome',["blogs"=>$domains,"funding_deals"=>$funding_deals,"cryptovideos"=>$cryptoVideos,"newsletters"=>$newsletters]);
     }else{
         return view('mobile_view');
     }
@@ -608,4 +610,10 @@ class StaticSiteController extends Controller
   {
     return view('funding-deals');
   }
+
+  public function getCryptoNews($id)
+  {
+    return view('get-crypto-news');
+  }
 }
+

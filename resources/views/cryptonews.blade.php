@@ -10,7 +10,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 
 @section('content')
 
-<div class="container-fluid mt-5">
+<div class="container-fluid mt-5 px-10 ">
     <div class="row">
         <div class="col">
             <div class="page-title-bar">
@@ -35,7 +35,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             </div>
             <div class="featured-news-container">
                 <div class="row">
-                    <div class="col-lg-6 featured-news-main">
+                    <div class="col-lg-6 featured-news-main flex-column">
                         <div class="card bg-dark text-white p-0 rounded-lg">
                             <img src="{{ asset('img/crypto_news/Rectangle 7.png') }}" class="card-img" alt="...">
                             <div class="card-img-overlay info d-flex flex-column justify-content-between p-0 rounded-lg">
@@ -62,7 +62,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                 <div class="content-col">
                                     <div class="card-body pt-0 pb-0">
                                         <h5 class="card-title font-weight-bold" style="color: #1663FF;">DeFi</h5>
-                                        <h5 class="card-title font-weight-bold">Pink stairs leading to the sky</h5>
+                                        <h5 class="card-title font-weight-bold"><a href="{{ url('cryptonews/1') }}">  Pink stairs leading to the sky </a></h5>
                                         <p class="card-text"><small class="text-muted">13 hours ago <span class="pl-4"> Sep 4, 2023</span></small></p>
                                         <p class="card-text">In my opinion, Ui/Ux design is the foundation of a product, its face and soul. You can create an infinitely high-quality heart, and organize the simulation of breathing, but we <span class="font-weight-bold" style="color: #1663FF;">...read more</span></p>
                                     </div>
