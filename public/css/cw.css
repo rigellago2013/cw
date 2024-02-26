@@ -1196,6 +1196,9 @@
     .card .info-box span {
         color: #fff;
     }
+    .category-buttons {
+        gap: 10px;
+    }
     .cat-btn {
         background-color: #5095F1;
         border-radius: 6px;
@@ -1216,7 +1219,7 @@
         text-decoration: none;
     }
     
-    .card-deck .card {
+    .card-deck .card, .gray-bg  {
         background-color: #F3F8FD;
     }
 
@@ -1227,6 +1230,9 @@
     .news-img img {
         max-width: 100%;
     }
+     .blue-border {
+        border-color: #5095F14D;
+     }
 
     .ad-box {
         background: rgb(105,155,255);
@@ -1237,6 +1243,10 @@
     .acc-img {
         bottom: 0;
         right: 0;
+    }
+
+    .container-fluid.newsletter {
+        height: 100vh;
     }
 
     .newsletter .hero-img {
@@ -1282,4 +1292,18 @@
     .px-10 {
         padding-left: 9rem; 
         padding-right: 9rem;
+    }
+
+    /*  */
+    .share-box ul {
+        list-style: none;
+        gap: 10px;
+    }
+
+    .news-breadcrumb nav {
+        text-decoration: underline;
+    }
+
+    .news-breadcrumb .breadcrumb {
+        background-color: transparent;
     }
