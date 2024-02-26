@@ -60,14 +60,15 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <div class="card h-100">
             <div class="cw-landing-main-card-bg">
                 <div class="mask-center-big">
-                <div class="mask-center-small ">             
+                <div class="mask-center-small ">   
+                    <img class="object-fit-cover h-100" src="{{ $newshighlight->title_img }}" alt="">    
                 </div>
                 </div>
             </div>
                 <div class="card-body cw-landing-main-card-bg">
-                    <h3 class="card-title cryptohome-header-text">News Highlight</h3>
-                    <h2 class="cryptohome-header-text mt-4">Argentina Will Have A New Bitcoin Friendly President</h2>
-                    <p class="card-text">In a historic triumph, Javier Milei has secured the presidential seat in Argentina, indicating a potential significant change in the economic landscape of the nation going forward. Milei, renowned for fervently supporting Bitcoin and strongly criticizing.</p>
+                    <h3 class="card-title cryptohome-header-text news-highlight">News Highlight</h3>
+                    <h2 class="cryptohome-header-text mt-4 news-highlight-blog-title">{{ $newshighlight->blog_title }}</h2>
+                    <p class="card-text">{{ Str::limit(strip_tags($newshighlight->blog), 400) }}</p>
                     <a href="">Read more</a>
                 </div>
             </div>
@@ -144,7 +145,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <div>
                 <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
             </div>
-            <div class="mt-4 ml-3">
+            <div class="mt-2 ml-3">
                 <h1> >>>>> Advertise Here </h1>
             </div>
         </div>
@@ -163,7 +164,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
         <div class="col-lg-3 ">
             <div class="card cw-bg-card border-0 flex-fill h-100">
                 <div class="px-2 ">
-                    <img  style="height: 200px;" class="w-100" src="{{ $blog->title_img }}" class="card-img-top" alt="...">
+                    <img  class="w-100 cw-landing-latest-news-image" src="{{ $blog->title_img }}" class="card-img-top" alt="...">
                 </div>
                 <div class="card-body pb-0">
                     <h5 class="font-weight-bold">{{ $blog->blog_title }}</h5>
@@ -171,7 +172,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 <div class="d-flex flex-row card-footer border-0 cw-bg-card pt-0">
                     <!-- <p>13 hours ago </p> -->
                     <p>{{ $blog->published_on }}</p>
-                    <a href="https://google.com" class="ml-auto"> <i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
+                    <a href="https://google.com" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
                 </div>
             </div>
         </div>
@@ -183,7 +184,14 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
     </div>
      <!--END LATEST NEWS SECTION -->
 
-    <div class="row m-4">
+    <div class="row mt-4 mb-4">
+        <div class="col-lg-12">
+            <img src="{{ asset('img/svg/banner.svg') }}" style="width: 100%;">
+        </div>
+    </div>
+
+    
+    <!-- <div class="row m-4">
         <div class="col-lg-12">
             <div class="cta-box p-5 rounded-lg">
                 <h2 class="font-weight-bold">Instant Network Expansion: Thousands of Industry Contacts, Just a Click Away.</h2>
@@ -211,7 +219,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 <img class="acc-img" src="{{ asset('img/svg/computer.png') }}">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!--CRYPTO VIDEOS SECTION -->
     <div class="row">
@@ -236,7 +244,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
               
             </div>
             <div class="d-flex flex-row card-footer border-0 cw-bg-card pt-0">
-                <a href="#" class="ml-auto"> <i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
+                <a href="#" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
             </div>
         </div>   
         @endforeach
@@ -279,7 +287,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                             </div>
                             <div class="d-flex flex-row card-footer border-0 cw-bg-card p-0">
                                 <p>13 hours ago </p>
-                                <a href="https://google.com" class="ml-auto"> <i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
+                                <a href="https://google.com" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
                             </div>
                         </div>
                     </div>
@@ -295,7 +303,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                             </div>
                             <div class="d-flex flex-row card-footer border-0 cw-bg-card p-0">
                                 <p>13 hours ago </p>
-                                <a href="https://google.com" class="ml-auto"> <i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
+                                <a href="https://google.com" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
                             </div>
                         </div>
                     </div>
@@ -313,7 +321,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                             </div>
                             <div class="d-flex flex-row card-footer border-0 cw-bg-card p-0">
                                 <p>13 hours ago </p>
-                                <a href="https://google.com" class="ml-auto"> <i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
+                                <a href="https://google.com" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
                             </div>
                         </div>
                     </div>
@@ -329,7 +337,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                             </div>
                             <div class="d-flex flex-row card-footer border-0 cw-bg-card p-0">
                                 <p>13 hours ago </p>
-                                <a href="https://google.com" class="ml-auto"> <i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
+                                <a href="https://google.com" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
                             </div>
                         </div>
                     </div>
@@ -347,7 +355,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <div>
                 <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
             </div>
-            <div class="mt-4 ml-3">
+            <div class="mt-2 ml-3">
                 <h1> >>>>> Advertise Here </h1>
             </div>
         </div>

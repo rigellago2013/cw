@@ -17,27 +17,25 @@
     </a>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item {{ request()->routeIs('index') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('index') }}">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{ request()->routeIs('cryptonews') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('cryptonews') }}">Crypto News</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{ request()->routeIs('cryptoyoutube') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('cryptoyoutube') }}">Crypto Youtube</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{ request()->routeIs('investor-zone') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('investor-zone') }}">Investor Zone</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{ request()->routeIs('news-letter') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('news-letter') }}">Newsletter</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{ request()->routeIs('funding-deals') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('funding-deals') }}">Funding Deals</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Awards</a>
-            </li>
+     
         </ul>
     </div>
     <!-- <div class="crypto-youtube">

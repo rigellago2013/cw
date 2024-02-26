@@ -575,12 +575,13 @@ class StaticSiteController extends Controller
     $page = $request->page;
 
     if($desk){
+        $news_highlight =  DB::table('blog')->where('status',1)->orderBy('published_on', 'DESC')->first();
         $funding_deals = DB::table('tblfundingdeals')->orderBy('rank', 'desc')->paginate(15);
         $newsletters = DB::table('tblnewsletter')->orderBy('new_newsletter_date', 'DESC')->paginate(50, ['*'], 'page', $page);
         $domains = DB::table('blog')->join('users', 'blog.blog_user', '=', 'users.id')->where('status', 1)->orderBy('published_on', 'desc')->limit(4)->get();
         $cryptoVideos = DB::table('crypto_feeds')->orderBy('upload_date', 'DESC')->orderBy('sr_no', 'desc')->limit(4)->get();
       
-        return view('cryptohome',["blogs"=>$domains,"funding_deals"=>$funding_deals,"cryptovideos"=>$cryptoVideos,"newsletters"=>$newsletters]);
+        return view('cryptohome',["blogs"=>$domains,"funding_deals"=>$funding_deals,"cryptovideos"=>$cryptoVideos,"newsletters"=>$newsletters, 'newshighlight'=>$news_highlight]);
     }else{
         return view('mobile_view');
     }
