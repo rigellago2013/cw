@@ -12,7 +12,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
 
 <div class="container-fluid px-7 mt-5">
     <div class="row">
-        <div class="col-lg-10">
+        <div class="col-lg-9">
             <div class="news-breadcrumb">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -27,7 +27,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
             <div class="info-box d-flex align-items-center justify-content-between py-3">
                 <div class="author d-flex align-items-center">
                     <div class="author__avatar">
-                        <img src="{{ asset('img./single_news/author.png') }}" class="rounded-circle" alt="...">                 
+                        <img src="{{ asset('img/single_news/author.png') }}" class="rounded-circle" alt="...">                 
                     </div>
                     <div class="author__info ml-2">
                         <h5 class="author__name m-0 font-weight-bold">Haider Jamal</h5>
@@ -93,8 +93,39 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
                 </div>
             </div>
         </div>
-        <div class="col-lg-2">
-            
+        <div class="col-lg-3 pt-3">
+        <div class="col-lg-12 cw-bg-card px-0 mt-5 pb-2">
+                <div class="rounded p-3">
+                    <h2 class="cryptohome-header-text ml-2">Top News</h2>
+                    <hr>
+                    <div class="cw-landing-scrollable-content cw-scrollbar" id="infinite-scroll">
+                    <div class="scrolling-pagination">
+                
+                        <div class="pl-2">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <img src="{{ asset('img/png/cw-icon.png') }}" alt="cw-icon"> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-n-10">
+                                <div class="col-md-12">
+                                    <div class="mb-3 ml-2 pl-3 pt-0 border-left border-info border-1">
+                                       <!-- put data here -->
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+               
+                      
+                        </div>
+                    </div>
+                    
+                </div>
+                <a href="#" class="read-more-link font-weight-bold ml-3">Read more latest news <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
         </div>
     </div>
     <div class="row more-news">
