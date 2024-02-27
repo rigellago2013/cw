@@ -1456,3 +1456,19 @@
         padding: 5px 20px;
         font-weight: 500;
     }
+
+    /* Crypto Youtube */
+
+    .video-duration {
+        background-color: #564740;
+        width: auto;
+        display: inline-block;
+        color: #fff;
+        padding: 3px 12px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .crypto-videos .video-duration {
+        background-color: #0E1C29;
+    }
