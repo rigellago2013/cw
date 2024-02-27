@@ -1234,7 +1234,7 @@
         height: 100%;
     }
 
-    .acc-img {
+    .ad-box .acc-img {
         bottom: 0;
         right: 0;
     }
@@ -1415,4 +1415,44 @@
 
     .news-breadcrumb .breadcrumb {
         background-color: transparent;
+    }
+
+    /*CTA Box*/
+
+    .cta-box {
+        background-color: #fff;
+        box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+        min-height: 400px;
+        overflow: hidden;
+    }
+
+    .cta-box__info {
+        max-width: 820px;
+    }
+
+    .cta-box .acc-img {
+        bottom: -30px;
+        right: 15px;
+    }
+
+    .cta-box .pricing__buttons {
+        gap: 10px;
+    }
+
+    .blue-outline-btn {
+        background-color: #CCE5FD;
+        color: #1663FF;
+        border: 1px solid;
+        border-radius: 8px;
+        padding: 5px 20px;
+        font-weight: 500;
+    }
+
+    .blue-outline-light-bg-btn {
+        background-color: #fff;
+        color: #1663FF;
+        border: 1px solid;
+        border-radius: 8px;
+        padding: 5px 20px;
+        font-weight: 500;
     }
