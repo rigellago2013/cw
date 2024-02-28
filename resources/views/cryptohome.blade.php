@@ -164,7 +164,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
         <div class="col-lg-3 ">
             <div class="card cw-bg-card border-0 flex-fill h-100">
                 <div class="px-2 ">
-                    <img  class="w-100 cw-landing-latest-news-image" src="{{ $blog->title_img }}" class="card-img-top" alt="...">
+                    <img  class="w-100 cw-landing-latest-news-image" src="{{ $blog->title_img }}" class="card-img-top rounded" alt="...">
                 </div>
                 <div class="card-body pb-0">
                     <h5 class="font-weight-bold">{{ $blog->blog_title }}</h5>
@@ -179,7 +179,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
         @endforeach
 
         <div class="col-lg-12 text-center mt-5">
-        <a href="" class=" mx-auto"> <img src="{{  asset('img/svg/read-all-btn.svg') }}" alt=""> </a>
+        <a href="{{ route('cryptonews') }}" class=" mx-auto"> <img src="{{  asset('img/svg/read-all-btn.svg') }}" alt=""> </a>
         </div>
     </div>
      <!--END LATEST NEWS SECTION -->
@@ -191,7 +191,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
     </div> -->
 
     
-    <div class="row m-4">
+    <div class="row mt-5 mb-5">
         <div class="col-lg-12">
             <div class="cta-box position-relative p-4 rounded-lg d-flex align-items-center">
                 <div class="cta-box__info">
@@ -232,14 +232,14 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
         <div class="col-lg-3 pb-2">
             <div class="cw-bg-card rounded flex-fill h-100">
                 <div class="pb-1">
-                    <div class="px-2 embed-responsive embed-responsive-1by1">
+                    <div class="px-2 embed-responsive embed-responsive-1by1 rounded">
                        {!! $video->video !!}
                     </div>
                     <div class="d-flex justify-content-between">
                         <h5 class="mt-3 px-3">{{ $video->channel_name }}</h5>
                     </div>
                     <div class="text-bold px-3">
-                        <h3> <strong> {{ $video->title }} </strong></h3>
+                        <h4> <strong> {{ $video->title }} </strong></h4>
                     </div>
                   
                 </div>
@@ -254,7 +254,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
      
 
         <div class="col-lg-12 text-center mt-5">
-        <a href="https://google.com" class=" mx-auto"> <img src="{{  asset('img/svg/view-all-btn.svg') }}" alt=""> </a>
+        <a href="{{ route('cryptoyoutube') }}" class=" mx-auto"> <img src="{{  asset('img/svg/view-all-btn.svg') }}" alt=""> </a>
         </div>
     </div>
     <!--END CRYPTO VIDEOS SECTION -->
@@ -266,85 +266,47 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
         <div class="col-lg-6 cw-bg-card rounded">
             <div class="px-3 pt-4">
                 <div>
-                    <img class="rounded" src="https://media.licdn.com/dms/image/D4D12AQGQFiOvxvA20g/article-cover_image-shrink_720_1280/0/1682758304423?e=2147483647&v=beta&t=T_m6Cj_F9IDuPjn1NL9TBgcpjIxCctnghbXhHAxSK2k" alt="Image" style=" max-width: 100%; width: 100%; height:400px">
+                    <img class="rounded img-fluid" src="{{ $pressreleases[0]['title_img'] }}" alt="Image">
                 </div>
                 <div class="mt-3 pb-3">
-                    <h2 class="font-weight-bold">Jack Dorsey Is Over Performance Reviews And Names New CTO</h2>
-                    <p>13 hours </p>
-                    <p>Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes. Background utilities do not set color, so in some cases you’ll want to use .text-* utilities.</p>
+                    <h2 class="font-weight-bold">{{ $pressreleases[0]['blog_title'] }}</h2>
+                    <p>{{ $pressreleases[0]['published_on'] }} </p>
+                    <p>{{ Str::limit(strip_tags($pressreleases[0]['blog']), 350) }} <a href="{{ url('/cryptonews/'.$pressreleases[0]['blog_id']) }}">Read more</a></p>
                 </div>
 
             </div>
         </div>
         <div class="col-lg-6">
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <div class="cw-bg-card rounded">
-                        <div class="px-2 pb-1">
-                            <div>
-                                <img class="rounded" src="https://media.licdn.com/dms/image/D4D12AQGQFiOvxvA20g/article-cover_image-shrink_720_1280/0/1682758304423?e=2147483647&v=beta&t=T_m6Cj_F9IDuPjn1NL9TBgcpjIxCctnghbXhHAxSK2k" alt="Image" style="max-width: 100%;">
+        <div class="row">
+            @php
+                $index = 0;
+            @endphp
+            @foreach($pressreleases as $pressrelease)
+                @if($index > 0)
+                    <div class="col-md-6 d-flex @if($index > 2) mt-3 @endif flex-fill h-100">
+                        <div class="cw-bg-card rounded w-100">
+                            <div class="px-2 pb-1">
+                                <div>
+                                    <img class="rounded img-fluid" src="{{ $pressrelease->title_img }}" alt="Image">
+                                </div>
+                                <div class="mt-3">
+                                    <h4 class="font-weight-bold">{{ $pressrelease->blog_title }}</h4>
+                                </div>
+                                <div class="d-flex flex-row card-footer border-0 cw-bg-card p-0">
+                                    <p>{{$pressrelease->published_on }}</p>                           
+                                </div>                              
                             </div>
-                            <div class="mt-3">
-                                <h2 class="font-weight-bold">Jack Dorsey Is Over Performance Reviews And Names New CTO.</h2>
-                            </div>
-                            <div class="d-flex flex-row card-footer border-0 cw-bg-card p-0">
-                                <p>13 hours ago </p>
-                                <a href="https://google.com" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <div class="cw-bg-card rounded">
-                        <div class="px-2 pb-1">
-                            <div>
-                                <img class="rounded" src="https://media.licdn.com/dms/image/D4D12AQGQFiOvxvA20g/article-cover_image-shrink_720_1280/0/1682758304423?e=2147483647&v=beta&t=T_m6Cj_F9IDuPjn1NL9TBgcpjIxCctnghbXhHAxSK2k" alt="Image" style="max-width: 100%;">
-                            </div>
-                            <div class="mt-3">
-                                <h2 class="font-weight-bold">Jack Dorsey Is Over Performance Reviews And Names New CTO.</h2>
-                            </div>
-                            <div class="d-flex flex-row card-footer border-0 cw-bg-card p-0">
-                                <p>13 hours ago </p>
-                                <a href="https://google.com" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
+                            <div class="d-flex flex-row card-footer border-0 cw-bg-card pt-0">
+                            <a href="{{ url('/cryptonews/'.$pressrelease->blog_id) }}" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <div class="cw-bg-card rounded">
-                        <div class="px-2 pb-1">
-                            <div>
-                                <img class="rounded" src="https://media.licdn.com/dms/image/D4D12AQGQFiOvxvA20g/article-cover_image-shrink_720_1280/0/1682758304423?e=2147483647&v=beta&t=T_m6Cj_F9IDuPjn1NL9TBgcpjIxCctnghbXhHAxSK2k" alt="Image" style="max-width: 100%;">
-                            </div>
-                            <div class="mt-3">
-                                <h2 class="font-weight-bold">Jack Dorsey Is Over Performance Reviews And Names New CTO.</h2>
-                            </div>
-                            <div class="d-flex flex-row card-footer border-0 cw-bg-card p-0">
-                                <p>13 hours ago </p>
-                                <a href="https://google.com" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <div class="cw-bg-card rounded">
-                        <div class="px-2 pb-1">
-                            <div>
-                                <img class="rounded" src="https://media.licdn.com/dms/image/D4D12AQGQFiOvxvA20g/article-cover_image-shrink_720_1280/0/1682758304423?e=2147483647&v=beta&t=T_m6Cj_F9IDuPjn1NL9TBgcpjIxCctnghbXhHAxSK2k" alt="Image" style="max-width: 100%;">
-                            </div>
-                            <div class="mt-3">
-                                <h2 class="font-weight-bold">Jack Dorsey Is Over Performance Reviews And Names New CTO.</h2>
-                            </div>
-                            <div class="d-flex flex-row card-footer border-0 cw-bg-card p-0">
-                                <p>13 hours ago </p>
-                                <a href="https://google.com" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                @endif
+                @php
+                    $index++;
+                @endphp
+            @endforeach
+        </div>
         </div>
         <div class="col-lg-12 text-center mt-5 mb-3">
         <a href="https://google.com" class=" mx-auto"> <img src="{{  asset('img/svg/read-all-btn.svg') }}" alt=""> </a>

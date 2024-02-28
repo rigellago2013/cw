@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Blog;
 use Illuminate\Http\Request;
 use DB;
 
@@ -580,8 +581,12 @@ class StaticSiteController extends Controller
         $newsletters = DB::table('tblnewsletter')->orderBy('new_newsletter_date', 'DESC')->paginate(50, ['*'], 'page', $page);
         $domains = DB::table('blog')->join('users', 'blog.blog_user', '=', 'users.id')->where('status', 1)->orderBy('published_on', 'desc')->limit(4)->get();
         $cryptoVideos = DB::table('crypto_feeds')->orderBy('upload_date', 'DESC')->orderBy('sr_no', 'desc')->limit(4)->get();
-      
-        return view('cryptohome',["blogs"=>$domains,"funding_deals"=>$funding_deals,"cryptovideos"=>$cryptoVideos,"newsletters"=>$newsletters, 'newshighlight'=>$news_highlight]);
+
+        $press_releases = Blog::whereHas('categories', function ($query) {
+          $query->where('name', 'Press Release');
+        })->orderBy('published_on', 'DESC')->get();
+
+        return view('cryptohome',["blogs"=>$domains,"funding_deals"=>$funding_deals,"cryptovideos"=>$cryptoVideos,"newsletters"=>$newsletters, 'newshighlight'=>$news_highlight, 'pressreleases' => $press_releases]);
     }else{
         return view('mobile_view');
     }

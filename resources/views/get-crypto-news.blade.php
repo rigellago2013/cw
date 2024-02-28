@@ -131,7 +131,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
     <div class="row more-news">
         <div class="col-lg-6">
             <h4 class="font-weight-bold pt-3 border-top">More From The News</h4>
-            <div class="row">
+            <div class="row mt-3">
                 <div class="col-lg-6 mb-4">
                     <div class="card border-0 rounded-lg px-2 gray-bg">
                         <img src="https://www.shutterstock.com/image-vector/cryptocurrency-financial-items-altcoins-collection-600nw-2025103145.jpg" class="card-img-top mb-4 rounded" alt="...">
@@ -196,7 +196,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
         </div>
         <div class="col-lg-6">
             <h4 class="font-weight-bold pt-3 border-top">Press Releases</h4>
-            <div class="press-releases">
+            <div class="press-releases mt-3">
                 <div class="card mb-4 border-0 ">
                     <div class="d-flex align-items-start">
                         <div class="img-col">
