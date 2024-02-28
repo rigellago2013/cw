@@ -1472,3 +1472,20 @@
     .crypto-videos .video-duration {
         background-color: #0E1C29;
     }
+
+    /* Investor Zone */
+    .database-box {
+        box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.1);
+        -webkit-box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.1);
+        border: 1px solid transparent;
+        height: 100%;
+    }
+
+    .database-box:hover {
+        border: 1px solid #1663FF;
+    }
+
+    .database-box:hover > p {
+        font-weight: 700;
+    }
