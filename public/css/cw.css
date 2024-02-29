@@ -1448,6 +1448,55 @@
         font-weight: 500;
     }
 
+    .cta-box::after {
+        content: 'Super Rare 2023 2023 Coming soon Future Nft Super Rare 2023 2023 Coming soon';
+        display: block;
+        position: absolute;
+        font-size: 57px;
+        line-height: 70px;
+        color: #3297F8;
+        max-width: 370px;
+        font-weight: 700;
+        z-index: 1;
+        right: -200px;
+        top: -200px;
+		animation: rotate-animation 10s infinite linear;
+    }
+
+    .cta-box.blue-bg {
+        background-color: #1663FF;
+        max-width: 100%;
+    }
+
+    
+    .cta-box.blue-bg .cta-box__info {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .cta-box.blue-bg .acc-img {
+        bottom: -50px;
+        right: -30px;
+    }
+
+    .cta-box.blue-bg::after {
+        left: -200px;
+        top: -200px;
+        right: 0;
+    }
+
+    @keyframes rotate-animation {
+        0% {
+            transform: rotate(0deg);
+      }
+      50% {
+            transform: rotate(180deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
     .blue-outline-light-bg-btn {
         background-color: #fff;
         color: #1663FF;

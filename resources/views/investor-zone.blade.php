@@ -39,7 +39,7 @@ investors & communities in crypto</strong></h2>
                     Whether you’re launching your own crypto startup and want to connect with industry leaders, invest in crypto or just looking to make your first few investments in cryptocurrencies, you’ll be sure to get value out of CryptoList.
                     We’ve spent thousands of hours resea</p>
                 </div>
-                <img class="acc-img position-absolute" src="{{ asset('img/svg/computer.png') }}">
+                <img class="acc-img position-absolute" style="z-index: 3;" src="{{ asset('img/svg/computer.png') }}">
             </div>
         </div>
     </div>
@@ -68,6 +68,19 @@ investors & communities in crypto</strong></h2>
                 <div class="customer-logo__img">
                     <img class="" src="{{ asset('img/investor_zone/image 4374.png') }}">
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="cta-box blue-bg position-relative p-4 d-flex align-items-center">
+                <div class="cta-box__info text-center">
+                    <h2 class="font-weight-bold mb-3 text-light" style="font-size: 40px;">Download the Investor Zone List</h2>
+                    <h3 class="font-weight-bold text-light" style="font-size: 25px;">Actual Price <s style="color: #9BBBFF;">$249</s></h3>
+                    <h3 class="font-weight-bold text-light mb-3" style="font-size: 60px;">Offer Price <span style="color: #F5C92F;">$149</span></h3>
+                    <a href="" class="blue-outline-light-bg-btn py-2 px-3">Buy Now</a>
+                </div>
+                <img class="acc-img position-absolute" style="z-index: 3;" src="{{ asset('img/svg/computer.png') }}">
             </div>
         </div>
     </div>
@@ -128,6 +141,14 @@ investors & communities in crypto</strong></h2>
                         <p class="m-0">Crypto Companies</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="row p-4 rounded-lg" style="background-color: #1662FF;">
+        <div class="col-lg-12">
+            <div class="align-items-center justify-content-center d-flex flex-column">
+                <h2 class="text-light font-weight-bold mb-3 text-center">Get a FREE Sample of the Crypto List Database</h2>
+                <a href="" class="blue-outline-light-bg-btn">Download <i class="fa fa-download" style="margin-left: 10px;" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>

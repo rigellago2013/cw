@@ -218,7 +218,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         </div>
                     </div>
                 </div>
-                <img class="acc-img position-absolute" src="{{ asset('img/svg/computer.png') }}">
+                <img class="acc-img position-absolute" style="z-index: 3;" src="{{ asset('img/svg/computer.png') }}">
             </div>
         </div>
     </div>
