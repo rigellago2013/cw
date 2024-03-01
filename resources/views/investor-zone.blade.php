@@ -11,9 +11,9 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
 @section('content')
 
 <div class="container-fluid px-7 mt-5">
-    <div class="row">
+    <div class="row py-5 border-bottom">
         <div class="col">
-            <div class="hero d-flex justify-content-center border-bottom">
+            <div class="hero d-flex justify-content-center">
                 <div class="hero-img">
                     <img src="{{ asset('img/investor_zone/investor-hero.png') }}" alt="">
                 </div>
@@ -23,8 +23,8 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
     <div class="row py-5">
         <div class="col">
             <div class="newsletter-form d-flex flex-column">
-                <h2 class="text-center"><strong>Get our entire database of over 7,500 hand-researched companies,
-investors & communities in crypto</strong></h2>
+                <h2 class="text-center font-weight-bold">Get our entire database of over 7,500 hand-researched companies,
+investors & communities in crypto</h2>
                 <p class="text-center mb-3">- With over 6,000 verified emails -</p>
             </div>
         </div>
@@ -102,7 +102,7 @@ investors & communities in crypto</strong></h2>
                         <div class="database-img mb-2">
                             <img class="" src="{{ asset('img/investor_zone/database-img.png') }}">
                         </div>
-                        <p class="m-0">Crypto Companies</p>
+                        <p class="m-0">Crypto Investors</p>
                     </div>
                 </div>
                 <div class="col-lg-3 mb-4">
@@ -110,7 +110,7 @@ investors & communities in crypto</strong></h2>
                         <div class="database-img mb-2">
                             <img class="" src="{{ asset('img/investor_zone/database-img.png') }}">
                         </div>
-                        <p class="m-0">Crypto Companies</p>
+                        <p class="m-0">Crypto News Outlets</p>
                     </div>
                 </div>
                 <div class="col-lg-3 mb-4">
@@ -130,7 +130,7 @@ investors & communities in crypto</strong></h2>
                         <div class="database-img mb-2">
                             <img class="" src="{{ asset('img/investor_zone/database-img.png') }}">
                         </div>
-                        <p class="m-0">Crypto Companies</p>
+                        <p class="m-0">Crypto Journalists</p>
                     </div>
                 </div>
                 <div class="col-lg-3 mb-4">
@@ -138,7 +138,7 @@ investors & communities in crypto</strong></h2>
                         <div class="database-img mb-2">
                             <img class="" src="{{ asset('img/investor_zone/database-img.png') }}">
                         </div>
-                        <p class="m-0">Crypto Companies</p>
+                        <p class="m-0">Crypto Communities</p>
                     </div>
                 </div>
             </div>
