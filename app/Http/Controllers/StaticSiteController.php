@@ -621,5 +621,20 @@ class StaticSiteController extends Controller
   {
     return view('get-crypto-news');
   }
+
+  public function top100People()
+  {
+    return view('top100-people');
+  }
+  
+  public function top250Organisations( )
+  {
+    return view('top250-organisations');
+  }
+
+  public function top50DefiProjects()
+  {
+    return view('top50-defi-projects');
+  }
 }
 

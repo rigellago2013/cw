@@ -35,6 +35,18 @@
             <li class="nav-item {{ request()->routeIs('funding-deals') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('funding-deals') }}">Funding Deals</a>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Awards & Lists
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ route('top-100-people') }}">Top 100 People</a>
+                <a class="dropdown-item" href="{{ route('top-250-organisations') }}">Top 250 Organisations</a>
+                <a class="dropdown-item" href="{{ route('top-50-defi-projects') }}">Top 50 Defi Projects</a>
+                <a class="dropdown-item" href="#">Top 50 Females</a>
+                <a class="dropdown-item" href="#">Top 20 Youtubers</a>
+                </div>
+            </li>
      
         </ul>
     </div>

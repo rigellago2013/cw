@@ -28,6 +28,9 @@ Route::get('cryptonews/{id}', 'StaticSiteController@getCryptoNews');
 Route::get('investor-zone', 'StaticSiteController@investorZone')->name('investor-zone');
 Route::get('news-letter', 'StaticSiteController@newsLetterV2')->name('news-letter');
 Route::get('funding-deals', 'StaticSiteController@fundingDeals')->name('funding-deals');
+Route::get('top-100-people', 'StaticSiteController@top100People')->name('top-100-people');
+Route::get('top-250-organisations', 'StaticSiteController@top250Organisations')->name('top-250-organisations');
+Route::get('top-50-defi-projects', 'StaticSiteController@top50DefiProjects')->name('top-50-defi-projects');
 
 Route::get('/fetchYoutube20_ajax', 'StaticSiteController@fetchYoutube20_ajax')->name('static.fetchYoutube20_ajax'); 
 
