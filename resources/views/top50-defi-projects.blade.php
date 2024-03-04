@@ -10,4 +10,57 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
 
 @section('content')
 
+<div class="container-fluid px-7">
+    <div class="row py-5 border-bottom">
+        <div class="col">
+            <div class="hero d-flex justify-content-center">
+                <div class="hero-img">
+                    <img src="{{ asset('img/funding_deals/funding-deals-hero.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row py-5">
+        <div class="col">
+            <div class="newsletter-form d-flex flex-column">
+                <h2 class="text-center font-weight-bold">The 50 Most Interesting ranking-boxs In DeFi</h2>
+                <p class="text-center">- 2024 Edition -</p>
+                
+            </div>
+        </div>
+    </div>
+    <div class="row mx-auto">
+        <div class="col-lg-12 bg-blue text-white rounded d-flex justify-content-between align-items-center">
+            <div>
+                <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
+            </div>
+            <div class="mt-2 ml-3">
+                <h1> >>>>> Advertise Here </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row py-5">
+        <div class="col-lg-6">
+           <div class="ranking-box rounded-lg box-shadow-gray p-3 position-relative">
+                <div class="ranking-box-header d-flex justify-content-between mb-3">
+                    <div class="ranking-box-info d-flex align-items-center">
+                        <div class="ranking-box_image mr-3">
+                            <img src="{{ asset('img/defi_projects/ethereum.png') }}" alt="">
+                        </div>
+                        <div class="ranking-box_title">
+                            <h5 class="m-0">Ethereum</h5>
+                            <a href="">@ethereum</a>
+                        </div>
+                    </div>
+                    <div class="ranking-box_ranking position-absolute">1</div>
+                </div>
+                <div class="ranking-box_content">
+                    <p>Ethereum is an open-source and global platform for decentralized applications. The platform is open to everyone. It is open access to data-friendly services and digital money for everyone. What’s best is no company or government has control over Ethereum. It is completely private as you don’t have to provide your personal details.</p>
+                </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+
 @endsection

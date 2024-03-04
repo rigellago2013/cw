@@ -1552,3 +1552,28 @@
         padding-left: 20px;
         padding-right: 20px;
     }
+
+    /* Defi ranking-boxs */
+    .ranking-box {
+        transition: 0.3s;
+    }
+
+    .ranking-box_ranking {
+        color: #1662FF5C;
+        font-size: 90px;
+        font-weight: 700;
+        line-height: 80px;
+        right: 10px;
+        top: 0;
+    }
+
+    .ranking-box:hover {
+        background-color: #CCE5FD;
+    }
+
+    .ranking-box:hover .ranking-box_ranking {
+        font-size: 130px;
+        right: 15px;
+        top: -10px;
+    }
+
