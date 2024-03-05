@@ -1553,12 +1553,13 @@
         padding-right: 20px;
     }
 
-    /* Defi ranking-boxs */
+    /* Defi ranking boxes */
     .ranking-box {
         transition: 0.3s;
+        background-color: #F3F8FD;
     }
 
-    .ranking-box_ranking {
+    .ranking-box__ranking {
         color: #1662FF5C;
         font-size: 90px;
         font-weight: 700;
@@ -1571,9 +1572,21 @@
         background-color: #CCE5FD;
     }
 
-    .ranking-box:hover .ranking-box_ranking {
+    .ranking-box:hover .ranking-box__ranking {
         font-size: 130px;
         right: 15px;
         top: -10px;
+    }
+
+    /* Company Boxes */
+    .company-ranking-box__image {
+        max-width: 140px;
+        margin: 0 auto 1.5em;
+    }
+    .company-ranking-box__image img{
+        max-width: 100%;
+        display: block;
+        height: auto;
+        margin: 0 auto 1em;
     }
 

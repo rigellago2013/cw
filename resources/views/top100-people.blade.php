@@ -1,4 +1,3 @@
-
 @extends('layouts.cryptoapp')
 
 @section('title')
@@ -10,8 +9,6 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
 @section('revisit-after', 'content="3 days')
 
 @section('content')
-
-
 <div class="container-fluid px-7">
     <div class="row py-5 border-bottom">
         <div class="col">
@@ -31,6 +28,19 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
             </div>
         </div>
     </div>
+    <div class="row pb-5">
+        <div class="col">
+            <div class="thank-you-sponsor d-flex align-items-center rounded-lg px-3 py-2" style="background-color: #CCE5FD;">
+                <div class="thank-you-sponsor__image">
+                    <img src="{{ asset('img/influencial_people/sponsor_logo.png') }}" alt="">
+                </div>
+                <div class="thank-you-sponsor__content">
+                    <h5 class="font-weight-bold mb-1">Thank you to our sponsor</h5>
+                    <p class="mb-0">We want to give a special thanks to our sponsor, Crypto.com, who are doing amazing work with mass crypto adoption via their easy-to-use mobile app, Visa cards (with amazing rewards) and their crypto exchange for more advanced traders.</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row mx-auto">
         <div class="col-lg-12 bg-blue text-white rounded d-flex justify-content-between align-items-center">
             <div>
@@ -44,25 +54,23 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
     <div class="row py-5">
         <div class="col-lg-6">
            <div class="ranking-box rounded-lg box-shadow-gray p-3 position-relative">
-                <div class="ranking-box-header d-flex justify-content-between mb-3">
-                    <div class="ranking-box-info d-flex align-items-center">
-                        <div class="ranking-box_image mr-3">
-                            <img src="{{ asset('img/defi_ranking-boxs/ethereum.png') }}" alt="">
+                <div class="ranking-box__header d-flex justify-content-between mb-3">
+                    <div class="ranking-box__info d-flex align-items-center">
+                        <div class="ranking-box__image mr-3">
+                            <img src="{{ asset('img/influencial_people/changpeng.png') }}" alt="">
                         </div>
-                        <div class="ranking-box_title">
-                            <h5 class="m-0">Ethereum</h5>
-                            <a href="">@ethereum</a>
+                        <div class="ranking-box__title">
+                            <h5 class="m-0" style="color: #1662FF; font-weight: 500;">Changpeng Zhao</h5>
+                            <a href="">@cz_binance</a>
                         </div>
                     </div>
-                    <div class="ranking-box_ranking position-absolute">1</div>
+                    <div class="ranking-box__ranking position-absolute">1</div>
                 </div>
-                <div class="ranking-box_content">
-                    <p>Ethereum is an open-source and global platform for decentralized applications. The platform is open to everyone. It is open access to data-friendly services and digital money for everyone. What’s best is no company or government has control over Ethereum. It is completely private as you don’t have to provide your personal details.</p>
+                <div class="ranking-box__content">
+                    <p>Changpeng Zhao is CEO of Binance, the world’s largest cryptocurrency exchange by volume, launched in 2015. He was number three on the Forbes 2018 list of The Richest People in Cryptocurrency. Prior to this, he was Head of Development at Blockchain and Chief Technology Officer of OK Coin. He also developed trading software at Bloomberg and the Tokyo Stock Exchange.</p>
                 </div>
            </div>
         </div>
     </div>
 </div>
-
-
 @endsection

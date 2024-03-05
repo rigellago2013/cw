@@ -9,7 +9,6 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
 @section('revisit-after', 'content="3 days')
 
 @section('content')
-
 <div class="container-fluid px-7">
     <div class="row py-5 border-bottom">
         <div class="col">
@@ -42,25 +41,23 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
     <div class="row py-5">
         <div class="col-lg-6">
            <div class="ranking-box rounded-lg box-shadow-gray p-3 position-relative">
-                <div class="ranking-box-header d-flex justify-content-between mb-3">
-                    <div class="ranking-box-info d-flex align-items-center">
-                        <div class="ranking-box_image mr-3">
+                <div class="ranking-box__header d-flex justify-content-between mb-3">
+                    <div class="ranking-box__info d-flex align-items-center">
+                        <div class="ranking-box__image mr-3">
                             <img src="{{ asset('img/defi_projects/ethereum.png') }}" alt="">
                         </div>
-                        <div class="ranking-box_title">
-                            <h5 class="m-0">Ethereum</h5>
+                        <div class="ranking-box__title">
+                            <h5 class="m-0" style="color: #1662FF; font-weight: 500;">Ethereum</h5>
                             <a href="">@ethereum</a>
                         </div>
                     </div>
-                    <div class="ranking-box_ranking position-absolute">1</div>
+                    <div class="ranking-box__ranking position-absolute">1</div>
                 </div>
-                <div class="ranking-box_content">
+                <div class="ranking-box__content">
                     <p>Ethereum is an open-source and global platform for decentralized applications. The platform is open to everyone. It is open access to data-friendly services and digital money for everyone. What’s best is no company or government has control over Ethereum. It is completely private as you don’t have to provide your personal details.</p>
                 </div>
            </div>
         </div>
     </div>
 </div>
-
-
 @endsection
