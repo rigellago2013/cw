@@ -9,5 +9,58 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
 @section('revisit-after', 'content="3 days')
 
 @section('content')
-
+<div class="container-fluid px-7">
+    <div class="row py-5 border-bottom">
+        <div class="col">
+            <div class="hero d-flex justify-content-center">
+                <div class="hero-img">
+                    <img src="{{ asset('img/top_youtubers/top-youtubers-hero.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row py-5">
+        <div class="col">
+            <div class="newsletter-form d-flex flex-column">
+                <h2 class="text-center font-weight-bold">The Top 20 Crypto Youtubers in 2024</h2>
+                <p class="text-center">- Meet the top YouTube Influencers of 2024 -</p>
+                
+            </div>
+        </div>
+    </div>
+    <div class="row mx-auto">
+        <div class="col-lg-12 bg-blue text-white rounded d-flex justify-content-between align-items-center">
+            <div>
+                <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
+            </div>
+            <div class="mt-2 ml-3">
+                <h1> >>>>> Advertise Here </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row py-5">
+        <div class="col-lg-6">
+           <div class="ranking-box rounded-lg box-shadow-gray p-3 position-relative">
+                <div class="ranking-box__header d-flex justify-content-between mb-3">
+                    <div class="ranking-box__info d-flex align-items-center">
+                        <div class="ranking-box__image mr-3">
+                            <img src="{{ asset('img/top_youtubers/bitboy.png') }}" alt="">
+                        </div>
+                        <div class="ranking-box__title">
+                            <h5 class="m-0" style="color: #1662FF; font-weight: 500;">BitBoy Crypto</h5>
+                            <div class="youtube-box d-flex align-items-center mt-2">
+                                <a href="" class="youtube-link text-light py-1 px-2 mr-1" style="background-color: #FF0000;"><i class="fa fa-youtube-play" aria-hidden="true"></i> 1430k</a>
+                                <a href="" class="youtube-link text-light py-1 px-2" style="background-color: #1662FF;"><i class="fa fa-youtube-play" aria-hidden="true"></i> Watch Youtube Content</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ranking-box__ranking position-absolute">1</div>
+                </div>
+                <div class="ranking-box__content">
+                    <p>Meltem Demirors is the Chief Strategy Officer of CoinShares, a financial services firm in London and New York that focuses on alternative assets, starting with digital currencies. Demoirors also hosts a weekly podcast and the annual Crypto Springs conference in Palm Springs.</p>
+                </div>
+           </div>
+        </div>
+    </div>
+</div>
 @endsection

@@ -14,7 +14,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
         <div class="col">
             <div class="hero d-flex justify-content-center">
                 <div class="hero-img">
-                    <img src="{{ asset('img/funding_deals/funding-deals-hero.png') }}" alt="">
+                    <img src="{{ asset('img/defi_projects/defi-projects-hero.png') }}" alt="">
                 </div>
             </div>
         </div>
