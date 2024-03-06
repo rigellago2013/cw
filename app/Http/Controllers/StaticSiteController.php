@@ -662,5 +662,15 @@ class StaticSiteController extends Controller
   {
     return view('top50-defi-projects');
   }
+
+  public function top50Females()
+  {
+    return view('top50-females');
+  }
+
+  public function top20Youtubers()
+  {
+    return view('top20-youtubers');
+  }
 }
 

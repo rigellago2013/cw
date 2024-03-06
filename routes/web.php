@@ -31,6 +31,9 @@ Route::get('funding-deals', 'StaticSiteController@fundingDeals')->name('funding-
 Route::get('top-100-people', 'StaticSiteController@top100People')->name('top-100-people');
 Route::get('top-250-organisations', 'StaticSiteController@top250Organisations')->name('top-250-organisations');
 Route::get('top-50-defi-projects', 'StaticSiteController@top50DefiProjects')->name('top-50-defi-projects');
+Route::get('top-50-females', 'StaticSiteController@top50Females')->name('top-50-females');
+Route::get('top-20-youtubers', 'StaticSiteController@top20Youtubers')->name('top-20-youtubers');
+
 
 Route::get('/fetchYoutube20_ajax', 'StaticSiteController@fetchYoutube20_ajax')->name('static.fetchYoutube20_ajax'); 
 
