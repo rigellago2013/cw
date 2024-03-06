@@ -14,65 +14,42 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
     <div class="row">
         <div class="col-lg-9">
             <div class="news-breadcrumb">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active font-weight-bold" aria-current="page">Library</li>
+                <nav aria-label="breadcrumb ">
+                    <ol class="breadcrumb ">
+                        <li class="breadcrumb-item"><a href="#">News</a></li>
+                        <li class="breadcrumb-item font-weight-bold" aria-current="page"> {{ $blog->blog_title}} </li>
                     </ol>
                 </nav>
             </div>
-            <div class="news-featured-image">
-                <img src="{{ asset('img./single_news/Mask Group (3).png') }}" class="" alt="...">
+            <div class="">
+                <img class="img-fluid" src="{{ $blog->title_img }}" class="" alt="...">
             </div>
             <div class="info-box d-flex align-items-center justify-content-between py-3">
                 <div class="author d-flex align-items-center">
                     <div class="author__avatar">
-                        <img src="{{ asset('img/single_news/author.png') }}" class="rounded-circle" alt="...">                 
+                        <img style="width: 50px;" src="{{ $blog->user->profile_link }}" class="rounded-circle" alt="...">                 
                     </div>
-                    <div class="author__info ml-2">
-                        <h5 class="author__name m-0 font-weight-bold">Haider Jamal</h5>
-                        <p class="news__publish-date m-0">20th December 2023</p>
+                    <div class="author__info ml-2 mt-2">
+                        <h5 class="author__name m-0 font-weight-bold">{{ $blog->user->name }}</h5>
+                        <p class="news__publish-date m-0"> {{ $blog->published_on_formatted_date_string }} </p>
                     </div>
                 </div>
-                <div class="source">
+                <!-- <div class="source">
                     <a href="">Source: DeFi News Report</a>
-                </div>
+                </div> -->
             </div>
             <div class="news-content">
-                <h2 class="font-weight-bold">Huge Security Vulnerability Discovered By Thirdweb</h2>
+                <h2 class="font-weight-bold">{{ $blog->blog_title }}</h2>
+                <p> {!! $blog->blog !!}</p>
 
-                <p>Thirdweb, a smart contract development entity operating within the Web3 ecosystem, has detected a security vulnerability that has the potential to impact a variety of smart contracts in the Web3 domain. The company, which supplies tools for deploying multi-chain smart contracts in areas like gaming, minting, marketplaces, and wallets, caters to a user base exceeding 70,000 developers.</p>
-
-                <strong>No panic just yet</strong>
-
-                <p>On December 4th, Thirdweb revealed a vulnerability in a widely used open-source library, affecting specific pre-built smart contracts, including some developed by the company. Despite the identification of this vulnerability, the investigations have determined that there has been no exploitation of the flaw in smart contracts. This presents a limited timeframe for Web3 firms to implement preventive measures and avoid potential security breaches.</p>
-
-
-                <em>“Bitcoin consolidating for a long time. Bullish outlook with 0.618 Fib retracement at 48500 and 45K providing strong resistance. Past tests make 45K weaker. Bullish potential towards a new ATH.”</em>
-                <img src="{{ asset('img/single_news/no-panic.png') }}" class="mb-3" alt="...">
-
-                <p>Thirdweb nevertheless stressed the urgency of addressing the vulnerability promptly, highlighting the risk associated with affected pre-built contracts such as DropERC20, ERC721, ERC1155 (all versions), and AirdropERC20 if left unrectified.</p>
-
-                <p>In response to the discovery, Thirdweb issued a proactive warning to the Web3 ecosystem, urging users who deployed its contracts before November 22nd to take independent mitigation steps or use a tool provided by the company.</p>
-
-                <div class="ad-box my-3 p-4 rounded">
-                    <h3 class="text-light"><strong>>>>>> Advertise Here</strong></h3>
-                </div>
-                <strong>Time is of the essence</strong>
-                
-                <p>Thirdweb recommended that developers assist users in revoking approvals on all affected contracts using revoke.cash, as suggested by DefiLlama developer 0xngmi. This measure aimed to offer additional protection to users who might choose not to implement contract mitigation steps.</p>
-
-                <p>In light of the identified vulnerability in the open-source library, Thirdweb has taken proactive measures. The company has reached out to the maintainers of the open-source library responsible for the vulnerability and contacted other teams that may be affected. Thirdweb has also committed to enhancing its investment in security, doubling bug bounty payouts to $50,000, and implementing a more rigorous auditing process for its smart contract deployment tools.</p>
-
-                <p>Moreover, Thirdweb is providing a grant to cover contract mitigations for affected users, although the full details of the vulnerability remain undisclosed for security reasons. It is noteworthy that Thirdweb successfully raised $24 million in a Series A funding round in August 2022, with contributions via prominent entities like Haun Ventures, Shopify, Coinbase, and Polygon.</p>
             </div>
             <div class="category-box border-top border-bottom py-4 blue-border">
                 <div class="row">
                     <div class="col">
                         <div class="category-buttons d-flex">
-                            <a href="" class="cat-btn px-2 py-1">CATEGORY</a>
-                            <a href="" class="cat-btn px-2 py-1">CATEGORY</a>
-                            <a href="" class="cat-btn px-2 py-1">CATEGORY</a>
+                            @foreach($blog->categories as $category)
+                            <a class="cat-btn px-2 py-1">{{ $category->name }}</a>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -99,27 +76,28 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
                     <h2 class="cryptohome-header-text ml-2">Top News</h2>
                     <hr>
                     <div class="cw-landing-scrollable-content cw-scrollbar" id="infinite-scroll">
-                    <div class="scrolling-pagination">
-                
-                        <div class="pl-2">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="mb-3">
-                                        <img src="{{ asset('img/png/cw-icon.png') }}" alt="cw-icon"> 
+                        <div class="scrolling-pagination">
+                            @foreach($topnews as $blog)
+                            <div class="pl-2">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <img src="{{ asset('img/png/cw-icon.png') }}" alt="cw-icon"> {{ $blog->published_on_formatted }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-n-10">
+                                    <div class="col-md-12">
+                                        <div class="mb-3 ml-2 pl-3 pt-0 border-left border-info border-1">
+                                            <!-- put data here -->
+                                            <a href="{{ url('/cryptonews/'.$blog->blog_id) }}">{{ $blog->blog_title }}</a>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mt-n-10">
-                                <div class="col-md-12">
-                                    <div class="mb-3 ml-2 pl-3 pt-0 border-left border-info border-1">
-                                       <!-- put data here -->
-                                    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-               
-                      
+                            @endforeach
+                            {{ $topnews->links() }}
                         </div>
                     </div>
                     
@@ -132,142 +110,84 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
         <div class="col-lg-6">
             <h4 class="font-weight-bold pt-3 border-top">More From The News</h4>
             <div class="row mt-3">
+                @foreach($newslist as $news)
                 <div class="col-lg-6 mb-4">
                     <div class="card border-0 rounded-lg px-2 gray-bg">
-                        <img src="https://www.shutterstock.com/image-vector/cryptocurrency-financial-items-altcoins-collection-600nw-2025103145.jpg" class="card-img-top mb-4 rounded" alt="...">
+                        <img src="{{ $news->title_img }}" class="card-img-top mb-4 rounded" alt="...">
                         <div class="card-body p-2">
-                            <a href="" class="cat-btn px-2 py-1">CATEGORY</a>
-                            <h5 class="card-title mt-3 mb-2 font-weight-bold">Jack Dorsey Is Over Performance Reviews And Names New CTO</h5>
-                            <p class="date-time d-flex align-items-center justify-content-between"><span>13 hours ago <span class="ml-4"> Sep 4, 2023</span></span><a href="#" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
+                            @foreach ($news->categories->where('name', 'News') as $category)
+                                <a href="" class="cat-btn px-2 py-1">{{ $category->name }}</a>
+                            @endforeach
+                            <h5 class="card-title mt-3 mb-2 font-weight-bold"><a class="text-dark" href="{{ url('/cryptonews/'.$news->blog_id) }}">{{ $news->blog_title }}</a></h5>
+                            <p class="date-time d-flex align-items-center justify-content-between"><span>{{ $news->published_on_formatted }} <span class="ml-4">{{ $news->published_on_formatted_date_string }}</span></span><a href="{{ url('/cryptonews/'.$news->blog_id) }}" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card border-0 rounded-lg px-2 gray-bg">
-                        <img src="https://www.shutterstock.com/image-vector/cryptocurrency-financial-items-altcoins-collection-600nw-2025103145.jpg" class="card-img-top mb-4 rounded" alt="...">
-                        <div class="card-body p-2">
-                            <a href="" class="cat-btn px-2 py-1">CATEGORY</a>
-                            <h5 class="card-title mt-3 mb-2 font-weight-bold">Jack Dorsey Is Over Performance Reviews And Names New CTO</h5>
-                            <p class="date-time d-flex align-items-center justify-content-between"><span>13 hours ago <span class="ml-4"> Sep 4, 2023</span></span><a href="#" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card border-0 rounded-lg px-2 gray-bg">
-                        <img src="https://www.shutterstock.com/image-vector/cryptocurrency-financial-items-altcoins-collection-600nw-2025103145.jpg" class="card-img-top mb-4 rounded" alt="...">
-                        <div class="card-body p-2">
-                            <a href="" class="cat-btn px-2 py-1">CATEGORY</a>
-                            <h5 class="card-title mt-3 mb-2 font-weight-bold">Jack Dorsey Is Over Performance Reviews And Names New CTO</h5>
-                            <p class="date-time d-flex align-items-center justify-content-between"><span>13 hours ago <span class="ml-4"> Sep 4, 2023</span></span><a href="#" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card border-0 rounded-lg px-2 gray-bg">
-                        <img src="https://www.shutterstock.com/image-vector/cryptocurrency-financial-items-altcoins-collection-600nw-2025103145.jpg" class="card-img-top mb-4 rounded" alt="...">
-                        <div class="card-body p-2">
-                            <a href="" class="cat-btn px-2 py-1">CATEGORY</a>
-                            <h5 class="card-title mt-3 mb-2 font-weight-bold">Jack Dorsey Is Over Performance Reviews And Names New CTO</h5>
-                            <p class="date-time d-flex align-items-center justify-content-between"><span>13 hours ago <span class="ml-4"> Sep 4, 2023</span></span><a href="#" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card border-0 rounded-lg px-2 gray-bg">
-                        <img src="https://www.shutterstock.com/image-vector/cryptocurrency-financial-items-altcoins-collection-600nw-2025103145.jpg" class="card-img-top mb-4 rounded" alt="...">
-                        <div class="card-body p-2">
-                            <a href="" class="cat-btn px-2 py-1">CATEGORY</a>
-                            <h5 class="card-title mt-3 mb-2 font-weight-bold">Jack Dorsey Is Over Performance Reviews And Names New CTO</h5>
-                            <p class="date-time d-flex align-items-center justify-content-between"><span>13 hours ago <span class="ml-4"> Sep 4, 2023</span></span><a href="#" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card border-0 rounded-lg px-2 gray-bg">
-                        <img src="https://www.shutterstock.com/image-vector/cryptocurrency-financial-items-altcoins-collection-600nw-2025103145.jpg" class="card-img-top mb-4 rounded" alt="...">
-                        <div class="card-body p-2">
-                            <a href="" class="cat-btn px-2 py-1">CATEGORY</a>
-                            <h5 class="card-title mt-3 mb-2 font-weight-bold">Jack Dorsey Is Over Performance Reviews And Names New CTO</h5>
-                            <p class="date-time d-flex align-items-center justify-content-between"><span>13 hours ago <span class="ml-4"> Sep 4, 2023</span></span><a href="#" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
         <div class="col-lg-6">
             <h4 class="font-weight-bold pt-3 border-top">Press Releases</h4>
             <div class="press-releases mt-3">
+            @foreach($press_releases as $news)
                 <div class="card mb-4 border-0 ">
                     <div class="d-flex align-items-start">
                         <div class="img-col">
-                            <div class="news-img">
-                                <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
+                            <div class="press-releases-img">
+                                <img src="{{ $news->title_img }}" class="card-img" alt="...">
                             </div>
                         </div>
                         <div class="content-col">
                             <div class="card-body pt-0 pb-0">
-                                <h5 class="card-title font-weight-bold" style="color: #1663FF;">DeFi</h5>
-                                <h5 class="card-title font-weight-bold">Pink stairs leading to the sky</h5>
-                                <p class="card-text"><small class="text-muted">13 hours ago <span class="pl-4"> Sep 4, 2023</span></small></p>
-                                <p class="card-text">In my opinion, Ui/Ux design is the foundation of a product, its face and soul. You can create an infinitely high-quality heart, and organize the simulation of breathing, but we <span class="font-weight-bold" style="color: #1663FF;">...read more</span></p>
+                                <h5 class="card-title font-weight-bold" style="color: #1663FF;">{{ $news->keywords }}</h5>
+                                <h5 class="card-title mt-3 mb-2 font-weight-bold"><a class="text-dark" href="{{ url('/cryptonews/'.$news->blog_id) }}">{{ $news->blog_title }}</a></h5>
+                                <p class="date-time d-flex align-items-center justify-content-between"><span>{{ $news->published_on_formatted }} <span class="ml-4">{{ $news->published_on_formatted_date_string }}</span></span><a href="{{ url('/cryptonews/'.$news->blog_id) }}" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
+                                <p class="card-text"> {{ Str::limit(strip_tags($news->blog), 70) }} <span class="font-weight-bold" style="color: #1663FF;"> <a href="{{ url('/cryptonews/'.$news->blog_id) }}">Read more</a> </span></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card mb-4 border-0 ">
-                    <div class="d-flex align-items-start">
-                        <div class="img-col">
-                            <div class="news-img">
-                                <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
-                            </div>
-                        </div>
-                        <div class="content-col">
-                            <div class="card-body pt-0 pb-0">
-                                <h5 class="card-title font-weight-bold" style="color: #1663FF;">DeFi</h5>
-                                <h5 class="card-title font-weight-bold">Pink stairs leading to the sky</h5>
-                                <p class="card-text"><small class="text-muted">13 hours ago <span class="pl-4"> Sep 4, 2023</span></small></p>
-                                <p class="card-text">In my opinion, Ui/Ux design is the foundation of a product, its face and soul. You can create an infinitely high-quality heart, and organize the simulation of breathing, but we <span class="font-weight-bold" style="color: #1663FF;">...read more</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-4 border-0 ">
-                    <div class="d-flex align-items-start">
-                        <div class="img-col">
-                            <div class="news-img">
-                                <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
-                            </div>
-                        </div>
-                        <div class="content-col">
-                            <div class="card-body pt-0 pb-0">
-                                <h5 class="card-title font-weight-bold" style="color: #1663FF;">DeFi</h5>
-                                <h5 class="card-title font-weight-bold">Pink stairs leading to the sky</h5>
-                                <p class="card-text"><small class="text-muted">13 hours ago <span class="pl-4"> Sep 4, 2023</span></small></p>
-                                <p class="card-text">In my opinion, Ui/Ux design is the foundation of a product, its face and soul. You can create an infinitely high-quality heart, and organize the simulation of breathing, but we <span class="font-weight-bold" style="color: #1663FF;">...read more</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-4 border-0 ">
-                    <div class="d-flex align-items-start">
-                        <div class="img-col">
-                            <div class="news-img">
-                                <img src="{{ asset('img/crypto_news/Frame 5.png') }}" class="card-img" alt="...">
-                            </div>
-                        </div>
-                        <div class="content-col">
-                            <div class="card-body pt-0 pb-0">
-                                <h5 class="card-title font-weight-bold" style="color: #1663FF;">DeFi</h5>
-                                <h5 class="card-title font-weight-bold">Pink stairs leading to the sky</h5>
-                                <p class="card-text"><small class="text-muted">13 hours ago <span class="pl-4"> Sep 4, 2023</span></small></p>
-                                <p class="card-text">In my opinion, Ui/Ux design is the foundation of a product, its face and soul. You can create an infinitely high-quality heart, and organize the simulation of breathing, but we <span class="font-weight-bold" style="color: #1663FF;">...read more</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            @endforeach
             </div>
         </div>
     </div>
 </div>
+<div class="bg-blue py-6 text-center align-items-center text-white">
+    <h1 class="font-weight-bold news-letter-font">Join Our Newsletter</h1>
+    <p>Get the latest trends and updates on our crypto community.</p>
+    <form action="#" method="post" class="mb-4">
+        <div class="d-flex justify-content-center">
+            <div>
+                <input type="email" name="email" class="form-control" placeholder="Enter Email Address">
+            </div>
+            <div class="ml-2">
+                <button type="submit" class="btn btn-subscribe">Subscribe Now</button>
+                <div class="pointer-icon">
+                    <svg width="34" height="45" viewBox="0 0 34 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32 18.1941V16.1941H30V14.1941H26V12.1941H20V10.1941H16V2.19409H14V0.194092H10V2.19409H8V20.1941H6V18.1941H0V26.1941H2V30.1941H4V34.1941H6V38.1941H8V44.1941H30V36.1941H32V30.1941H30V36.1941H28V42.1941H10V38.1941H8V34.1941H6V30.1941H4V26.1941H2V20.1941H6V22.1941H8V28.1941H10V2.19409H14V20.1941H16V12.1941H20V20.1941H22V14.1941H26V22.1941H28V16.1941H30V18.1941H32V30.1941H34V18.1941H32Z" fill="white" />
+                    </svg>
+                </div>
 
+            </div>
+        </div>
+    </form>
+</div>
 @endsection
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
+<script>
+    jQuery(document).ready(function($) {
+        // Your jScroll initialization code here
+        $('ul.pagination').hide();
+        $('#infinite-scroll').jscroll({
+            debug: true,
+            autoTrigger: true,
+            padding: 0,
+            nextSelector: '.pagination li.active + li a',
+            contentSelector: 'div.scrolling-pagination',
+            callback: function() {
+                $('ul.pagination').hide();
+            }
+        });
+    });
+</script>

@@ -1221,7 +1221,7 @@
     }
 
     .news-img {
-        min-width: 195px;
+        width: 310px;
     }
 
     .news-img img {
@@ -1362,7 +1362,7 @@
     }
 
     .news-img img {
-        max-width: 100%;
+        max-width: 100% !important;
     }
      .blue-border {
         border-color: #5095F14D;
@@ -1590,3 +1590,29 @@
         margin: 0 auto 1em;
     }
 
+    .top-news-img {
+        width: 310px;
+    }
+
+    .top-news-img img {
+        max-width: 100% !important;
+    }
+
+    .top-news-scrollable-content {
+        height: 700px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+
+    .press-releases-img {
+        width: 310px;
+    }
+
+    .press-releases-img img {
+        max-width: 100% !important;
+    }
+
+    
+
+    

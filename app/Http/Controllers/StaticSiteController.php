@@ -578,15 +578,14 @@ class StaticSiteController extends Controller
     if($desk){
         $news_highlight =  DB::table('blog')->where('status',1)->orderBy('published_on', 'DESC')->first();
         $funding_deals = DB::table('tblfundingdeals')->orderBy('rank', 'desc')->paginate(15);
-        $newsletters = DB::table('tblnewsletter')->orderBy('new_newsletter_date', 'DESC')->paginate(50, ['*'], 'page', $page);
-        $domains = DB::table('blog')->join('users', 'blog.blog_user', '=', 'users.id')->where('status', 1)->orderBy('published_on', 'desc')->limit(4)->get();
+        $blogs = Blog::with('categories')->orderBy('published_on', 'DESC')->paginate(50, ['*'], 'page', $page);
+        $latest_news = DB::table('blog')->join('users', 'blog.blog_user', '=', 'users.id')->where('status', 1)->orderBy('published_on', 'desc')->limit(4)->get();
         $cryptoVideos = DB::table('crypto_feeds')->orderBy('upload_date', 'DESC')->orderBy('sr_no', 'desc')->limit(4)->get();
-
         $press_releases = Blog::whereHas('categories', function ($query) {
           $query->where('name', 'Press Release');
         })->orderBy('published_on', 'DESC')->get();
 
-        return view('cryptohome',["blogs"=>$domains,"funding_deals"=>$funding_deals,"cryptovideos"=>$cryptoVideos,"newsletters"=>$newsletters, 'newshighlight'=>$news_highlight, 'pressreleases' => $press_releases]);
+        return view('cryptohome',["latest_news"=>$latest_news,"funding_deals"=>$funding_deals,"cryptovideos"=>$cryptoVideos,"blogs"=>$blogs, 'newshighlight'=>$news_highlight, 'pressreleases' => $press_releases]);
     }else{
         return view('mobile_view');
     }
@@ -594,7 +593,21 @@ class StaticSiteController extends Controller
 
   public function cryptoNews()
   {
-    return view('cryptonews');
+    //Select top 5
+    $top5 = Blog::with('categories')->where('status', 1)->orderBy('published_on', 'DESC')->limit(5)->get();
+    
+    //select top 4 disctinct categories
+    $top4 =  Blog::with('categories')
+    ->where('status', 1)
+    ->orderBy('published_on', 'DESC')
+    ->distinct()
+    ->take(4)
+    ->get();
+
+    //pagination mix categories order by date DESC
+    $blogs = Blog::with('categories')->orderBy('published_on', 'desc')->paginate(15);
+ 
+    return view('cryptonews', ['top5' => $top5, 'top4' => $top4, 'blogs' => $blogs]);
   }
 
   public function cryptoYoutube()
@@ -617,9 +630,22 @@ class StaticSiteController extends Controller
     return view('funding-deals');
   }
 
-  public function getCryptoNews($id)
+  public function getCryptoNews($id, Request $request)
   {
-    return view('get-crypto-news');
+    $page = $request->page;
+    $blog = Blog::with('categories')->findOrFail($id);
+    $press_releases = Blog::whereHas('categories', function ($query) {
+      $query->where('name', 'Press Release');
+    })->orderBy('published_on', 'DESC')->take(4)->get();
+    $news = Blog::whereHas('categories', function ($query) {
+      $query->where('name', 'News');
+    })
+    ->orderBy('published_on', 'DESC')
+    ->take(6)
+    ->get();
+    $topnews = Blog::with('categories')->orderBy('published_on', 'DESC')->paginate(50, ['*'], 'page', $page);
+
+    return view('get-crypto-news', ['blog' => $blog, 'press_releases' => $press_releases, 'newslist' => $news,  'topnews' => $topnews]);
   }
 
   public function top100People()
