@@ -1613,6 +1613,20 @@
         max-width: 100% !important;
     }
 
-    
+    /* Crypto Rates Nav */
+    .crypto-rates__value.down {
+        background-color: #F9AAAA99;
+    }
 
+    .crypto-rates__value.down i {
+        color: #CB4747;
+    }
     
+    .crypto-rates__value.up {
+        background-color: #B1EF8099;
+    }
+
+    .crypto-rates__value.up i {
+        color: #3F7C0E;
+        transform: rotate(180deg);
+    }
