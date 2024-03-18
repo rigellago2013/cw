@@ -1619,6 +1619,11 @@
     }
 
     /* Crypto Rates Nav */
+    
+    .crypto-rates__boxes {
+        gap: 10px;
+    }
+
     .crypto-rates__value.down {
         background-color: #F9AAAA99;
     }
@@ -1650,4 +1655,13 @@
     .fundingdeal-logo {
         width: 40px;
         height: 40px;
+    }
+
+
+    /* Tablet - 1024 */
+
+    @media screen and (max-width: 1024px) {
+        .crypto-rates {
+            display: none;
+        }
     }
