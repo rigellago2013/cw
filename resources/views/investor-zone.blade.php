@@ -152,6 +152,38 @@ investors & communities in crypto</h2>
             </div>
         </div>
     </div>
+
+    <div class="row mt-5 mb-5">
+        <div class="col-lg-12">
+            <div class="cta-box position-relative p-4 rounded-lg d-flex align-items-center">
+                <div class="cta-box__info">
+                    <h2 class="font-weight-bold">Instant Network Expansion: Thousands of Industry Contacts, Just a Click Away.</h2>
+                    <p>Get our entire database of over 7,500 hand-researched companies, investors & communities in crypto!</p>
+                    <div class="cta-box__info-inner d-flex justify-content-between">
+                        <div class="pricing">
+                            <h4 class="actual-price align-items-center d-flex"><strong class="mr-2">Actual Price</strong> <s style="color: #828282;">$249</s></h4>
+                            <h3 class="offer-price mb-4 align-items-center d-flex font-weight-bold"><span class="mr-2" style="#3297F8">Offer Price</span> <span style="color: #1662FF; font-size: 48px;">$149</span></h3>
+                            <div class="pricing__buttons d-flex">
+                                <a href="" class="blue-outline-btn">Learn More</a>
+                                <a href="" class="blue-outline-light-bg-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <div class="features">
+                            <h4 class="font-weight-bold">Get Full Access To These Databases</h4>
+                            <ul class="m-0 p-0" style="columns: 2; list-style: none;">
+                                <li><i class="fa fa-check" aria-hidden="true"></i> Crypto Companies</li>
+                                <li><i class="fa fa-check" aria-hidden="true"></i> Crypto Investors</li>
+                                <li><i class="fa fa-check" aria-hidden="true"></i> Crypto Media Outlets</li>
+                                <li><i class="fa fa-check" aria-hidden="true"></i> Crypto Exchanges</li>
+                                <li><i class="fa fa-check" aria-hidden="true"></i> Crypto Journalists</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <img class="acc-img position-absolute" style="z-index: 3;" src="{{ asset('img/svg/computer.png') }}">
+            </div>
+        </div>
+    </div>
 </div>
 
 @endsection

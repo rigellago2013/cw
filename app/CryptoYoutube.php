@@ -10,6 +10,7 @@ class CryptoYoutube extends Model
     protected $primaryKey = 'sr_no';
     protected $table = 'crypto_feeds';
     protected $dates = ['upload_date']; 
+    protected $appends = ['upload_date_format'];
 
     private function formatDate($value)
     {
@@ -35,4 +36,8 @@ class CryptoYoutube extends Model
         return $this->formatDate($this->upload_date);
     }
 
+    public function getUploadDateFormatAttribute()
+    {
+        return $this->formatDate($this->upload_date);
+    }
 }

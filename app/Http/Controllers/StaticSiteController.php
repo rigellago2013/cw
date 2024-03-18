@@ -691,7 +691,7 @@ class StaticSiteController extends Controller
 
   public function top20Youtubers()
   {
-    $top20 = Crypto20Youtubers::orderBy('position')->get();
+    $top20 = Crypto20Youtubers::take(20)->orderBy('position')->get();
     return view('top20-youtubers',['top20' => $top20]);
   }
 }

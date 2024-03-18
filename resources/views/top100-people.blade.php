@@ -24,7 +24,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
             <div class="newsletter-form d-flex flex-column">
                 <h2 class="text-center font-weight-bold">The 100 Most Influential People In Crypto</h2>
                 <p class="text-center">- 2024 Edition -</p>
-                
+
             </div>
         </div>
     </div>
@@ -52,10 +52,24 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
         </div>
     </div>
     <div class="row py-5">
-
-    @foreach($top100 as $person)
+        @php
+        $counter = 0;
+        @endphp
+        @foreach($top100 as $index => $person)
+        @if ($counter % 20 == 0 && $counter != 0)
+        <div style="width: 98.9%;" class="mx-auto">
+            <div class="col-lg-12 bg-blue text-white rounded d-flex justify-content-between align-items-center mt-2 mb-4 mx-auto">
+                <div>
+                    <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
+                </div>
+                <div class="mt-2 ml-3">
+                    <h1> >>>>> Advertise Here </h1>
+                </div>
+            </div>
+        </div>
+        @endif
         <div class="col-lg-6 mt-3">
-           <div class="ranking-box rounded-lg box-shadow-gray p-3 position-relative">
+            <div class="ranking-box rounded-lg box-shadow-gray p-3 position-relative">
                 <div class="ranking-box__header d-flex justify-content-between mb-3">
                     <div class="ranking-box__info d-flex align-items-center">
                         <div class="ranking-box__image mr-3">
@@ -71,8 +85,11 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
                 <div class="ranking-box__content">
                     <p>{{ $person->description }}</p>
                 </div>
-           </div>
+            </div>
         </div>
+        @php
+        $counter++;
+        @endphp
         @endforeach
     </div>
 </div>

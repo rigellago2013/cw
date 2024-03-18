@@ -39,7 +39,22 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
         </div>
     </div>
     <div class="row py-5">
-        @foreach($top50 as $project)
+        @php
+        $counter = 0;
+        @endphp
+        @foreach($top50 as $index => $project)
+        @if($index == 20 || $index == 40)
+        <div style="width: 98.9%;" class="mx-auto">
+            <div class="col-lg-12 bg-blue text-white rounded d-flex justify-content-between align-items-center mt-2 mb-4 mx-auto">
+                <div>
+                    <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
+                </div>
+                <div class="mt-2 ml-3">
+                    <h1> >>>>> Advertise Here </h1>
+                </div>
+            </div>
+        </div>
+        @endif
         <div class="col-lg-6 mt-3">
            <div class="ranking-box rounded-lg box-shadow-gray p-3 position-relative">
                 <div class="ranking-box__header d-flex justify-content-between mb-3">
@@ -59,6 +74,9 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
                 </div>
            </div>
         </div>
+        @php
+        $counter++;
+        @endphp
         @endforeach
     </div>
 </div>

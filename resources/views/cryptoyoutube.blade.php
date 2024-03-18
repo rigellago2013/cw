@@ -138,7 +138,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 html += '</div>';
                 html += '</div>';
                 html += '<h5 class="card-title mt-3 mb-2 font-weight-bold">' + video.title + '</h5>';
-                html += '<p class="views-date d-flex align-items-center justify-content-between">' + video.upload_date_formatted + '<a href="#" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>';
+                html += '<p class="views-date d-flex align-items-center justify-content-between">' + video.upload_date_format + '<a href="#" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>';
                 html += '</div>';
                 html += '</div>';
                 html += '</div>';

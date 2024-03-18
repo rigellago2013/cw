@@ -56,14 +56,29 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
     $counter = 0;
     @endphp
     @foreach( $top250 as $index => $organization)
+
+    
+    @if(($index + 1) % 32 == 0)
+    <div style="width: 98.9%;" class="mx-auto">
+    <div class="col-lg-12 bg-blue text-white rounded d-flex justify-content-between align-items-center mt-2 mb-4 mx-auto">
+            <div>
+                <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
+            </div>
+            <div class="mt-2 ml-3">
+                <h1> >>>>> Advertise Here </h1>
+            </div>
+        </div>
+    </div>
+   
+    @endif
         @if($index == 3) <!-- Checking if it's the 3rd index -->
-            <div class="col-lg-3 mb-4">
+            <div class="col-lg-3 mb-2">
                 <div class="box-shadow-gray p-4" style="border-radius: 8px; height: 100%;">
                     <p class="m-0">Launched in 2012, Coinbase is one of the most popular crypto exchange and custody providers in the world while simultaneously providing merchant payment solutions to enable crypto transactions. As of now, users can buy and trade 14 cryptocurrencies with both crypto and FIAT. Merchants can also use Coinbase to accept payment for their services.</p>
                 </div>
             </div>
         @endif
-        <div class="col-lg-3 mb-4">
+        <div class="col-lg-3 mb-2">
             <div class="company-ranking-box box-shadow-gray pt-4 pb-0 d-flex flex-column justify-content-between" style="border-radius: 8px; height: 100%;">
                 <div class="company-ranking-box__image ">
                     <img src="{{ $organization->logo }}" alt="">
