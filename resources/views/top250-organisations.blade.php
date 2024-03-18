@@ -52,67 +52,31 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
         </div>
     </div>
     <div class="row py-5 align-items-stretch">
+    @php
+    $counter = 0;
+    @endphp
+    @foreach( $top250 as $index => $organization)
+        @if($index == 3) <!-- Checking if it's the 3rd index -->
+            <div class="col-lg-3 mb-4">
+                <div class="box-shadow-gray p-4" style="border-radius: 8px; height: 100%;">
+                    <p class="m-0">Launched in 2012, Coinbase is one of the most popular crypto exchange and custody providers in the world while simultaneously providing merchant payment solutions to enable crypto transactions. As of now, users can buy and trade 14 cryptocurrencies with both crypto and FIAT. Merchants can also use Coinbase to accept payment for their services.</p>
+                </div>
+            </div>
+        @endif
         <div class="col-lg-3 mb-4">
             <div class="company-ranking-box box-shadow-gray pt-4 pb-0 d-flex flex-column justify-content-between" style="border-radius: 8px; height: 100%;">
                 <div class="company-ranking-box__image ">
-                    <img src="{{ asset('img/company_ranking/eth-logo.png') }}" alt="">
+                    <img src="{{ $organization->logo }}" alt="">
                 </div>
-                <a href="" class="company-ranking-box__title d-flex text-center text-light font-weight-bold p-2 justify-content-center" style="border-radius: 8px; background-color: #1663FF; margin-top: auto;">Ethereum</a>
+                <a href="{{ $organization->url }}" class="company-ranking-box__title d-flex text-center text-light font-weight-bold p-2 justify-content-center" style="border-radius: 8px; background-color: #1663FF; margin-top: auto;">{{$organization->company_name }}</a>
             </div>
         </div>
-        <div class="col-lg-3 mb-4">
-            <div class="company-ranking-box box-shadow-gray pt-4 pb-0 d-flex flex-column justify-content-between" style="border-radius: 8px; height: 100%;">
-                <div class="company-ranking-box__image ">
-                    <img src="{{ asset('img/company_ranking/grayscale-logo.png') }}" alt="">
-                </div>
-                <a href="" class="company-ranking-box__title d-flex text-center text-light font-weight-bold p-2 justify-content-center" style="border-radius: 8px; background-color: #1663FF; margin-top: auto;">Grayscale</a>
-            </div>
-        </div>
-        <div class="col-lg-3 mb-4">
-            <div class="company-ranking-box box-shadow-gray pt-4 pb-0 d-flex flex-column justify-content-between" style="border-radius: 8px; height: 100%;">
-                <div class="company-ranking-box__image ">
-                    <img src="{{ asset('img/company_ranking/chainlink-logo.png') }}" alt="">
-                </div>
-                <a href="" class="company-ranking-box__title d-flex text-center text-light font-weight-bold p-2 justify-content-center" style="border-radius: 8px; background-color: #1663FF; margin-top: auto;">Chainlink</a>
-            </div>
-        </div>
-        <div class="col-lg-3 mb-4">
-            <div class="box-shadow-gray p-4" style="border-radius: 8px; height: 100%;">
-                <p class="m-0">Launched in 2012, Coinbase is one of the most popular crypto exchange and custody providers in the world while simultaneously providing merchant payment solutions to enable crypto transactions. As of now, users can buy and trade 14 cryptocurrencies with both crypto and FIAT. Merchants can also use Coinbase to accept payment for their services.</p>
-            </div>
-        </div>
-        <div class="col-lg-3 mb-4">
-            <div class="company-ranking-box box-shadow-gray pt-4 pb-0 d-flex flex-column justify-content-between" style="border-radius: 8px; height: 100%;">
-                <div class="company-ranking-box__image ">
-                    <img src="{{ asset('img/company_ranking/polkadot-logo.png') }}" alt="">
-                </div>
-                <a href="" class="company-ranking-box__title d-flex text-center text-light font-weight-bold p-2 justify-content-center" style="border-radius: 8px; background-color: #1663FF; margin-top: auto;">Polkadot</a>
-            </div>
-        </div>
-        <div class="col-lg-3 mb-4">
-            <div class="company-ranking-box box-shadow-gray pt-4 pb-0 d-flex flex-column justify-content-between" style="border-radius: 8px; height: 100%;">
-                <div class="company-ranking-box__image ">
-                    <img src="{{ asset('img/company_ranking/aave-logo.png') }}" alt="">
-                </div>
-                <a href="" class="company-ranking-box__title d-flex text-center text-light font-weight-bold p-2 justify-content-center" style="border-radius: 8px; background-color: #1663FF; margin-top: auto;">Aave</a>
-            </div>
-        </div>
-        <div class="col-lg-3 mb-4">
-            <div class="company-ranking-box box-shadow-gray pt-4 pb-0 d-flex flex-column justify-content-between" style="border-radius: 8px; height: 100%;">
-                <div class="company-ranking-box__image ">
-                    <img src="{{ asset('img/company_ranking/uniswap-logo.png') }}" alt="">
-                </div>
-                <a href="" class="company-ranking-box__title d-flex text-center text-light font-weight-bold p-2 justify-content-center" style="border-radius: 8px; background-color: #1663FF; margin-top: auto;">Uniswap</a>
-            </div>
-        </div>
-        <div class="col-lg-3 mb-4">
-            <div class="company-ranking-box box-shadow-gray pt-4 pb-0 d-flex flex-column justify-content-between" style="border-radius: 8px; height: 100%;">
-                <div class="company-ranking-box__image ">
-                    <img src="{{ asset('img/company_ranking/gemini-logo.png') }}" alt="">
-                </div>
-                <a href="" class="company-ranking-box__title d-flex d-flex text-center text-light font-weight-bold p-2 justify-content-center" style="border-radius: 8px; background-color: #1663FF; margin-top: auto;">Gemini</a>
-            </div>
-        </div>
+
+        @php
+            $counter++;
+        @endphp
+    @endforeach
+
     </div>
 </div>
 @endsection

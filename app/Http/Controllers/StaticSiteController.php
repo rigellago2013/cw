@@ -3,8 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Blog;
+use App\Crypto100People;
+use App\CryptoYoutube;
+use App\FundingDeals;
 use Illuminate\Http\Request;
 use DB;
+use App\Crypto250Organizations;
+use App\Crypto50DefiProjects;
+use App\Crypto50Women;
+use App\Crypto20Youtubers;
 
 class StaticSiteController extends Controller
 {
@@ -610,10 +617,18 @@ class StaticSiteController extends Controller
     return view('cryptonews', ['top5' => $top5, 'top4' => $top4, 'blogs' => $blogs]);
   }
 
-  public function cryptoYoutube()
+  public function cryptoYoutube(Request $request)
   {
-    return view('cryptoyoutube');
+      if ($request->ajax()) {
+          $page = $request->page;
+          $cryptoyoutubes = CryptoYoutube::orderBy('upload_date', 'DESC')->paginate(4, ['*'], 'page', $page);
+          return response()->json($cryptoyoutubes);
+      }
+  
+      $top2 = CryptoYoutube::orderBy('upload_date', 'DESC')->take(2)->get();
+      return view('cryptoyoutube', ['top2' => $top2]);
   }
+  
 
   public function investorZone()
   {
@@ -625,9 +640,11 @@ class StaticSiteController extends Controller
     return view('news-letter');
   }
 
-  public function fundingDeals()
+  public function fundingDeals(Request $request)
   {
-    return view('funding-deals');
+    $page = $request->page;
+    $fundingdeals = FundingDeals::orderBy('rank','ASC')->paginate(25, ['*'], 'page', $page);
+    return view('funding-deals',['fundingdeals'=> $fundingdeals]);
   }
 
   public function getCryptoNews($id, Request $request)
@@ -650,27 +667,32 @@ class StaticSiteController extends Controller
 
   public function top100People()
   {
-    return view('top100-people');
+    $top100 = Crypto100People::orderBy('position')->get();
+    return view('top100-people', ['top100' => $top100]);
   }
   
   public function top250Organisations( )
   {
-    return view('top250-organisations');
+    $top250 = Crypto250Organizations::orderBy('position')->get();
+    return view('top250-organisations', ['top250' => $top250]);
   }
 
   public function top50DefiProjects()
   {
-    return view('top50-defi-projects');
+    $top50 = Crypto50DefiProjects::orderBy('position')->get();
+    return view('top50-defi-projects', ['top50' => $top50]);
   }
 
   public function top50Females()
   {
-    return view('top50-females');
+    $top50 = Crypto50Women::orderBy('position')->get();
+    return view('top50-females', ['top50' => $top50]);
   }
 
   public function top20Youtubers()
   {
-    return view('top20-youtubers');
+    $top20 = Crypto20Youtubers::orderBy('position')->get();
+    return view('top20-youtubers',['top20' => $top20]);
   }
 }
 

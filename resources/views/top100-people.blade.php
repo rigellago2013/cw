@@ -52,25 +52,28 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
         </div>
     </div>
     <div class="row py-5">
-        <div class="col-lg-6">
+
+    @foreach($top100 as $person)
+        <div class="col-lg-6 mt-3">
            <div class="ranking-box rounded-lg box-shadow-gray p-3 position-relative">
                 <div class="ranking-box__header d-flex justify-content-between mb-3">
                     <div class="ranking-box__info d-flex align-items-center">
                         <div class="ranking-box__image mr-3">
-                            <img src="{{ asset('img/influencial_people/changpeng.png') }}" alt="">
+                            <img src="{{ $person->head_url }}" alt="">
                         </div>
                         <div class="ranking-box__title">
-                            <h5 class="m-0" style="color: #1662FF; font-weight: 500;">Changpeng Zhao</h5>
-                            <a href="">@cz_binance</a>
+                            <h5 class="m-0" style="color: #1662FF; font-weight: 500;">{{ $person->name }}</h5>
+                            <a href="">{{ $person->twitter_handle }}</a>
                         </div>
                     </div>
-                    <div class="ranking-box__ranking position-absolute">1</div>
+                    <div class="ranking-box__ranking position-absolute">{{ $person->position }}</div>
                 </div>
                 <div class="ranking-box__content">
-                    <p>Changpeng Zhao is CEO of Binance, the world’s largest cryptocurrency exchange by volume, launched in 2015. He was number three on the Forbes 2018 list of The Richest People in Cryptocurrency. Prior to this, he was Head of Development at Blockchain and Chief Technology Officer of OK Coin. He also developed trading software at Bloomberg and the Tokyo Stock Exchange.</p>
+                    <p>{{ $person->description }}</p>
                 </div>
            </div>
         </div>
+        @endforeach
     </div>
 </div>
 @endsection

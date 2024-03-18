@@ -39,25 +39,27 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
         </div>
     </div>
     <div class="row py-5">
-        <div class="col-lg-6">
+        @foreach($top50 as $woman)
+        <div class="col-lg-6 mt-3">
            <div class="ranking-box rounded-lg box-shadow-gray p-3 position-relative">
                 <div class="ranking-box__header d-flex justify-content-between mb-3">
                     <div class="ranking-box__info d-flex align-items-center">
                         <div class="ranking-box__image mr-3">
-                            <img src="{{ asset('img/top_females/meltem.png') }}" alt="">
+                            <img src="{{ $woman->head_url }}" alt="">
                         </div>
                         <div class="ranking-box__title">
-                            <h5 class="m-0" style="color: #1662FF; font-weight: 500;">Meltem Demirors</h5>
-                            <a href="">@Melt_Dem</a>
+                            <h5 class="m-0" style="color: #1662FF; font-weight: 500;">{{ $woman->name }}</h5>
+                            <a href="">{{ $woman->twitter_handle }}</a>
                         </div>
                     </div>
-                    <div class="ranking-box__ranking position-absolute">1</div>
+                    <div class="ranking-box__ranking position-absolute">{{ $woman->position }}</div>
                 </div>
                 <div class="ranking-box__content">
-                    <p>Meltem Demirors is the Chief Strategy Officer of CoinShares, a financial services firm in London and New York that focuses on alternative assets, starting with digital currencies. Demoirors also hosts a weekly podcast and the annual Crypto Springs conference in Palm Springs.</p>
+                    <p>{{ $woman->description }}</p>
                 </div>
            </div>
         </div>
+        @endforeach
     </div>
 </div>
 @endsection

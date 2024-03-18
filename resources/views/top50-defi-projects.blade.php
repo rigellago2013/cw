@@ -39,25 +39,27 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
         </div>
     </div>
     <div class="row py-5">
-        <div class="col-lg-6">
+        @foreach($top50 as $project)
+        <div class="col-lg-6 mt-3">
            <div class="ranking-box rounded-lg box-shadow-gray p-3 position-relative">
                 <div class="ranking-box__header d-flex justify-content-between mb-3">
                     <div class="ranking-box__info d-flex align-items-center">
                         <div class="ranking-box__image mr-3">
-                            <img src="{{ asset('img/defi_projects/ethereum.png') }}" alt="">
+                            <img src="{{ $project->head_url }}" alt="">
                         </div>
                         <div class="ranking-box__title">
-                            <h5 class="m-0" style="color: #1662FF; font-weight: 500;">Ethereum</h5>
-                            <a href="">@ethereum</a>
+                            <h5 class="m-0" style="color: #1662FF; font-weight: 500;">{{ $project->company_name }}</h5>
+                            <a href="">{{ $project->twitter_handle }}</a>
                         </div>
                     </div>
-                    <div class="ranking-box__ranking position-absolute">1</div>
+                    <div class="ranking-box__ranking position-absolute">{{ $project->position }}</div>
                 </div>
                 <div class="ranking-box__content">
-                    <p>Ethereum is an open-source and global platform for decentralized applications. The platform is open to everyone. It is open access to data-friendly services and digital money for everyone. What’s best is no company or government has control over Ethereum. It is completely private as you don’t have to provide your personal details.</p>
+                    <p>{{$project->description }}</p>
                 </div>
            </div>
         </div>
+        @endforeach
     </div>
 </div>
 @endsection

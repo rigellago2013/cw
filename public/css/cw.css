@@ -1578,6 +1578,11 @@
         top: -10px;
     }
 
+    .ranking-box__image img {
+        width:50px;
+        height:45px;
+    }
+
     /* Company Boxes */
     .company-ranking-box__image {
         max-width: 140px;
@@ -1629,4 +1634,20 @@
     .crypto-rates__value.up i {
         color: #3F7C0E;
         transform: rotate(180deg);
+    }
+
+    .author__avatar img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .crypto-videos-container {
+        height:50vh;
+        overflow-y: scroll !important;
+        overflow-x: hidden;
+    }
+
+    .fundingdeal-logo {
+        width: 40px;
+        height: 40px;
     }

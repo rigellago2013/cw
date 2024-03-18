@@ -39,28 +39,30 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
         </div>
     </div>
     <div class="row py-5">
-        <div class="col-lg-6">
+        @foreach($top20 as $youtuber)
+        <div class="col-lg-6 mt-3">
            <div class="ranking-box rounded-lg box-shadow-gray p-3 position-relative">
                 <div class="ranking-box__header d-flex justify-content-between mb-3">
                     <div class="ranking-box__info d-flex align-items-center">
                         <div class="ranking-box__image mr-3">
-                            <img src="{{ asset('img/top_youtubers/bitboy.png') }}" alt="">
+                            <img src="{{ $youtuber->logo_url }}" alt="">
                         </div>
                         <div class="ranking-box__title">
-                            <h5 class="m-0" style="color: #1662FF; font-weight: 500;">BitBoy Crypto</h5>
+                            <h5 class="m-0" style="color: #1662FF; font-weight: 500;">{{ $youtuber->channel }}</h5>
                             <div class="youtube-box d-flex align-items-center mt-2">
-                                <a href="" class="youtube-link text-light py-1 px-2 mr-1" style="background-color: #FF0000;"><i class="fa fa-youtube-play" aria-hidden="true"></i> 1430k</a>
-                                <a href="" class="youtube-link text-light py-1 px-2" style="background-color: #1662FF;"><i class="fa fa-youtube-play" aria-hidden="true"></i> Watch Youtube Content</a>
+                                <a href="" class="youtube-link text-light py-1 px-2 mr-1" style="background-color: #FF0000;"><i class="fa fa-youtube-play" aria-hidden="true"></i>{{ $youtuber->subscriber }}</a>
+                                <a href="{{ $youtuber->about_page }}" class="youtube-link text-light py-1 px-2" style="background-color: #1662FF;"><i class="fa fa-youtube-play" aria-hidden="true"></i> Watch Youtube Content</a>
                             </div>
                         </div>
                     </div>
-                    <div class="ranking-box__ranking position-absolute">1</div>
+                    <div class="ranking-box__ranking position-absolute">{{ $youtuber->position }}</div>
                 </div>
                 <div class="ranking-box__content">
-                    <p>Meltem Demirors is the Chief Strategy Officer of CoinShares, a financial services firm in London and New York that focuses on alternative assets, starting with digital currencies. Demoirors also hosts a weekly podcast and the annual Crypto Springs conference in Palm Springs.</p>
+                    <p>{{ $youtuber->description }}</p>
                 </div>
            </div>
         </div>
+        @endforeach
     </div>
 </div>
 @endsection

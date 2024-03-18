@@ -44,53 +44,25 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($fundingdeals as $deal)
                     <tr>
-                        <td ><img src="{{ asset('img/funding_deals/image 4340.png') }}" class=""></td>
-                        <td class="font-weight-bold" style="color: #1662FF;">bitsCrunch</td>
-                        <td class="font-weight-bold">Germany</td>
-                        <td class="font-weight-bold">$3.8M</td>
-                        <td class="font-weight-bold">Initial Coin Offering</td>
-                        <td class="font-weight-bold"><a href="https://cryptoweekly.co/fundingdeals" style="color: #1662FF;"><u>Unknown</u></a></td>
-                        <td class="font-weight-bold">12/14/2023</td>
+                        <td ><img src="{{ $deal->logo }}" class="fundingdeal-logo"></td>
+                        <td class="font-weight-bold" style="color: #1662FF;">{{ $deal->company }}</td>
+                        <td class="font-weight-bold">{{ $deal->country }}</td>
+                        <td class="font-weight-bold">{{ $deal->funding }}</td>
+                        <td class="font-weight-bold">{{ $deal->funding_type }}</td>
+                        <td class="font-weight-bold"><a href="{{ $deal->c_website }}" style="color: #1662FF;"><u>{{ $deal->lead_investor }}</u></a></td>
+                        <td class="font-weight-bold">{{ $deal->completion_date }}</td>
                     </tr>
-                    <tr>
-                        <td ><img src="{{ asset('img/funding_deals/image 4341.png') }}" class=""></td>
-                        <td class="font-weight-bold" style="color: #1662FF;">Ivorypay</td>
-                        <td class="font-weight-bold">South Africa</td>
-                        <td class="font-weight-bold">$170k</td>
-                        <td class="font-weight-bold">Pre-Seed</td>
-                        <td class="font-weight-bold"><a href="https://blockchainff.com/" style="color: #1662FF;"><u>Blockchain Founders Fund</u></a></td>
-                        <td class="font-weight-bold">12/1/2023</td>
-                        </tr>
-                    <tr>
-                        <td ><img src="{{ asset('img/funding_deals/image 4342.png') }}" class=""></td>
-                        <td class="font-weight-bold" style="color: #1662FF;">Term Structure Labs</td>
-                        <td class="font-weight-bold">United Kingdom</td>
-                        <td class="font-weight-bold">$4.2M</td>
-                        <td class="font-weight-bold">Seed</td>
-                        <td class="font-weight-bold"><a href="https://cumberland.io/" style="color: #1662FF;"><u>Cumberland</u></a></td>
-                        <td class="font-weight-bold">11/30/2023</td>
-                    </tr>
-                    <tr>
-                        <td ><img src="{{ asset('img/funding_deals/image 4343.png') }}" class=""></td>
-                        <td class="font-weight-bold" style="color: #1662FF;">Pocket Network</td>
-                        <td class="font-weight-bold">United States</td>
-                        <td class="font-weight-bold">$7.9M</td>
-                        <td class="font-weight-bold">Venture-Series Unknown</td>
-                        <td class="font-weight-bold"><a href="" style="color: #1662FF;"><u>Unknown</u></a></td>
-                        <td class="font-weight-bold">11/30/2023</td>
-                    </tr>
-                    <tr>
-                        <td ><img src="{{ asset('img/funding_deals/image 4344.png') }}" class=""></td>
-                        <td class="font-weight-bold" style="color: #1662FF;">Wormhole</td>
-                        <td class="font-weight-bold">Cayman Islands</td>
-                        <td class="font-weight-bold">$225M</td>
-                        <td class="font-weight-bold">Venture-Series Unknown</td>
-                        <td class="font-weight-bold"><a href="" style="color: #1662FF;"><u>Unknown</u></a></td>
-                        <td class="font-weight-bold">11/29/2023</td>
-                    </tr>
+                @endforeach
                 </tbody>
+           
             </table>
+
+            <div class="d-flex align-items-center justify-content-center">
+            {{ $fundingdeals->links()}}
+            </div>
+           
         </div>
     </div>
 </div>
