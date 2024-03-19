@@ -12,7 +12,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 <div class="container-fluid site-width bg-white py-5">
     <div class="row">
         <div class="col d-flex p-0">
-            <div class="col-lg-3 d-flex flex-column">
+            <div class="col-lg-3 d-flex flex-column mobile-hide">
                 <div class="col-lg-12 cw-bg-card  px-0 mb-2 flex-fill h-100">
                     <div class="rounded p-3">
                         <h2 class="cryptohome-header-text ml-2">Top News</h2>
@@ -59,7 +59,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             </div>
             <div class="col-lg-6">
                 <div class="card h-100">
-                    <div class="cw-landing-main-card-bg">
+                    <div class="cw-landing-main-card-bg overflow-hidden">
                         <div class="mask-center-big">
                             <div class="mask-center-small ">
                                 <img class="object-fit-cover h-100" src="{{ $newshighlight->title_img }}" alt="">
@@ -74,7 +74,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 mobile-hide">
                 <div class="col-lg-12 px-0 h-100">
                     <div class="cw-bg-card rounded px-1 py-3 flex-fill h-100">
                         <h2 class="cryptohome-header-text mb-3">Funding Deals</h2>
@@ -145,12 +145,14 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 <!-- Advertise Here -->
 <div class="container-fluid site-width">
     <div class="row">
-        <div class="col bg-blue text-white rounded d-flex justify-content-between align-items-center">
-            <div>
-                <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
-            </div>
-            <div class="mt-2 ml-3">
-                <h1> >>>>> Advertise Here </h1>
+        <div class="col-md-12">
+            <div class="bg-blue text-white rounded d-flex justify-content-between align-items-center">
+                <div>
+                    <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
+                </div>
+                <div class="mt-2 ml-3">
+                    <h1> >>>>> Advertise Here </h1>
+                </div>
             </div>
         </div>
     </div>
@@ -159,7 +161,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 <!-- Border -->
 <div class="container-fluid site-width py-4">
     <div class="row">
-        <div class="col p-0">
+        <div class="col-md-12">
             <div class="border border-secondary border-top-3"></div>
         </div>
     </div>
@@ -168,11 +170,11 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 <!--LATEST NEWS SECTION -->
 <div class="container-fluid site-width py-4">
     <div class="row">
-        <div class="col p-0">
+        <div class="col-md-12">
             <h1 class="cryptohome-header-text mb-4">Latest News</h1>
-            <div class="latest-news d-flex">
+            <div class="latest-news d-flex flex-wrap">
                 @foreach($latest_news as $news)
-                <div class="col-lg-3 ">
+                <div class="col-md-3 ">
                     <div class="card cw-bg-card border-0 flex-fill h-100">
                         <div class="px-2 ">
                             <img class="w-100 cw-landing-latest-news-image" src="{{ $blog->title_img }}" class="card-img-top rounded" alt="...">
@@ -198,7 +200,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 <!--END LATEST NEWS SECTION -->
 <div class="container-fluid site-width py-5">
     <div class="row">
-        <div class="col p-0">
+        <div class="col-md-12">
             <div class="cta-box position-relative p-4 rounded-lg d-flex align-items-center">
                 <div class="cta-box__info">
                     <h2 class="font-weight-bold">Instant Network Expansion: Thousands of Industry Contacts, Just a Click Away.</h2>
@@ -232,11 +234,11 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 <!--CRYPTO VIDEOS SECTION -->
 <div class="container-fluid site-width py-4">
     <div class="row">
-        <div class="col p-0">
+        <div class="col-md-12">
             <h1 class="cryptohome-header-text mb-4">Crypto Videos</h1>
-            <div class="crypto-videos d-flex">
+            <div class="crypto-videos d-flex flex-wrap">
                 @foreach ($cryptovideos as $video)
-                    <div class="col-lg-3 pb-2">
+                    <div class="col-md-3">
                         <div class="cw-bg-card rounded flex-fill h-100">
                             <div class="pb-1">
                                 <div class="px-2 embed-responsive embed-responsive-1by1 rounded">
@@ -268,10 +270,10 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 <!--PRESS RELEASE SECTION -->
 <div class="container-fluid site-width py-4">
     <div class="row">
-        <div class="col p-0">
+        <div class="col-md-12">
             <h1 class="cryptohome-header-text mb-4">Press Releases</h1>
-            <div class="press-release d-flex">
-                <div class="col-lg-6 cw-bg-card rounded">
+            <div class="press-release d-flex mobile-flex-column">
+                <div class="col-md-6 cw-bg-card rounded">
                     <div class="px-3 pt-4">
                         <div>
                             <img class="rounded img-fluid" src="{{ $pressreleases[0]['title_img'] }}" alt="Image">
@@ -285,7 +287,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <div class="row">
                         @php
                         $index = 0;
@@ -328,12 +330,14 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 <!-- Advertise Here -->
 <div class="container-fluid site-width">
     <div class="row">
-        <div class="col bg-blue text-white rounded d-flex justify-content-between align-items-center">
-            <div>
-                <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
-            </div>
-            <div class="mt-2 ml-3">
-                <h1> >>>>> Advertise Here </h1>
+        <div class="col-md-12">
+            <div class="bg-blue text-white rounded d-flex justify-content-between align-items-center">
+                <div>
+                    <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
+                </div>
+                <div class="mt-2 ml-3">
+                    <h1> >>>>> Advertise Here </h1>
+                </div>
             </div>
         </div>
     </div>
@@ -342,7 +346,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 <!-- Border -->
 <div class="container-fluid site-width pt-4">
     <div class="row">
-        <div class="col p-0">
+        <div class="col-md-12">
             <div class="border border-secondary border-top-3"></div>
         </div>
     </div>
@@ -350,7 +354,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 <!-- End Border -->
 <div class="container-fluid site-width py-5">
     <div class="row">
-        <div class="col p-0">
+        <div class="col-md-12">
             <h1 class="cryptohome-header-text text-center">Industry Awards</h1>
             <p class="text-center">Top crypto figures</p>
             <div class="d-flex flex-wrap justify-content-center award-container">
@@ -375,7 +379,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 </div>
 <div class="container-fluid bg-blue py-6 text-center align-items-center text-white left-rotating-text">
     <div class="row">
-        <div class="col p-0">
+        <div class="col-md-12">
             <h1 class="font-weight-bold news-letter-font">Join Our Newsletter</h1>
             <p>Get the latest trends and updates on our crypto community.</p>
             <form action="#" method="post" class="mb-4">

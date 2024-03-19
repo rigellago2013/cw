@@ -10,16 +10,10 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 
 @section('content')
 
-<div class="container-fluid mt-5 px-10 ">
-    <div class="row">
-        <div class="col">
-            <div class="page-title-bar">
-                <h1 class="font-weight-bold">Trending News</h1>
-            </div>
-        </div>
-    </div>
+<div class="container-fluid site-width pt-5">
     <div class="row pb-5 border-bottom">
         <div class="col">
+            <h1 class="font-weight-bold">Trending News</h1>
             <div class="tab-header mb-5">
                 <ul class="nav nav-tabs">
                     <li class="nav-item"><a href="#" class="nav-link align-middle"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img.png') }}" alt=""> News</a>
@@ -60,7 +54,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         @foreach($top5 as $top)
                         @if($index > 0)
                         <div class="card mb-4 border-0 ">
-                            <div class="d-flex align-items-start">
+                            <div class="d-flex align-items-start tablet-flex-column">
                                 <div class="img-col">
                                     <div class="top-news-img">
                                         <img src="{{ $top->title_img }}" class="card-img" alt="...">
@@ -88,16 +82,20 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             </div>
         </div>
     </div>
-    <div class="row py-5 border-bottom">
-        <div class="d-flex flex-row">
+</div>
+<div class="container-fluid site-width pt-5">
+    <div class="row pb-5 border-bottom">
+        <div class="d-flex mobile-flex-column">
             @foreach($top4 as $blog)
-            <div class="col-lg-3">
+            <div class="col-md-3">
                 <div class="card border-0 rounded-lg px-2 flex-fill h-100">
                     <img src="{{ $blog->title_img }}" class="card-img-top rounded" alt="...">
                     <div class="card-body px-2 py-3 cw-bg-card">
-                        @foreach($blog->categories as $key => $category)
-                        <a href="" class="cat-btn px-2 py-1 @if($key > 0) ml-2 @endif">{{ $category->name }}@if($key < count($blog->categories) - 1) @endif </a>
-                        @endforeach
+                        <div class="cat-buttons d-flex flex-wrap">
+                            @foreach($blog->categories as $key => $category)
+                            <a href="" class="cat-btn px-2 py-1">{{ $category->name }}@if($key < count($blog->categories) - 1) @endif </a>
+                            @endforeach
+                        </div>
                         <h5 class="card-title mt-3 mb-2 font-weight-bold"><a class="text-dark" href="{{ url('/cryptonews/'.$blog->blog_id) }}">{{ $blog->blog_title }}</a></h5>
                         <p class="date-time d-flex align-items-center justify-content-between"><span>{{ $blog->published_on_formatted }} <span class="ml-4">{{ $blog->published_on_formatted_date_string }}</span></span><a href="{{ url('/cryptonews/'.$blog->blog_id) }}" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
                     </div>
@@ -106,12 +104,14 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             @endforeach
         </div>
     </div>
-    <div class="row py-5">
+</div>
+<div class="container-fluid site-width py-5">    
+    <div class="row">
         <div class="col-lg-7 featured-news-list border-bottom top-news-scrollable-content cw-scrollbar" id="infinite-scroll">
             <div class="scrolling-pagination">
                 @foreach($blogs as $blog)
                 <div class="card mb-4 border-0 ">
-                    <div class="d-flex align-items-start">
+                    <div class="d-flex align-items-start tablet-flex-column">
                         <div class="img-col">
                             <div class="news-img">
                                 <img src="{{ $blog->title_img }}" class="card-img" alt="...">
@@ -143,25 +143,29 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
         </div>
     </div>
 </div>
-<div class="bg-blue py-6 text-center align-items-center text-white">
-    <h1 class="font-weight-bold news-letter-font">Join Our Newsletter</h1>
-    <p>Get the latest trends and updates on our crypto community.</p>
-    <form action="#" method="post" class="mb-4">
-        <div class="d-flex justify-content-center">
-            <div>
-                <input type="email" name="email" class="form-control" placeholder="Enter Email Address">
-            </div>
-            <div class="ml-2">
-                <button type="submit" class="btn btn-subscribe">Subscribe Now</button>
-                <div class="pointer-icon">
-                    <svg width="34" height="45" viewBox="0 0 34 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M32 18.1941V16.1941H30V14.1941H26V12.1941H20V10.1941H16V2.19409H14V0.194092H10V2.19409H8V20.1941H6V18.1941H0V26.1941H2V30.1941H4V34.1941H6V38.1941H8V44.1941H30V36.1941H32V30.1941H30V36.1941H28V42.1941H10V38.1941H8V34.1941H6V30.1941H4V26.1941H2V20.1941H6V22.1941H8V28.1941H10V2.19409H14V20.1941H16V12.1941H20V20.1941H22V14.1941H26V22.1941H28V16.1941H30V18.1941H32V30.1941H34V18.1941H32Z" fill="white" />
-                    </svg>
-                </div>
+<div class="container-fluid bg-blue py-6 text-center align-items-center text-white left-rotating-text">
+    <div class="row">
+        <div class="col p-0">
+            <h1 class="font-weight-bold news-letter-font">Join Our Newsletter</h1>
+            <p>Get the latest trends and updates on our crypto community.</p>
+            <form action="#" method="post" class="mb-4">
+                <div class="d-flex justify-content-center">
+                    <div>
+                        <input type="email" name="email" class="form-control" placeholder="Enter Email Address">
+                    </div>
+                    <div class="ml-2">
+                        <button type="submit" class="btn btn-subscribe">Subscribe Now</button>
+                        <div class="pointer-icon">
+                            <svg width="34" height="45" viewBox="0 0 34 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 18.1941V16.1941H30V14.1941H26V12.1941H20V10.1941H16V2.19409H14V0.194092H10V2.19409H8V20.1941H6V18.1941H0V26.1941H2V30.1941H4V34.1941H6V38.1941H8V44.1941H30V36.1941H32V30.1941H30V36.1941H28V42.1941H10V38.1941H8V34.1941H6V30.1941H4V26.1941H2V20.1941H6V22.1941H8V28.1941H10V2.19409H14V20.1941H16V12.1941H20V20.1941H22V14.1941H26V22.1941H28V16.1941H30V18.1941H32V30.1941H34V18.1941H32Z" fill="white" />
+                            </svg>
+                        </div>
 
-            </div>
+                    </div>
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
 </div>
 @endsection
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -1196,6 +1196,9 @@
     .card .info-box span {
         color: #fff;
     }
+    .cat-buttons {
+        gap: 10px;
+    }
     .cat-btn {
         background-color: #5095F1;
         border-radius: 6px;
@@ -1661,7 +1664,37 @@
     /* Tablet - 1024 */
 
     @media screen and (max-width: 1024px) {
+        /* Global */
+        .tablet-flex-column {
+            flex-direction: column;
+        }
+
+        /* Crypto Rates */
         .crypto-rates {
             display: none;
+        }
+
+        /* Top News */
+        .top-news-img, .news-img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .featured-news-list .content-col .card-body {
+            padding: 0;
+        }
+
+    }
+
+    /* Tablet - 1024 */
+
+    @media screen and (max-width: 767px) {
+        /* Global */
+        .mobile-hide {
+            display: none !important;
+        }
+
+        .mobile-flex-column {
+            flex-direction: column;
         }
     }
