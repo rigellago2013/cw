@@ -174,8 +174,8 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <h1 class="cryptohome-header-text mb-4">Latest News</h1>
             <div class="latest-news d-flex flex-wrap">
                 @foreach($latest_news as $news)
-                <div class="col-md-3 ">
-                    <div class="card cw-bg-card border-0 flex-fill h-100">
+                <div class="col-md-3 mb-4">
+                    <div class="card cw-bg-card border-0">
                         <div class="px-2 ">
                             <img class="w-100 cw-landing-latest-news-image" src="{{ $blog->title_img }}" class="card-img-top rounded" alt="...">
                         </div>
@@ -238,8 +238,8 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <h1 class="cryptohome-header-text mb-4">Crypto Videos</h1>
             <div class="crypto-videos d-flex flex-wrap">
                 @foreach ($cryptovideos as $video)
-                    <div class="col-md-3">
-                        <div class="cw-bg-card rounded flex-fill h-100">
+                    <div class="col-md-3 mb-4">
+                        <div class="cw-bg-card rounded h-100">
                             <div class="pb-1">
                                 <div class="px-2 embed-responsive embed-responsive-1by1 rounded">
                                     {!! $video->video !!}
@@ -271,9 +271,9 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 <div class="container-fluid site-width py-4">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="cryptohome-header-text mb-4">Press Releases</h1>
+            <h1 class="cryptohome-header-text">Press Releases</h1>
             <div class="press-release d-flex mobile-flex-column">
-                <div class="col-md-6 cw-bg-card rounded">
+                <div class="col-md-6 cw-bg-card rounded mb-4">
                     <div class="px-3 pt-4">
                         <div>
                             <img class="rounded img-fluid" src="{{ $pressreleases[0]['title_img'] }}" alt="Image">
@@ -287,14 +287,14 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 no-p-mobile">
                     <div class="row">
                         @php
                         $index = 0;
                         @endphp
                         @foreach($pressreleases as $pressrelease)
                         @if($index > 0)
-                        <div class="col-md-6 d-flex @if($index > 2) mt-3 @endif flex-fill h-100">
+                        <div class="col-md-6 d-flex mb-4">
                             <div class="cw-bg-card rounded w-100">
                                 <div class="px-2 pb-1">
                                     <div>

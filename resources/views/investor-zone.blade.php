@@ -10,9 +10,9 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
 
 @section('content')
 
-<div class="container-fluid px-7 mt-5">
-    <div class="row py-5 border-bottom">
-        <div class="col">
+<div class="container-fluid site-width pt-5">
+    <div class="row pb-5 border-bottom">
+        <div class="col-">
             <div class="hero d-flex justify-content-center">
                 <div class="hero-img">
                     <img src="{{ asset('img/investor_zone/investor-hero.png') }}" alt="">
@@ -20,8 +20,10 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
             </div>
         </div>
     </div>
-    <div class="row py-5">
-        <div class="col">
+</div>
+<div class="container-fluid site-width py-5">
+    <div class="row justify-content-center">
+        <div class="col-">
             <div class="newsletter-form d-flex flex-column">
                 <h2 class="text-center font-weight-bold">Get our entire database of over 7,500 hand-researched companies,
 investors & communities in crypto</h2>
@@ -29,8 +31,10 @@ investors & communities in crypto</h2>
             </div>
         </div>
     </div>
+</div>
+<div class="container-fluid site-width py-5">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-md-12">
             <div class="cta-box position-relative p-4 rounded-lg d-flex align-items-center">
                 <div class="cta-box__info">
                     <h2 class="font-weight-bold mb-4">We spent thousands of hours researching the crypto ecosystem so you don't have to.</h2>
@@ -43,29 +47,31 @@ investors & communities in crypto</h2>
             </div>
         </div>
     </div>
+</div> 
+<div class="container-fluid site-width py-5">
     <div class="row py-5">
         <div class="col-lg-12">
             <h2 class="font-weight-bold mb-3 text-center">- Our Customers -</h2>
             <div class="row customers-logo align-items-center justify-content-between">
-                <div class="customer-logo__img">
+                <div class="customer-logo__img d-flex justify-content-center">
                     <img class="" src="{{ asset('img/investor_zone/image 4368.png') }}">
                 </div>
-                <div class="customer-logo__img">
+                <div class="customer-logo__img d-flex justify-content-center">
                     <img class="" src="{{ asset('img/investor_zone/image 4369.png') }}">
                 </div>
-                <div class="customer-logo__img">
+                <div class="customer-logo__img d-flex justify-content-center">
                     <img class="" src="{{ asset('img/investor_zone/image 4370.png') }}">
                 </div>
-                <div class="customer-logo__img">
+                <div class="customer-logo__img d-flex justify-content-center">
                     <img class="" src="{{ asset('img/investor_zone/image 4371.png') }}">
                 </div>
-                <div class="customer-logo__img">
+                <div class="customer-logo__img d-flex justify-content-center">
                     <img class="" src="{{ asset('img/investor_zone/image 4372.png') }}">
                 </div>
-                <div class="customer-logo__img">
+                <div class="customer-logo__img d-flex justify-content-center">
                     <img class="" src="{{ asset('img/investor_zone/image 4373.png') }}">
                 </div>
-                <div class="customer-logo__img">
+                <div class="customer-logo__img d-flex justify-content-center">
                     <img class="" src="{{ asset('img/investor_zone/image 4374.png') }}">
                 </div>
             </div>
@@ -91,7 +97,7 @@ investors & communities in crypto</h2>
             <div class="row database-boxes justify-content-center align-items-stretch">
                 <div class="col-lg-3 mb-4">
                     <div class="database-box p-4 rounded-lg text-center">
-                        <div class="database-img mb-2">
+                        <div class="database-img mb-2 d-flex justify-content-center">
                             <img class="" src="{{ asset('img/investor_zone/database-img.png') }}">
                         </div>
                         <p class="m-0">Crypto Companies</p>
@@ -99,7 +105,7 @@ investors & communities in crypto</h2>
                 </div>
                 <div class="col-lg-3 mb-4">
                     <div class="database-box p-4 rounded-lg text-center">
-                        <div class="database-img mb-2">
+                        <div class="database-img mb-2 d-flex justify-content-center">
                             <img class="" src="{{ asset('img/investor_zone/database-img.png') }}">
                         </div>
                         <p class="m-0">Crypto Investors</p>
@@ -107,7 +113,7 @@ investors & communities in crypto</h2>
                 </div>
                 <div class="col-lg-3 mb-4">
                     <div class="database-box p-4 rounded-lg text-center">
-                        <div class="database-img mb-2">
+                        <div class="database-img mb-2 d-flex justify-content-center">
                             <img class="" src="{{ asset('img/investor_zone/database-img.png') }}">
                         </div>
                         <p class="m-0">Crypto News Outlets</p>
@@ -127,7 +133,7 @@ investors & communities in crypto</h2>
                 </div>
                 <div class="col-lg-3 mb-4">
                     <div class="database-box p-4 rounded-lg text-center">
-                        <div class="database-img mb-2">
+                        <div class="database-img mb-2 d-flex justify-content-center">
                             <img class="" src="{{ asset('img/investor_zone/database-img.png') }}">
                         </div>
                         <p class="m-0">Crypto Journalists</p>
@@ -135,7 +141,7 @@ investors & communities in crypto</h2>
                 </div>
                 <div class="col-lg-3 mb-4">
                     <div class="database-box p-4 rounded-lg text-center">
-                        <div class="database-img mb-2">
+                        <div class="database-img mb-2 d-flex justify-content-center">
                             <img class="" src="{{ asset('img/investor_zone/database-img.png') }}">
                         </div>
                         <p class="m-0">Crypto Communities</p>
