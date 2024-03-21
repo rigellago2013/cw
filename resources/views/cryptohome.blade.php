@@ -9,11 +9,11 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 @section('revisit-after', 'content="3 days')
 
 @section('content')
-<div class="container-fluid site-width bg-white py-5">
+<div class="container-fluid site-width bg-white d-none d-lg-block  py-5">
     <div class="row">
         <div class="col d-flex p-0">
-            <div class="col-lg-3 d-flex flex-column mobile-hide">
-                <div class="col-lg-12 cw-bg-card  px-0 mb-2 flex-fill h-100">
+            <div class="col-lg-3 flex-column">
+                <div class="col-lg-12 cw-bg-card  px-0 mb-2 flex-fill">
                     <div class="rounded p-3">
                         <h2 class="cryptohome-header-text ml-2">Top News</h2>
                         <hr>
@@ -47,7 +47,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     <a href="#" class="read-more-link font-weight-bold ml-3">Read more latest news <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
                 <div class="col-lg-12 mt-auto px-0 flex-fill">
-                    <div class="card border-0 bg-blue text-white h-100">
+                    <div class="card border-0 bg-blue text-white">
                         <img class="card-img-top" src="https://miro.medium.com/v2/resize:fit:900/1*wnYZ2svg4x1OE7CrtZ1rWA.jpeg" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold">SPONSORED</h6>
@@ -74,9 +74,105 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 mobile-hide">
+            <div class="col-lg-3 d-lg-block d-none">
                 <div class="col-lg-12 px-0 h-100">
                     <div class="cw-bg-card rounded px-1 py-3 flex-fill h-100">
+                        <h2 class="cryptohome-header-text mb-3">Funding Deals</h2>
+                        <div class="d-block d-flex flex-column">
+                            <div class="row">
+                                <div class="col" id="fundingDealCollapse">
+                                    @foreach($funding_deals as $index => $deal)
+                                    <div style="@if($index > 0) margin-top: 5px; @endif">
+                                        <div class="d-flex py-2 px-3 rounded bg-white text-primary">
+                                            <a type="button">
+                                                <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">{{ $deal->company }}
+                                            </a>
+                                            <div class="ml-auto text-dark">
+                                                {{ $deal->funding}}
+                                                <a data-toggle="collapse" data-target="#collapseDeal{{ $index }}" aria-expanded="false" aria-controls="collapseDeal{{ $index }}"> <i class="fa fa-angle-down"></i> </a>
+                                            </div>
+                                        </div>
+                                        <div id="collapseDeal{{ $index }}" class="collapse" data-parent="#fundingDealCollapse">
+                                            <div class="card card-body border-left-0 border-right-0 border-bottom-0 rounded-0">
+                                                <div class="d-flex border-bottom border-bottom-gray ">
+                                                    <div>
+                                                        Country:
+                                                    </div>
+                                                    <div class="ml-auto">
+                                                        {{ $deal->country}}
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex border-bottom border-bottom-gray ">
+                                                    <div>
+                                                        Funding Type:
+                                                    </div>
+                                                    <div class="ml-auto">
+                                                        {{ $deal->funding_type}}
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex border-bottom border-bottom-gray ">
+                                                    <div>
+                                                        Lead Investor:
+                                                    </div>
+                                                    <div class="ml-auto">
+                                                        {{ $deal->lead_investor }}
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div>
+                                                        Completion Date:
+                                                    </div>
+                                                    <div class="ml-auto">
+                                                        {{ $deal->completion_date }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="mr-3 font-weight-bold mt-2">See Full List</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid site-width hero-tabs d-lg-none py-5">
+    <div class="row">
+        <div class="col w-100">
+        <ul class="nav nav-tabs d-flex flex-nowrap w-100" role="tablist">
+            <li class="nav-item w-100">
+                <a class="nav-link text-center active" data-toggle="tab" href="#tabs-1" role="tab">Latest News</a>
+            </li>
+            <li class="nav-item w-100">
+                <a class="nav-link text-center" data-toggle="tab" href="#tabs-2" role="tab">Funding Deals</a>
+            </li>
+            </ul><!-- Tab panes -->
+            <div class="tab-content w-100 pt-4">
+                <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                    <div class="card h-100">
+                        <div class="cw-landing-main-card-bg overflow-hidden">
+                            <div class="mask-center-big">
+                                <div class="mask-center-small ">
+                                    <img class="object-fit-cover h-100" src="{{ $newshighlight->title_img }}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body cw-landing-main-card-bg">
+                            <h3 class="card-title cryptohome-header-text news-highlight">News Highlight</h3>
+                            <h2 class="cryptohome-header-text mt-4 news-highlight-blog-title">{{ $newshighlight->blog_title }}</h2>
+                            <p class="card-text">{{ Str::limit(strip_tags($newshighlight->blog), 400) }}</p>
+                            <a href="">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tabs-2" role="tabpanel">
+                    <div class="cw-bg-card w-100 rounded px-1 py-3">
                         <h2 class="cryptohome-header-text mb-3">Funding Deals</h2>
                         <div class="d-block d-flex flex-column">
                             <div class="row">
@@ -175,7 +271,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <div class="latest-news d-flex flex-wrap">
                 @foreach($latest_news as $news)
                 <div class="col-md-3 mb-4">
-                    <div class="card cw-bg-card border-0">
+                    <div class="card cw-bg-card border-0 h-100">
                         <div class="px-2 ">
                             <img class="w-100 cw-landing-latest-news-image" src="{{ $blog->title_img }}" class="card-img-top rounded" alt="...">
                         </div>
@@ -191,7 +287,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 </div>
                 @endforeach
             </div>
-            <div class="col text-center mt-5">
+            <div class="col d-flex mt-5">
                 <a href="{{ route('cryptonews') }}" class="mx-auto"> <img src="{{  asset('img/svg/read-all-btn.svg') }}" alt=""> </a>
             </div>
         </div>
@@ -260,7 +356,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     </div>
                 @endforeach
             </div>
-            <div class="col text-center mt-5">
+            <div class="col d-flex mt-5">
                 <a href="{{ route('cryptoyoutube') }}" class=" mx-auto"> <img src="{{  asset('img/svg/view-all-btn.svg') }}" alt=""> </a>
             </div>
         </div>
@@ -320,7 +416,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 text-center mt-5 mb-3">
+            <div class="col-lg-12 d-flex mt-5 mb-3">
                 <a href="https://google.com" class=" mx-auto"> <img src="{{  asset('img/svg/read-all-btn.svg') }}" alt=""> </a>
             </div>
         </div>

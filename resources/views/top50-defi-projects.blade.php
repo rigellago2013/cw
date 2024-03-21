@@ -9,8 +9,8 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
 @section('revisit-after', 'content="3 days')
 
 @section('content')
-<div class="container-fluid px-7">
-    <div class="row py-5 border-bottom">
+<div class="container-fluid site-width pt-5">
+    <div class="row pb-5 border-bottom">
         <div class="col">
             <div class="hero d-flex justify-content-center">
                 <div class="hero-img">
@@ -19,7 +19,9 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
             </div>
         </div>
     </div>
-    <div class="row py-5">
+</div>
+<div class="container-fluid site-width py-5">
+    <div class="row">
         <div class="col">
             <div class="newsletter-form d-flex flex-column">
                 <h2 class="text-center font-weight-bold">The 50 Most Interesting ranking-boxs In DeFi</h2>
@@ -28,7 +30,9 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
             </div>
         </div>
     </div>
-    <div class="row mx-auto">
+</div>
+<div class="container-fluid site-width">
+    <div class="row">
         <div class="col-lg-12 bg-blue text-white rounded d-flex justify-content-between align-items-center">
             <div>
                 <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
@@ -38,7 +42,9 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
             </div>
         </div>
     </div>
-    <div class="row py-5">
+</div>
+<div class="container-fluid site-width py-5">
+    <div class="row">
         @php
         $counter = 0;
         @endphp
@@ -55,8 +61,8 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
             </div>
         </div>
         @endif
-        <div class="col-lg-6 mt-3">
-           <div class="ranking-box rounded-lg box-shadow-gray p-3 position-relative">
+        <div class="col-md-6 mt-3">
+           <div class="ranking-box rounded-lg box-shadow-gray p-3 position-relative h-100">
                 <div class="ranking-box__header d-flex justify-content-between mb-3">
                     <div class="ranking-box__info d-flex align-items-center">
                         <div class="ranking-box__image mr-3">
