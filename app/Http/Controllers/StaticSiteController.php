@@ -576,13 +576,12 @@ class StaticSiteController extends Controller
 
   public function cryptoHome(Request $request)
   {
-    $agent = new \Jenssegers\Agent\Agent;
-    $mobile = $agent->isMobile();
-    $tab = $agent->isTablet();
-    $desk = $agent->isDesktop();
+    // $agent = new \Jenssegers\Agent\Agent;
+    // $mobile = $agent->isMobile();
+    //$tab = $agent->isTablet();
+    //$desk = $agent->isDesktop();
     $page = $request->page;
 
-    if($desk){
         $news_highlight =  DB::table('blog')->where('status',1)->orderBy('published_on', 'DESC')->first();
         $funding_deals = DB::table('tblfundingdeals')->orderBy('rank', 'desc')->paginate(15);
         $blogs = Blog::with('categories')->orderBy('published_on', 'DESC')->paginate(50, ['*'], 'page', $page);
@@ -593,9 +592,6 @@ class StaticSiteController extends Controller
         })->orderBy('published_on', 'DESC')->get();
 
         return view('cryptohome',["latest_news"=>$latest_news,"funding_deals"=>$funding_deals,"cryptovideos"=>$cryptoVideos,"blogs"=>$blogs, 'newshighlight'=>$news_highlight, 'pressreleases' => $press_releases]);
-    }else{
-        return view('mobile_view');
-    }
   }
 
   public function cryptoNews()
