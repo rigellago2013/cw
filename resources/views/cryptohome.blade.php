@@ -77,13 +77,13 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <div class="col-lg-3 d-lg-block d-none">
                 <div class="col-lg-12 px-0 h-100">
                     <div class="d-flex flex-column px-1 h-100">
-                        <h2 class=" p-3 cryptohome-header-text mb-3 cw-bg-card rounded">Funding Deals</h2>
+                        <h2 class="p-3 cryptohome-header-text mb-3 cw-bg-card rounded">Funding Deals</h2>
                         <div class="flex-grow-1">
                             <div class="row">
                                 <div class="col" id="fundingDealCollapse">
                                     @foreach($funding_deals as $index => $deal)
                                     <div class="shadow-sm" style="@if($index > 0) margin-top: 5px; @endif">
-                                        <div class="d-flex py-2 px-3 rounded bg-white text-primary">
+                                        <div class="d-flex pt-3 px-3 rounded bg-white text-primary">
                                             <a type="button">
                                                 <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">
                                             </a>
@@ -134,8 +134,8 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-end" style="margin-top: auto;">
-                            <a href="#" class="mr-3 font-weight-bold mt-2">See Full List</a>
+                        <div class="d-flex justify-content-end">
+                            <h2> <a href="{{ route('funding-deals') }}" class="mr-3 font-weight-bold">See Full List</a> </h2>
                         </div>
                     </div>
                 </div>
@@ -181,7 +181,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                 <div class="col" id="fundingDealCollapse">
                                     @foreach($funding_deals as $index => $deal)
                                     <div class="shadow-sm" style="@if($index > 0) margin-top: 5px; @endif">
-                                        <div class="d-flex py-2 px-3 rounded bg-white text-primary">
+                                        <div class="d-flex pt-3 px-3 rounded bg-white text-primary">
                                         <a type="button">
                                                 <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">
                                             </a>
@@ -233,7 +233,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                             </div>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="#" class="mr-3 font-weight-bold mt-2">See Full List</a>
+                            <a href="{{ route('funding-deals') }}" class="mr-3 font-weight-bold mt-2">See Full List</a>
                         </div>
                     </div>
                 </div>
@@ -284,7 +284,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         <div class="d-flex flex-row card-footer border-0 cw-bg-card pt-0">
                             <!-- <p>13 hours ago </p> -->
                             <p>{{ $news->published_on }}</p>
-                            <a href="https://google.com" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
+                            <a href="{{ url('/cryptonews/'.$news->blog_id) }}" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
                         </div>
                     </div>
                 </div>
