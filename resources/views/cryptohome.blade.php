@@ -11,9 +11,9 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 @section('content')
 <div class="container-fluid site-width bg-white d-none d-lg-block  py-5">
     <div class="row">
-        <div class="col d-flex p-0">
-            <div class="col-lg-3 flex-column">
-                <div class="col-lg-12 cw-bg-card  px-0 mb-2 flex-fill">
+        <div class="col d-flex p-0 align-items-stretch">
+            <div class="col-lg-3">
+                <div class="col-lg-12 cw-bg-card px-0 mb-2 d-flex flex-column h-100">
                     <div class="rounded p-3">
                         <h2 class="cryptohome-header-text ml-2">Top News</h2>
                         <hr>
@@ -44,9 +44,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         </div>
 
                     </div>
-                    <a href="#" class="read-more-link font-weight-bold ml-3">Read more latest news <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                </div>
-                <div class="col-lg-12 mt-auto px-0 flex-fill">
+                    <a href="#" class="read-more-link font-weight-bold ml-3" style="margin-bottom: auto;">Read more latest news <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     <div class="card border-0 bg-blue text-white">
                         <img class="card-img-top" src="https://miro.medium.com/v2/resize:fit:900/1*wnYZ2svg4x1OE7CrtZ1rWA.jpeg" alt="Card image cap">
                         <div class="card-body">
@@ -56,13 +54,15 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-12 mt-auto px-0 flex-fill">
+                </div>
             </div>
             <div class="col-lg-6">
                 <div class="card h-100">
-                    <div class="cw-landing-main-card-bg overflow-hidden">
+                    <div class="cw-landing-main-card-bg overflow-hidden position-relative">
                         <div class="mask-center-big">
                             <div class="mask-center-small ">
-                                <img class="object-fit-cover h-100" src="{{ $newshighlight->title_img }}" alt="">
+                                <img class="" src="{{ $newshighlight->title_img }}" alt="">
                             </div>
                         </div>
                     </div>
