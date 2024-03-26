@@ -498,6 +498,36 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
         </div>
     </div>
 </div>
+
+<div class="modal" id="myModal">
+    <div class="custom-modal py-4 px-3 w-100 position-relative" style="max-width: 680px; margin: 0 auto; background-color: #fff;">
+        <div class="close-modal position-absolute" style="top: 10px; right: 10px; cursor: pointer;">
+            <img class="" src="{{ asset('img/popup-close.png') }}" alt="">
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="custom-modal__img">
+                    <img class="rounded-lg" src="{{ asset('img/popup-img.png') }}" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="custom-modal__logo mb-1">
+                    <img src="{{ asset('img/popup-logo.png') }}" alt="">
+                </div>
+                <div class="custom-modal__content">
+                    <h2 class="mb-4">Don’t be that guy in a crypto conversation.</h2>
+                    <h3 class="font-weight-bold mb-4">Join our Newsletter.</h3>
+                    <form action="#" method="post">
+                        <div class="form-fields-container d-flex" style="gap: 10px;">
+                            <input type="email" name="email" placeholder="Enter email address" required>
+                            <input type="submit" value="Subscribe">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
@@ -515,5 +545,13 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 $('ul.pagination').hide();
             }
         });
+
+        $(window).on('load',function(){
+            $('#myModal').addClass('d-flex');
+        });
+
+        $( '.close-modal' ).on( "click", function() {
+            $('#myModal').removeClass('d-flex');
+        } );
     });
 </script>

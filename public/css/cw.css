@@ -1674,6 +1674,37 @@
         height: 40px;
     }
 
+    /* popup form */
+    .custom-modal input[type=email] {
+        background-color: #CCE5FD;
+        border: 0;
+        padding: 10px;
+        text-transform: uppercase;
+        font-weight: 700;
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .custom-modal input[type="submit"] {
+        background-color: #1662FF;
+        border: 0;
+        color: #fff;
+        padding: 10px 14px;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+        position: relative;
+    }
+    .modal {
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+    /* .custom-modal input[type="submit"]::after {
+        content: '';
+
+    } */
+
 
     /* Tablet - 1024 */
 
