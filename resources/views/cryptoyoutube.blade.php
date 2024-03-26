@@ -130,7 +130,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 html += '<div class="embed-responsive embed-responsive-4by3 rounded">';
                 html += video.video; // Assuming video is a HTML string
                 html += '</div>';
-                html += '<div class="card-body p-2">';
+                html += '<div class="card-body p-2 d-flex flex-column justify-content-between">';
                 html += '<div class="author d-flex align-items-center">';
                 html += '<div class="author__avatar">';
                 html += '<img src="{{ asset("img/pp.png") }}" class="rounded-circle" alt="...">';
