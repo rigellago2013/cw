@@ -69,8 +69,8 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     </div>
                     <div class="card-body cw-landing-main-card-bg">
                         <h2 class="cryptohome-header-text mt-4 news-highlight-blog-title">{{ $newshighlight->blog_title }}</h2>
-                        <p class="card-text">{{ Str::limit(strip_tags($newshighlight->blog), 1000) }}</p>
-                        <a href="">Read more</a>
+                        <p class="card-text">{{ Str::words(strip_tags($newshighlight->blog),150,'') }}...              <a href="{{ url('/cryptonews/'.$newshighlight->blog_id) }}">Read more</a></p>
+          
                     </div>
                 </div>
             </div>
