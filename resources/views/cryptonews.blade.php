@@ -88,16 +88,25 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
         <div class="d-flex mobile-flex-column">
             @foreach($top4 as $blog)
             <div class="col-md-3">
-                <div class="card m]\b-4 border-0 rounded-lg px-2 flex-fill h-100">
+                <div class="card mb-4 border-0 rounded-lg px-2 flex-fill h-100">
                     <img src="{{ $blog->title_img }}" class="card-img-top rounded" alt="...">
+<<<<<<< Updated upstream
                     <div class="card-body px-2 py-3 cw-bg-card d-flex flex-column">
+=======
+                    <div class="card-body px-2 py-3 cw-bg-card d-flex flex-column justify-content-between">
+>>>>>>> Stashed changes
                         <div class="cat-buttons d-flex flex-wrap">
                             @foreach($blog->categories as $key => $category)
                             <a href="" class="cat-btn px-2 py-1">{{ $category->name }}@if($key < count($blog->categories) - 1) @endif </a>
                             @endforeach
                         </div>
+<<<<<<< Updated upstream
                         <h5 class="card-title mt-3 mb-2 font-weight-bold flex-grow-1"><a class="text-dark" href="{{ url('/cryptonews/'.$blog->blog_id) }}">{{ $blog->blog_title }}</a></h5>
                         <p class="date-time d-flex align-items-center mb-0 justify-content-between" style="margin-top: auto;"><span>{{ $blog->published_on_formatted }} <span class="ml-4">{{ $blog->published_on_formatted_date_string }}</span></span><a href="{{ url('/cryptonews/'.$blog->blog_id) }}" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
+=======
+                        <h5 class="card-title mt-3 mb-2 font-weight-bold"><a class="text-dark" href="{{ url('/cryptonews/'.$blog->blog_id) }}">     {{ $blog->blog_title }}</a></h5>
+                        <p class="date-time d-flex align-items-center justify-content-between"><span>{{ $blog->published_on_formatted }} <span class="ml-4">{{ $blog->published_on_formatted_date_string }}</span></span><a href="{{ url('/cryptonews/'.$blog->blog_id) }}" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
+>>>>>>> Stashed changes
                     </div>
                 </div>
             </div>
@@ -120,11 +129,11 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         <div class="content-col">
                             <div class="card-body pt-0 pb-0">
                                 <h5 class="card-title font-weight-bold" style="color: #1663FF;">
-                                  {{ $blog->keywords }}
+                                {{ preg_replace('/[^A-Za-z0-9 ]/', '', Str::words($blog->keywords, 1, '')) }}
                                 </h5>
                                 <h5 class="card-title font-weight-bold"> <a class="text-dark" href="{{ url('/cryptonews/'.$blog->blog_id) }}">{{ $blog->blog_title }}</a> </h5>
                                 <p class="card-text"><small class="text-muted">{{ $blog->published_on_formatted }}<span class="pl-4">{{ $blog->published_on_formatted_date_string }}</span></small></p>
-                                <p class="card-text"> {{ Str::limit(strip_tags($blog->blog), 70) }} <span class="font-weight-bold" style="color: #1663FF;"> <a href="{{ url('/cryptonews/'.$blog->blog_id) }}">Read more</a> </span></p>
+                                <p class="card-text">{{Str::words(strip_tags($blog->blog),7,'')}}...<span class="font-weight-bold" style="color: #1663FF;"> <a href="{{ url('/cryptonews/'.$blog->blog_id) }}">Read more</a> </span></p>
                             </div>
                         </div>
                     </div>
