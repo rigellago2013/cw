@@ -9,7 +9,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 @section('revisit-after', '3 days')
 
 @section('content')
-<div class="container-fluid px-7 mt-5 ">
+<div class="container-fluid site-width pt-5">
     <div class="row">
         <div class="col">
             <h1 class="font-weight-bold">Trending Videos</h1>
@@ -55,7 +55,9 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             </div>
         </div>
     </div>
-    <div class="row mt-5">
+</div>
+<div class="container-fluid site-width py-5">
+    <div class="row">
         <div class="col-lg-12">
             <h2 class="font-weight-bold mb-4">Crypto Videos</h2>
             <div class="row" id="cryptoVideos">

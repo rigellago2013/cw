@@ -14,7 +14,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
         <div class="col d-flex p-0 align-items-stretch">
             <div class="col-lg-3">
                 <div class="col-lg-12 cw-bg-card px-0 mb-2 d-flex flex-column h-100">
-                    <div class="rounded p-3">
+                    <div class="rounded p-3 pb-0 flex-grow-1">
                         <h2 class="cryptohome-header-text ml-2">Top News</h2>
                         <hr>
                         <div class="cw-landing-scrollable-content cw-scrollbar" id="infinite-scroll">
@@ -44,7 +44,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         </div>
 
                     </div>
-                    <a href="#" class="read-more-link font-weight-bold ml-3" style="margin-bottom: auto;">Read more latest news <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="#" class="read-more-link font-weight-bold ml-3" style="margin: auto 0 20px;">Read more latest news <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     <div class="card border-0 bg-blue text-white">
                         <img class="card-img-top" src="{{asset('/img/OGI 1.png')}}" alt="Card image cap">
                         <div class="card-body">
@@ -163,10 +163,10 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                     <img class="" src="{{ $newshighlight->title_img }}" alt="">
                                 </div>
                             </div>
-                            <h3 class="card-title cryptohome-header-text news-highlight d-none d-md-block">News Highlight</h3>
+                            <h3 class="card-title cryptohome-header-text news-highlight d-none d-sm-block">News Highlight</h3>
                         </div>
                         <div class="card-body cw-landing-main-card-bg">
-                            <h3 class="card-title cryptohome-header-text news-highlight d-none d-sm-block position-relative">News Highlight</h3>
+                            <h3 class="card-title cryptohome-header-text news-highlight d-block d-sm-none position-relative">News Highlight</h3>
                             <h2 class="cryptohome-header-text mt-4 news-highlight-blog-title">{{ $newshighlight->blog_title }}</h2>
                             <p class="card-text">{{ Str::limit(strip_tags($newshighlight->blog), 400) }}</p>
                             <a href="">Read more</a>
