@@ -11,9 +11,9 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
 @section('content')
 
 <div class="container-fluid site-width pt-5">
-    <div class="row pb-5 border-bottom">
-        <div class="col">
-            <div class="hero d-flex justify-content-center">
+    <div class="row pb-5 border-bottom justify-content-center">
+        <div class="col-">
+            <div class="hero d-flex ">
                 <div class="hero-img">
                     <img src="{{ asset('img/investor_zone/investor-hero.png') }}" alt="">
                 </div>

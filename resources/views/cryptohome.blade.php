@@ -69,24 +69,25 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     <div class="card-body cw-landing-main-card-bg">
                         <h3 class="card-title cryptohome-header-text news-highlight">News Highlight</h3>
                         <h2 class="cryptohome-header-text mt-4 news-highlight-blog-title">{{ $newshighlight->blog_title }}</h2>
-                        <p class="card-text">{{ Str::limit(strip_tags($newshighlight->blog), 400) }}</p>
+                        <p class="card-text">{{ Str::limit(strip_tags($newshighlight->blog), 1000) }}</p>
                         <a href="">Read more</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 d-lg-block d-none">
                 <div class="col-lg-12 px-0 h-100">
-                    <div class="cw-bg-card rounded px-1 py-3 flex-fill h-100">
-                        <h2 class="cryptohome-header-text mb-3">Funding Deals</h2>
+                    <div class="px-1 flex-fill h-100">
+                        <h2 class="p-3 cryptohome-header-text mb-3 cw-bg-card rounded">Funding Deals</h2>
                         <div class="d-block d-flex flex-column">
                             <div class="row">
                                 <div class="col" id="fundingDealCollapse">
                                     @foreach($funding_deals as $index => $deal)
-                                    <div style="@if($index > 0) margin-top: 5px; @endif">
+                                    <div class="shadow-sm" style="@if($index > 0) margin-top: 5px; @endif">
                                         <div class="d-flex py-2 px-3 rounded bg-white text-primary">
                                             <a type="button">
-                                                <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">{{ $deal->company }}
+                                                <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">
                                             </a>
+                                            <p>{{ $deal->company }}</p>
                                             <div class="ml-auto text-dark">
                                                 {{ $deal->funding}}
                                                 <a data-toggle="collapse" data-target="#collapseDeal{{ $index }}" aria-expanded="false" aria-controls="collapseDeal{{ $index }}"> <i class="fa fa-angle-down"></i> </a>
@@ -172,17 +173,18 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     </div>
                 </div>
                 <div class="tab-pane" id="tabs-2" role="tabpanel">
-                    <div class="cw-bg-card w-100 rounded px-1 py-3">
-                        <h2 class="cryptohome-header-text mb-3">Funding Deals</h2>
+                    <div class="w-100 rounded px-1 py-3">
+                        <h2 class="p-3 cryptohome-header-text mb-3 cw-bg-card rounded">Funding Deals</h2>
                         <div class="d-block d-flex flex-column">
                             <div class="row">
                                 <div class="col" id="fundingDealCollapse">
                                     @foreach($funding_deals as $index => $deal)
-                                    <div style="@if($index > 0) margin-top: 5px; @endif">
+                                    <div class="shadow-sm" style="@if($index > 0) margin-top: 5px; @endif">
                                         <div class="d-flex py-2 px-3 rounded bg-white text-primary">
-                                            <a type="button">
-                                                <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">{{ $deal->company }}
+                                        <a type="button">
+                                                <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">
                                             </a>
+                                            <p>{{ $deal->company }}</p>
                                             <div class="ml-auto text-dark">
                                                 {{ $deal->funding}}
                                                 <a data-toggle="collapse" data-target="#collapseDeal{{ $index }}" aria-expanded="false" aria-controls="collapseDeal{{ $index }}"> <i class="fa fa-angle-down"></i> </a>
