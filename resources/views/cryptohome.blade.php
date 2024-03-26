@@ -395,19 +395,17 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         @if($index > 0)
                         <div class="col-md-6 d-flex mb-4">
                             <div class="cw-bg-card rounded w-100">
-                                <div class="px-2 pb-1">
+                                <div class="px-2 pb-2 d-flex flex-column">
                                     <div>
                                         <img class="rounded img-fluid" src="{{ $pressrelease->title_img }}" alt="Image">
                                     </div>
-                                    <div class="mt-3">
-                                        <h4 class="font-weight-bold">{{ $pressrelease->blog_title }}</h4>
+                                    <div class="mt-3 flex-grow-1">
+                                        <h4 class="font-weight-bold mb-2">{{ $pressrelease->blog_title }}</h4>
                                     </div>
-                                    <div class="d-flex flex-row card-footer border-0 cw-bg-card p-0">
-                                        <p>{{$pressrelease->published_on }}</p>
+                                    <div class="d-flex card-footer border-0 cw-bg-card p-0" style="margin-top: auto;">
+                                        <p class="mb-0">{{$pressrelease->published_on }}</p>
+                                        <a href="{{ url('/cryptonews/'.$pressrelease->blog_id) }}" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
                                     </div>
-                                </div>
-                                <div class="d-flex flex-row card-footer border-0 cw-bg-card pt-0">
-                                    <a href="{{ url('/cryptonews/'.$pressrelease->blog_id) }}" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
                                 </div>
                             </div>
                         </div>
