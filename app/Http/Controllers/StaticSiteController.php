@@ -585,8 +585,8 @@ class StaticSiteController extends Controller
         $news_highlight =  DB::table('blog')->where('status',1)->orderBy('published_on', 'DESC')->first();
         $funding_deals = DB::table('tblfundingdeals')->orderBy('rank', 'desc')->paginate(12);
         $blogs = Blog::with('categories')->orderBy('published_on', 'DESC')->paginate(50, ['*'], 'page', $page);
-        $latest_news = DB::table('blog')->join('users', 'blog.blog_user', '=', 'users.id')->where('status', 1)->orderBy('published_on', 'desc')->limit(8)->get();
-        $cryptoVideos = DB::table('crypto_feeds')->orderBy('upload_date', 'DESC')->orderBy('sr_no', 'desc')->limit(4)->get();
+        $latest_news = Blog::with('user')->where('status', 1)->orderBy('published_on', 'desc')->limit(8)->get();
+        $cryptoVideos = CryptoYoutube::orderBy('upload_date', 'DESC')->orderBy('sr_no', 'desc')->limit(4)->get();
         $press_releases = Blog::whereHas('categories', function ($query) {
           $query->where('name', 'Press Release');
         })->orderBy('published_on', 'DESC')->get();

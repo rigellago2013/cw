@@ -249,7 +249,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 <div>
                     <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
                 </div>
-                <div class="mt-2 ml-3">
+                <div class="mt-2 mr-3">
                     <h1> >>>>> Advertise Here </h1>
                 </div>
             </div>
@@ -283,7 +283,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         </div>
                         <div class="d-flex flex-row card-footer border-0 cw-bg-card pt-0">
                             <!-- <p>13 hours ago </p> -->
-                            <p>{{ $news->published_on }}</p>
+                            <p>{{ $news->published_on_formatted }} &nbsp; {{ $news->published_on_formatted_date_string }} </p>
                             <a href="{{ url('/cryptonews/'.$news->blog_id) }}" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
                         </div>
                     </div>
@@ -337,7 +337,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <h1 class="cryptohome-header-text mb-4">Crypto Videos</h1>
             <div class="crypto-videos d-flex flex-wrap">
                 @foreach ($cryptovideos as $video)
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-3 mb-4 d-flex flex-column justify-content-between">
                         <div class="cw-bg-card rounded h-100">
                             <div class="pb-1">
                                 <div class="px-2 embed-responsive embed-responsive-1by1 rounded">
@@ -349,11 +349,10 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                 <div class="text-bold px-3">
                                     <h4> <strong> {{ $video->title }} </strong></h4>
                                 </div>
-
                             </div>
-
                         </div>
                         <div class="d-flex flex-row card-footer border-0 cw-bg-card pt-0">
+                            <p> {{ $video['upload_date_format'] }} </p>
                             <a href="#" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
                         </div>
                     </div>
@@ -379,10 +378,10 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         </div>
                         <div class="mt-3 pb-3">
                             <h2 class="font-weight-bold">{{ $pressreleases[0]['blog_title'] }}</h2>
-                            <p>{{ $pressreleases[0]['published_on'] }} </p>
+                            <p>{{ $pressreleases[0]['published_on_formatted'] }} </p>
 
                         </div>
-                        <p>{{ Str::limit(strip_tags($pressreleases[0]['blog']), 350) }} <a href="{{ url('/cryptonews/'.$pressreleases[0]['blog_id']) }}">Read more</a></p>
+                        <p>{{ Str::words(strip_tags($pressreleases[0]['blog']), 40,'' ) }}...<a href="{{ url('/cryptonews/'.$pressreleases[0]['blog_id']) }}">Read more</a></p>
 
                     </div>
                 </div>
@@ -393,7 +392,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         @endphp
                         @foreach($pressreleases as $pressrelease)
                         @if($index > 0)
-                        <div class="col-md-6 d-flex mb-4">
+                        <div class="col-md-6 d-flex mb-4 h-100">
                             <div class="cw-bg-card rounded w-100">
                                 <div class="px-2 pb-2 d-flex flex-column">
                                     <div>
@@ -403,7 +402,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                         <h4 class="font-weight-bold mb-2">{{ $pressrelease->blog_title }}</h4>
                                     </div>
                                     <div class="d-flex card-footer border-0 cw-bg-card p-0" style="margin-top: auto;">
-                                        <p class="mb-0">{{$pressrelease->published_on }}</p>
+                                        <p class="mb-0">{{ $blog->published_on_formatted }} &nbsp;  &nbsp; {{ $blog->published_on_formatted_date_string }} </p>
                                         <a href="{{ url('/cryptonews/'.$pressrelease->blog_id) }}" class="ml-auto"> <i class="fa fa-arrow-right rotate-n45" aria-hidden="true"></i> </a>
                                     </div>
                                 </div>
@@ -432,7 +431,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 <div>
                     <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
                 </div>
-                <div class="mt-2 ml-3">
+                <div class="mt-2 mr-3">
                     <h1> >>>>> Advertise Here </h1>
                 </div>
             </div>

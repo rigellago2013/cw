@@ -26,14 +26,14 @@ class Blog extends Model
 
     private function formatDate($value)
     {
-         // Parse the provided date
+        // Parse the provided date
         $date = Carbon::parse($value);
-
+    
         // Get the difference in minutes between the current time and the provided date
         $difference = $date->diffInMinutes();
-
-
-
+        // Get the difference in days between the current time and the provided date
+        $differenceInDays = $date->diffInDays();
+    
         // Choose appropriate format based on the difference
         if ($difference < 1) {
             return 'just now';
@@ -47,12 +47,12 @@ class Blog extends Model
             return 'yesterday at ' . $date->format('h:i A');
         } elseif ($difference < 43200) { // Less than 30 days (30 days * 24 hours * 60 minutes)
             return round($difference / 1440) . ' days ago';
-        } elseif ($difference < 30 * 24 * 60 * 60) { // Less than 30 days
-            return round($difference / (24 * 60)) . ' days ago';
+        } elseif ($differenceInDays < 30) {
+            return $differenceInDays . ' days ago';
         } else {
             // Calculate the number of months
             $months = $date->diffInMonths();
-
+    
             if ($months == 1) {
                 return '1 month ago';
             } else {
@@ -60,6 +60,7 @@ class Blog extends Model
             }
         }
     }
+    
 
     public function getPublishedOnFormattedDateStringAttribute()
     {
