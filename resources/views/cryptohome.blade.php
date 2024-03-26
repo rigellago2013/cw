@@ -23,8 +23,8 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                 <div class="pl-2">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="mb-3">
-                                                <img src="{{ asset('img/png/cw-icon.png') }}" alt="cw-icon"> {{ $blog->published_on_formatted }}
+                                            <div class="mb-3 d-flex">
+                                                <img class="mr-1" src="{{ asset('img/png/cw-icon.png') }}" alt="cw-icon"> {{ $blog->published_on_formatted }}
                                             </div>
                                         </div>
                                     </div>

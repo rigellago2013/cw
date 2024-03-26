@@ -583,7 +583,7 @@ class StaticSiteController extends Controller
     $page = $request->page;
 
         $news_highlight =  DB::table('blog')->where('status',1)->orderBy('published_on', 'DESC')->first();
-        $funding_deals = DB::table('tblfundingdeals')->orderBy('rank', 'desc')->paginate(15);
+        $funding_deals = DB::table('tblfundingdeals')->orderBy('rank', 'desc')->paginate(12);
         $blogs = Blog::with('categories')->orderBy('published_on', 'DESC')->paginate(50, ['*'], 'page', $page);
         $latest_news = DB::table('blog')->join('users', 'blog.blog_user', '=', 'users.id')->where('status', 1)->orderBy('published_on', 'desc')->limit(8)->get();
         $cryptoVideos = DB::table('crypto_feeds')->orderBy('upload_date', 'DESC')->orderBy('sr_no', 'desc')->limit(4)->get();
@@ -597,7 +597,7 @@ class StaticSiteController extends Controller
   public function cryptoNews()
   {
     //Select top 5
-    $top5 = Blog::with('categories')->where('status', 1)->orderBy('published_on', 'DESC')->limit(5)->get();
+    $top5 = Blog::with('categories')->where('status', 1)->orderBy('published_on', 'DESC')->limit(4)->get();
     
     //select top 4 disctinct categories
     $top4 =  Blog::with('categories')

@@ -30,19 +30,20 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 <div class="row">
                     <div class="col-lg-6 d-flex">
                         <div class="featured-news-main mb-4 flex-column d-flex">
-                            <div class="card bg-dark text-white p-0 rounded-lg flex-grow-1 h-100" style="background-image: {!! $top5[0]['title_img'] !!}; background-size: cover; background-position: center;">
-                            <div class="cw-bg-card rounded-lg flex-grow-1">
-                                <div class="meta-box p-4">
-                                    @foreach($top5[0]['categories'] as $category)
-                                    <a class="cat-btn px-2 py-1">{{ $category['name'] }}</a>
-                                    @endforeach
+                            <div class="card bg-dark text-white p-0 rounded-lg flex-grow-1 h-100">
+                                <img class="h-100" src="{{ $top5[0]['title_img'] }}" alt="">
+                                <div class="h-100 rounded-lg flex-grow-1 position-absolute d-flex flex-column justify-content-between">
+                                    <div class="meta-box p-4">
+                                        @foreach($top5[0]['categories'] as $category)
+                                        <a class="cat-btn px-2 py-1">{{ $category['name'] }}</a>
+                                        @endforeach
+                                    </div>
+                                    <div class="info-box p-4">
+                                        <h3 class="card-title"> <a class="text-light" href="{{ url('/cryptonews/'.$top5[0]['blog_id']) }}">{{ $top5[0]['blog_title'] }} </a> </h3>
+                                        <p class="card-text">{{Str::words(strip_tags($top5[0]['blog']),50,'')}}...<a href="{{ url('/cryptonews/'.$top5[0]['blog_id']) }}">Read more</a></p>
+                                        <p class="card-text">{{ $top5[0]['published_on_formatted']}}<span class="pl-4"> {{ $top5[0]['published_on_formatted_date_string']}} </span></p>
+                                    </div>
                                 </div>
-                                <div class="info-box p-4">
-                                    <h5 class="card-title"> <a class="text-dark" href="{{ url('/cryptonews/'.$top5[0]['blog_id']) }}">{{ $top5[0]['blog_title'] }} </a> </h5>
-                                    <p class="card-text">{{ Str::limit(strip_tags($top5[0]['blog']), 400) }} <a href="{{ url('/cryptonews/'.$top5[0]['blog_id']) }}">Read more</a></p>
-                                    <p class="card-text">{{ $top5[0]['published_on_formatted']}}<span class="pl-4"> {{ $top5[0]['published_on_formatted_date_string']}} </span></p>
-                                </div>
-                            </div>
                             </div>
                         </div>
                     </div>
@@ -62,11 +63,11 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                 <div class="content-col">
                                     <div class="card-body pt-0 pb-0">
                                         <h5 class="card-title font-weight-bold" style="color: #1663FF;">
-                                          {{ $top->keywords }}
+                                        {{ preg_replace('/[^A-Za-z0-9 ]/', '', Str::words($top->keywords, 1, '')) }}
                                         </h5>
-                                        <h5 class="card-title font-weight-bold"><a class="text-dark" href="{{ url('/cryptonews/'.$top->blog_id) }}">{{ $top->blog_title }} </a></h5>
+                                        <p class="card-title font-weight-bold"><a class="text-dark" href="{{ url('/cryptonews/'.$top->blog_id) }}">{{ $top->blog_title }} </a></p>
                                         <p class="card-text"><small class="text-muted">{{ $top->published_on_formatted }} <span class="pl-4"> {{ $top->published_on_formatted_date_string }}</span></small></p>
-                                        <p class="card-text"> {{ Str::limit(strip_tags($top->blog), 70) }} <span class="font-weight-bold" style="color: #1663FF;"> <a href="{{ url('/cryptonews/'.$top->blog_id) }}">Read more</a> </span></p>
+                                        <p class="card-text">{{Str::words(strip_tags($top->blog),7,'')}}...<span class="font-weight-bold" style="color: #1663FF;"> <a href="{{ url('/cryptonews/'.$top->blog_id) }}">Read more</a> </span></p>
                                     </div>
                                 </div>
                             </div>
