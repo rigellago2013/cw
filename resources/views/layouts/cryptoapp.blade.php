@@ -58,11 +58,11 @@
   <link href="{{ asset('css/cw.css') }}" rel="stylesheet" type="text/css">
 
   <!-- Begin Constant Contact Active Forms -->
-  <script>
-    var _ctct_m = "f0d3cc78d267719eb2e1006770f19d2a";
-    
-  </script>
-  <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+    <!-- <script>
+      var _ctct_m = "f0d3cc78d267719eb2e1006770f19d2a";
+      
+    </script>
+    <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script> -->
   <!-- End Constant Contact Active Forms -->
   <!-- <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=6075696eae08f90011442daf&product=sticky-share-buttons" async="async"></script> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />

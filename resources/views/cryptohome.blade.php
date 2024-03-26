@@ -135,7 +135,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                             </div>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <h2> <a href="{{ route('funding-deals') }}" class="mr-3 font-weight-bold">See Full List</a> </h2>
+                            <h4> <a href="{{ route('funding-deals') }}" class="mr-3 font-weight-bold">See Full List</a> </h4>
                         </div>
                     </div>
                 </div>
@@ -233,7 +233,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                             </div>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="{{ route('funding-deals') }}" class="mr-3 font-weight-bold mt-2">See Full List</a>
+                           <h4> <a href="{{ route('funding-deals') }}" class="mr-3 font-weight-bold mt-2">See Full List</a> </h4> 
                         </div>
                     </div>
                 </div>
@@ -420,7 +420,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 </div>
             </div>
             <div class="col-lg-12 d-flex mt-5 mb-3">
-                <a href="https://google.com" class=" mx-auto"> <img src="{{  asset('img/svg/read-all-btn.svg') }}" alt=""> </a>
+                <a href="{{ url('cryptonews') }}" class=" mx-auto"> <img src="{{  asset('img/svg/read-all-btn.svg') }}" alt=""> </a>
             </div>
         </div>
     </div>
