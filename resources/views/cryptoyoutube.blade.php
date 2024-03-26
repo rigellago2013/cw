@@ -38,18 +38,18 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         <div class="embed-responsive embed-responsive-1by1 rounded-lg">
                             {!! $top2[1]['video'] !!}
                         </div>
-                        <!-- <h3 class="font-weight-bold mt-2">{{ $top2[1]['title'] }} </h3> -->
-                        <!-- <div class="featured-video__info">
+                        <!-- <h3 class="font-weight-bold mt-2">{{ $top2[1]['title'] }} </h3>  -->
+                        <div class="featured-video__info text-light" style="position: absolute; bottom: 70px;">
                             <div class="author  d-flex align-items-center">
-                                <div class="author__avatar">
+                                <!-- <div class="author__avatar">
                                     <img src="{{ asset('img/pp.png') }}" class="rounded-circle" alt="...">
-                                </div>
+                                </div> -->
                                 <div class="author__info ml-2">
                                     <h5 class="author__name m-0 font-weight-bold">{{ $top2[1]['channel_name'] }}</h5>
                                     <p class="views-date m-0">{{ $top2[1]['upload_date_formatted']  }} </p>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
