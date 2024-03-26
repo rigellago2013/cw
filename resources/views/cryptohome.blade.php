@@ -46,7 +46,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     </div>
                     <a href="#" class="read-more-link font-weight-bold ml-3" style="margin-bottom: auto;">Read more latest news <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     <div class="card border-0 bg-blue text-white">
-                        <img class="card-img-top" src="https://miro.medium.com/v2/resize:fit:900/1*wnYZ2svg4x1OE7CrtZ1rWA.jpeg" alt="Card image cap">
+                        <img class="card-img-top" src="{{asset('/img/OGI 1.png')}}" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold">SPONSORED</h6>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -65,9 +65,9 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                 <img class="" src="{{ $newshighlight->title_img }}" alt="">
                             </div>
                         </div>
+                        <h3 class="card-title cryptohome-header-text news-highlight">News Highlight</h3>
                     </div>
                     <div class="card-body cw-landing-main-card-bg">
-                        <h3 class="card-title cryptohome-header-text news-highlight">News Highlight</h3>
                         <h2 class="cryptohome-header-text mt-4 news-highlight-blog-title">{{ $newshighlight->blog_title }}</h2>
                         <p class="card-text">{{ Str::limit(strip_tags($newshighlight->blog), 1000) }}</p>
                         <a href="">Read more</a>
@@ -157,15 +157,16 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <div class="tab-content w-100 pt-4">
                 <div class="tab-pane active" id="tabs-1" role="tabpanel">
                     <div class="card h-100">
-                        <div class="cw-landing-main-card-bg overflow-hidden">
+                        <div class="cw-landing-main-card-bg overflow-hidden position-relative">
                             <div class="mask-center-big">
                                 <div class="mask-center-small ">
-                                    <img class="object-fit-cover h-100" src="{{ $newshighlight->title_img }}" alt="">
+                                    <img class="" src="{{ $newshighlight->title_img }}" alt="">
                                 </div>
                             </div>
+                            <h3 class="card-title cryptohome-header-text news-highlight d-none d-md-block">News Highlight</h3>
                         </div>
                         <div class="card-body cw-landing-main-card-bg">
-                            <h3 class="card-title cryptohome-header-text news-highlight">News Highlight</h3>
+                            <h3 class="card-title cryptohome-header-text news-highlight d-none d-sm-block position-relative">News Highlight</h3>
                             <h2 class="cryptohome-header-text mt-4 news-highlight-blog-title">{{ $newshighlight->blog_title }}</h2>
                             <p class="card-text">{{ Str::limit(strip_tags($newshighlight->blog), 400) }}</p>
                             <a href="">Read more</a>
