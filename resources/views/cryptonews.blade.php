@@ -90,14 +90,14 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <div class="col-md-3">
                 <div class="card m]\b-4 border-0 rounded-lg px-2 flex-fill h-100">
                     <img src="{{ $blog->title_img }}" class="card-img-top rounded" alt="...">
-                    <div class="card-body px-2 py-3 cw-bg-card">
+                    <div class="card-body px-2 py-3 cw-bg-card d-flex flex-column">
                         <div class="cat-buttons d-flex flex-wrap">
                             @foreach($blog->categories as $key => $category)
                             <a href="" class="cat-btn px-2 py-1">{{ $category->name }}@if($key < count($blog->categories) - 1) @endif </a>
                             @endforeach
                         </div>
-                        <h5 class="card-title mt-3 mb-2 font-weight-bold"><a class="text-dark" href="{{ url('/cryptonews/'.$blog->blog_id) }}">{{ $blog->blog_title }}</a></h5>
-                        <p class="date-time d-flex align-items-center justify-content-between"><span>{{ $blog->published_on_formatted }} <span class="ml-4">{{ $blog->published_on_formatted_date_string }}</span></span><a href="{{ url('/cryptonews/'.$blog->blog_id) }}" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
+                        <h5 class="card-title mt-3 mb-2 font-weight-bold flex-grow-1"><a class="text-dark" href="{{ url('/cryptonews/'.$blog->blog_id) }}">{{ $blog->blog_title }}</a></h5>
+                        <p class="date-time d-flex align-items-center mb-0 justify-content-between" style="margin-top: auto;"><span>{{ $blog->published_on_formatted }} <span class="ml-4">{{ $blog->published_on_formatted_date_string }}</span></span><a href="{{ url('/cryptonews/'.$blog->blog_id) }}" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
                     </div>
                 </div>
             </div>

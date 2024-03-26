@@ -76,9 +76,9 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             </div>
             <div class="col-lg-3 d-lg-block d-none">
                 <div class="col-lg-12 px-0 h-100">
-                    <div class="px-1 flex-fill h-100">
-                        <h2 class="p-3 cryptohome-header-text mb-3 cw-bg-card rounded">Funding Deals</h2>
-                        <div class="d-block d-flex flex-column">
+                    <div class="d-flex flex-column px-1 h-100">
+                        <h2 class=" p-3 cryptohome-header-text mb-3 cw-bg-card rounded">Funding Deals</h2>
+                        <div class="flex-grow-1">
                             <div class="row">
                                 <div class="col" id="fundingDealCollapse">
                                     @foreach($funding_deals as $index => $deal)
@@ -134,7 +134,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-end">
+                        <div class="d-flex justify-content-end" style="margin-top: auto;">
                             <a href="#" class="mr-3 font-weight-bold mt-2">See Full List</a>
                         </div>
                     </div>

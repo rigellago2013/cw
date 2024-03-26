@@ -19,7 +19,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         <div class="embed-responsive embed-responsive-21by9 rounded-lg">
                             {!! $top2[0]['video'] !!}
                         </div>
-                        <div class="featured-video__info text-light ml-3" style="position: absolute; top: 0;">
+                        <div class="featured-video__info text-light ml-3" style="position: absolute; bottom: 10px;">
                             <!-- <h3 class="font-weight-bold mt-2" style="margin-top:40% !important;">{{ $top2[0]['title'] }} </h3> -->
                             <div class="author d-flex align-items-center">
                                 <!-- <div class="author__avatar">
