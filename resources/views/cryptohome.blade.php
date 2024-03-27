@@ -386,15 +386,15 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     </div>
                 </div>
                 <div class="col-md-6 no-p-mobile">
-                    <div class="row">
+                    <div class="row align-items-stretch">
                         @php
                         $index = 0;
                         @endphp
                         @foreach($pressreleases as $pressrelease)
                         @if($index > 0)
-                        <div class="col-md-6 d-flex mb-4 h-100">
+                        <div class="col-md-6 d-flex mb-4">
                             <div class="cw-bg-card rounded w-100">
-                                <div class="px-2 pb-2 d-flex flex-column">
+                                <div class="px-2 pb-2 d-flex flex-column h-100">
                                     <div>
                                         <img class="rounded img-fluid" src="{{ $pressrelease->title_img }}" alt="Image">
                                     </div>
