@@ -589,7 +589,7 @@ class StaticSiteController extends Controller
         $cryptoVideos = CryptoYoutube::orderBy('upload_date', 'DESC')->orderBy('sr_no', 'desc')->limit(4)->get();
         $press_releases = Blog::whereHas('categories', function ($query) {
           $query->where('name', 'Press Release');
-        })->orderBy('published_on', 'DESC')->get();
+        })->orderBy('published_on', 'DESC')->take(5)->get();
 
         return view('cryptohome',["latest_news"=>$latest_news,"funding_deals"=>$funding_deals,"cryptovideos"=>$cryptoVideos,"blogs"=>$blogs, 'newshighlight'=>$news_highlight, 'pressreleases' => $press_releases]);
   }
@@ -689,6 +689,11 @@ class StaticSiteController extends Controller
   {
     $top20 = Crypto20Youtubers::take(20)->orderBy('position')->get();
     return view('top20-youtubers',['top20' => $top20]);
+  }
+
+  public function createblog()
+  {
+    # code...
   }
 }
 

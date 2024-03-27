@@ -24,7 +24,7 @@ Route::get('/crypto-youtube', 'StaticSiteController@crypto_feeds')->name('static
 
 Route::get('cryptonews', 'StaticSiteController@cryptoNews')->name('cryptonews');
 Route::get('cryptoyoutube', 'StaticSiteController@cryptoYoutube')->name('cryptoyoutube');
-Route::get('cryptonews/{id}', 'StaticSiteController@getCryptoNews');
+Route::get('cryptonews/{id}', 'StaticSiteController@getCryptoNews')->name('cryptonews.get');
 Route::get('investor-zone', 'StaticSiteController@investorZone')->name('investor-zone');
 Route::get('news-letter', 'StaticSiteController@newsLetterV2')->name('news-letter');
 Route::get('funding-deals', 'StaticSiteController@fundingDeals')->name('funding-deals');
