@@ -32,7 +32,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                         <div class="col-md-12">
                                             <div class="mb-3 ml-2 pl-3 pt-0 border-left border-info border-1">
                                                 <!-- put data here -->
-                                                <a href="{{ url('/cryptonews/'.$blog->blog_id) }}">{{ $blog->blog_title }}</a>
+                                                <a href="{{ route('cryptonews.get',$blog->blog_id) }}">{{ $blog->blog_title }}</a>
 
                                             </div>
                                         </div>
@@ -84,10 +84,10 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                     @foreach($funding_deals as $index => $deal)
                                     <div class="shadow-sm" style="@if($index > 0) margin-top: 5px; @endif">
                                         <div class="d-flex pt-3 px-3 rounded bg-white text-primary">
-                                            <a type="button">
+                                            <a href="{{ $deal->c_website }}" type="button">
                                                 <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">
                                             </a>
-                                            <p>{{ $deal->company }}</p>
+                                            <p> <a class="text-primary" href="{{ $deal->c_website }}">{{ $deal->company }} </a></p>
                                             <div class="ml-auto text-dark">
                                                 {{ $deal->funding}}
                                                 <a data-toggle="collapse" data-target="#collapseDeal{{ $index }}" aria-expanded="false" aria-controls="collapseDeal{{ $index }}"> <i class="fa fa-angle-down"></i> </a>
@@ -182,10 +182,10 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                     @foreach($funding_deals as $index => $deal)
                                     <div class="shadow-sm" style="@if($index > 0) margin-top: 5px; @endif">
                                         <div class="d-flex pt-3 px-3 rounded bg-white text-primary">
-                                        <a type="button">
+                                        <a href="{{ $deal->c_website }}" type="button">
                                                 <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">
                                             </a>
-                                            <p>{{ $deal->company }}</p>
+                                            <p> <a class="text-primary" href="{{ $deal->c_website }}">{{ $deal->company }} </a></p>
                                             <div class="ml-auto text-dark">
                                                 {{ $deal->funding}}
                                                 <a data-toggle="collapse" data-target="#collapseDeal{{ $index }}" aria-expanded="false" aria-controls="collapseDeal{{ $index }}"> <i class="fa fa-angle-down"></i> </a>
@@ -279,7 +279,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                             <img class="w-100 cw-landing-latest-news-image" src="{{ $blog->title_img }}" class="card-img-top rounded" alt="...">
                         </div>
                         <div class="card-body pb-0">
-                            <h5 class="font-weight-bold">{{ $news->blog_title }}</h5>
+                            <h5 class="font-weight-bold"> <a class="text-dark" href="{{ url('/cryptonews/'.$news->blog_id) }}">{{ $news->blog_title }}    </a></h5>
                         </div>
                         <div class="d-flex flex-row card-footer border-0 cw-bg-card pt-0">
                             <!-- <p>13 hours ago </p> -->
@@ -377,7 +377,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                             <img class="rounded img-fluid" src="{{ $pressreleases[0]['title_img'] }}" alt="Image">
                         </div>
                         <div class="mt-3 pb-3">
-                            <h2 class="font-weight-bold">{{ $pressreleases[0]['blog_title'] }}</h2>
+                            <h2 class="font-weight-bold"> <a class="text-dark" href="{{ url('/cryptonews/'.$pressreleases[0]['blog_id']) }}"> {{ $pressreleases[0]['blog_title'] }} </a></h2>
                             <p>{{ $pressreleases[0]['published_on_formatted'] }} </p>
 
                         </div>
@@ -399,7 +399,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                         <img class="rounded img-fluid" src="{{ $pressrelease->title_img }}" alt="Image">
                                     </div>
                                     <div class="mt-3 flex-grow-1">
-                                        <h4 class="font-weight-bold mb-2">{{ $pressrelease->blog_title }}</h4>
+                                        <h4 class="font-weight-bold mb-2"> <a class="text-dark" href="{{ url('/cryptonews/'.$pressrelease->blog_id) }}">{{ $pressrelease->blog_title }}</a></h4>
                                     </div>
                                     <div class="d-flex card-footer border-0 cw-bg-card p-0" style="margin-top: auto;">
                                         <p class="mb-0">{{ $blog->published_on_formatted }} &nbsp;  &nbsp; {{ $blog->published_on_formatted_date_string }} </p>

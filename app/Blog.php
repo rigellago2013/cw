@@ -36,19 +36,25 @@ class Blog extends Model
     
         // Choose appropriate format based on the difference
         if ($difference < 1) {
-            return 'just now';
+            return 'Just now';
         } elseif ($difference < 60) {
             return $difference . ' minutes ago';
         } elseif ($difference < 1440) {
             return round($difference / 60) . ' hours ago';
         } elseif ($date->isToday()) {
-            return 'today at ' . $date->format('h:i A');
-        } elseif ($date->isYesterday()) {
-            return 'yesterday at ' . $date->format('h:i A');
+            return 'Today at ' . $date->format('h:i A');
         } elseif ($difference < 43200) { // Less than 30 days (30 days * 24 hours * 60 minutes)
-            return round($difference / 1440) . ' days ago';
+            if ($differenceInDays == 1) {
+                return '1 day ago';
+            } else {
+                return $differenceInDays . ' days ago';
+            }
         } elseif ($differenceInDays < 30) {
-            return $differenceInDays . ' days ago';
+            if ($differenceInDays == 1) {
+                return '1 day ago';
+            } else {
+                return $differenceInDays . ' days ago';
+            }
         } else {
             // Calculate the number of months
             $months = $date->diffInMonths();
