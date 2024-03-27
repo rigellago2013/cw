@@ -27,8 +27,8 @@
                         <p class="mb-0">© Copyright 2024 CryptoWeekly</p>
                     </div>
                     <div class="mt-3 mt-md-0 ml-auto">
-                        <a href="#" class="social-icon text-white"><i class="fa fa-lg fa-facebook"></i></a>
-                        <a href="#" class="social-icon text-white"><i class="fa fa-lg fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/CryptoWeekly" class="social-icon text-white"><i class="fa fa-lg fa-facebook"></i></a>
+                        <a href="https://twitter.com/weeklycrypto" class="social-icon text-white"><i class="fa fa-lg fa-twitter"></i></a>
                         <a href="#" class="social-icon text-white"><i class="fa fa-lg fa-instagram"></i></a>
                         <a href="#" class="social-icon text-white"><i class="fa fa-lg fa-envelope"></i></a>
                     </div>
