@@ -62,7 +62,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     <div class="cw-landing-main-card-bg overflow-hidden position-relative">
                         <div class="mask-center-big">
                             <div class="mask-center-small ">
-                                <img class="" src="{{ $newshighlight->title_img }}" alt="">
+                                <img style="height: 420px;" src="{{ $newshighlight->title_img }}" alt="">
                             </div>
                         </div>
                         <h3 class="card-title cryptohome-header-text news-highlight">News Highlight</h3>
