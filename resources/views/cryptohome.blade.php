@@ -10,133 +10,131 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 
 @section('content')
 <div class="container-fluid site-width bg-white d-none d-lg-block  py-5">
-    <div class="row">
-        <div class="col d-flex p-0 align-items-stretch">
-            <div class="col-lg-3">
-                <div class="col-lg-12 cw-bg-card px-0 mb-2 d-flex flex-column h-100">
-                    <div class="rounded p-3 pb-0 flex-grow-1">
-                        <h2 class="cryptohome-header-text ml-2">Top News</h2>
-                        <hr>
-                        <div class="cw-landing-scrollable-content cw-scrollbar" id="infinite-scroll">
-                            <div class="scrolling-pagination">
-                                @foreach($blogs as $blog)
-                                <div class="pl-2">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="mb-3 d-flex">
-                                                <img class="mr-1" src="{{ asset('img/png/cw-icon.png') }}" alt="cw-icon"> {{ $blog->published_on_formatted }}
-                                            </div>
+    <div class="row align-items-stretch">
+        <div class="col-lg-3">
+            <div class="col-lg-12 cw-bg-card px-0 mb-2 d-flex flex-column h-100">
+                <div class="rounded p-3 pb-0 flex-grow-1">
+                    <h2 class="cryptohome-header-text ml-2">Top News</h2>
+                    <hr>
+                    <div class="cw-landing-scrollable-content cw-scrollbar" id="infinite-scroll">
+                        <div class="scrolling-pagination">
+                            @foreach($blogs as $blog)
+                            <div class="pl-2">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="mb-3 d-flex">
+                                            <img class="mr-1" src="{{ asset('img/png/cw-icon.png') }}" alt="cw-icon"> {{ $blog->published_on_formatted }}
                                         </div>
                                     </div>
-                                    <div class="row mt-n-10">
-                                        <div class="col-md-12">
-                                            <div class="mb-3 ml-2 pl-3 pt-0 border-left border-info border-1">
-                                                <!-- put data here -->
-                                                <a href="{{ route('cryptonews.get',$blog->blog_id) }}">{{ $blog->blog_title }}</a>
+                                </div>
+                                <div class="row mt-n-10">
+                                    <div class="col-md-12">
+                                        <div class="mb-3 ml-2 pl-3 pt-0 border-left border-info border-1">
+                                            <!-- put data here -->
+                                            <a href="{{ route('cryptonews.get',$blog->blog_id) }}">{{ $blog->blog_title }}</a>
 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                            {{ $blogs->links() }}
+                        </div>
+                    </div>
+
+                </div>
+                <a href="#" class="read-more-link font-weight-bold ml-3" style="margin: auto 0 20px;">Read more latest news <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                <div class="card border-0 bg-blue text-white">
+                    <img class="card-img-top" src="{{asset('/img/OGI 1.png')}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title font-weight-bold">SPONSORED</h6>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 mt-auto px-0 flex-fill">
+            </div>
+        </div>
+        <div class="col-lg-6 p-0">
+            <div class="card h-100">
+                <div class="cw-landing-main-card-bg overflow-hidden position-relative">
+                    <div class="mask-center-big">
+                        <div class="mask-center-small ">
+                            <img class="" src="{{ $newshighlight->title_img }}" alt="">
+                        </div>
+                    </div>
+                    <h3 class="card-title cryptohome-header-text news-highlight">News Highlight</h3>
+                </div>
+                <div class="card-body cw-landing-main-card-bg">
+                    <h2 class="cryptohome-header-text mt-4 news-highlight-blog-title">{{ $newshighlight->blog_title }}</h2>
+                    <p class="card-text">{{ Str::words(strip_tags($newshighlight->blog),150,'') }}...              <a href="{{ url('/cryptonews/'.$newshighlight->blog_id) }}">Read more</a></p>
+        
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 d-lg-block d-none">
+            <div class="col-lg-12 px-0 h-100">
+                <div class="d-flex flex-column px-1 h-100">
+                    <h2 class="p-3 cryptohome-header-text mb-3 cw-bg-card rounded">Funding Deals</h2>
+                    <div class="flex-grow-1">
+                        <div class="row">
+                            <div class="col" id="fundingDealCollapse">
+                                @foreach($funding_deals as $index => $deal)
+                                <div class="shadow-sm" style="@if($index > 0) margin-top: 5px; @endif">
+                                    <div class="d-flex pt-3 px-3 rounded bg-white text-primary">
+                                        <a href="{{ $deal->c_website }}" type="button">
+                                            <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">
+                                        </a>
+                                        <p> <a class="text-primary" href="{{ $deal->c_website }}">{{ $deal->company }} </a></p>
+                                        <div class="ml-auto text-dark">
+                                            {{ $deal->funding}}
+                                            <a data-toggle="collapse" data-target="#collapseDeal{{ $index }}" aria-expanded="false" aria-controls="collapseDeal{{ $index }}"> <i class="fa fa-angle-down"></i> </a>
+                                        </div>
+                                    </div>
+                                    <div id="collapseDeal{{ $index }}" class="collapse" data-parent="#fundingDealCollapse">
+                                        <div class="card card-body border-left-0 border-right-0 border-bottom-0 rounded-0">
+                                            <div class="d-flex border-bottom border-bottom-gray ">
+                                                <div>
+                                                    Country:
+                                                </div>
+                                                <div class="ml-auto">
+                                                    {{ $deal->country}}
+                                                </div>
+                                            </div>
+                                            <div class="d-flex border-bottom border-bottom-gray ">
+                                                <div>
+                                                    Funding Type:
+                                                </div>
+                                                <div class="ml-auto">
+                                                    {{ $deal->funding_type}}
+                                                </div>
+                                            </div>
+                                            <div class="d-flex border-bottom border-bottom-gray ">
+                                                <div>
+                                                    Lead Investor:
+                                                </div>
+                                                <div class="ml-auto">
+                                                    {{ $deal->lead_investor }}
+                                                </div>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div>
+                                                    Completion Date:
+                                                </div>
+                                                <div class="ml-auto">
+                                                    {{ $deal->completion_date }}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 @endforeach
-                                {{ $blogs->links() }}
                             </div>
                         </div>
-
                     </div>
-                    <a href="#" class="read-more-link font-weight-bold ml-3" style="margin: auto 0 20px;">Read more latest news <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                    <div class="card border-0 bg-blue text-white">
-                        <img class="card-img-top" src="{{asset('/img/OGI 1.png')}}" alt="Card image cap">
-                        <div class="card-body">
-                            <h6 class="card-title font-weight-bold">SPONSORED</h6>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 mt-auto px-0 flex-fill">
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="cw-landing-main-card-bg overflow-hidden position-relative">
-                        <div class="mask-center-big">
-                            <div class="mask-center-small ">
-                                <img class="" src="{{ $newshighlight->title_img }}" alt="">
-                            </div>
-                        </div>
-                        <h3 class="card-title cryptohome-header-text news-highlight">News Highlight</h3>
-                    </div>
-                    <div class="card-body cw-landing-main-card-bg">
-                        <h2 class="cryptohome-header-text mt-4 news-highlight-blog-title">{{ $newshighlight->blog_title }}</h2>
-                        <p class="card-text">{{ Str::words(strip_tags($newshighlight->blog),150,'') }}...              <a href="{{ url('/cryptonews/'.$newshighlight->blog_id) }}">Read more</a></p>
-          
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 d-lg-block d-none">
-                <div class="col-lg-12 px-0 h-100">
-                    <div class="d-flex flex-column px-1 h-100">
-                        <h2 class="p-3 cryptohome-header-text mb-3 cw-bg-card rounded">Funding Deals</h2>
-                        <div class="flex-grow-1">
-                            <div class="row">
-                                <div class="col" id="fundingDealCollapse">
-                                    @foreach($funding_deals as $index => $deal)
-                                    <div class="shadow-sm" style="@if($index > 0) margin-top: 5px; @endif">
-                                        <div class="d-flex pt-3 px-3 rounded bg-white text-primary">
-                                            <a href="{{ $deal->c_website }}" type="button">
-                                                <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">
-                                            </a>
-                                            <p> <a class="text-primary" href="{{ $deal->c_website }}">{{ $deal->company }} </a></p>
-                                            <div class="ml-auto text-dark">
-                                                {{ $deal->funding}}
-                                                <a data-toggle="collapse" data-target="#collapseDeal{{ $index }}" aria-expanded="false" aria-controls="collapseDeal{{ $index }}"> <i class="fa fa-angle-down"></i> </a>
-                                            </div>
-                                        </div>
-                                        <div id="collapseDeal{{ $index }}" class="collapse" data-parent="#fundingDealCollapse">
-                                            <div class="card card-body border-left-0 border-right-0 border-bottom-0 rounded-0">
-                                                <div class="d-flex border-bottom border-bottom-gray ">
-                                                    <div>
-                                                        Country:
-                                                    </div>
-                                                    <div class="ml-auto">
-                                                        {{ $deal->country}}
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex border-bottom border-bottom-gray ">
-                                                    <div>
-                                                        Funding Type:
-                                                    </div>
-                                                    <div class="ml-auto">
-                                                        {{ $deal->funding_type}}
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex border-bottom border-bottom-gray ">
-                                                    <div>
-                                                        Lead Investor:
-                                                    </div>
-                                                    <div class="ml-auto">
-                                                        {{ $deal->lead_investor }}
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <div>
-                                                        Completion Date:
-                                                    </div>
-                                                    <div class="ml-auto">
-                                                        {{ $deal->completion_date }}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-end">
-                            <h4> <a href="{{ route('funding-deals') }}" class="mr-3 font-weight-bold">See Full List</a> </h4>
-                        </div>
+                    <div class="d-flex justify-content-end">
+                        <h4> <a href="{{ route('funding-deals') }}" class="mr-3 font-weight-bold">See Full List</a> </h4>
                     </div>
                 </div>
             </div>
