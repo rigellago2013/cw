@@ -66,11 +66,18 @@
             </div>       
         </div>
     </div>
+<<<<<<< HEAD
     <div class="container-fluid crypto-rates pb-2" style="background-color: #F3F8FD; border-top:1px solid #C0C0C0; border-bottom:1px solid #C0C0C0;">
         <div class="row">
             <div class="col">
                 <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script> <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#999999" lcw-marquee-1="coins" lcw-marquee-2="none" lcw-marquee-items="10" ></div>
                 
+=======
+    <div class="container-fluid crypto-rates py-2" style="background-color: #F3F8FD; border-top:1px solid #C0C0C0; border-bottom:1px solid #C0C0C0; ">
+        <div class="row">
+            <div class="col">
+                <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#999999" lcw-marquee-1="coins" lcw-marquee-2="none" lcw-marquee-items="10"></div>
+>>>>>>> 259fcb8e831e00e1ac4da6f5d17be1d364cc8a8f
             </div>
         </div>
     </div>
