@@ -66,68 +66,11 @@
             </div>       
         </div>
     </div>
-    <div class="container-fluid crypto-rates py-2" style="background-color: #F3F8FD; border-top:1px solid #C0C0C0; border-bottom:1px solid #C0C0C0;">
+    <div class="container-fluid crypto-rates pb-2" style="background-color: #F3F8FD; border-top:1px solid #C0C0C0; border-bottom:1px solid #C0C0C0;">
         <div class="row">
             <div class="col">
                 <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script> <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#999999" lcw-marquee-1="coins" lcw-marquee-2="none" lcw-marquee-items="10" ></div>
-                <!-- <div class="crypto-rates__boxes d-flex align-items-center justify-content-between">
-                    <div class="crypto-rates__box d-flex align-items-center">
-                        <div class="crypto-rates__logo mr-1">
-                            <img src="{{ asset('img/bitcoin.png') }}" alt="">
-                        </div>
-                        <p class="crypto-rates__title mb-0 mr-1 font-weight-bold">BTC</p>
-                        <p class="crypto-rates__value mb-0 px-1 rounded-lg down" style="">$69,740.80 <i class="fa fa-caret-down" aria-hidden="true"></i> 0.79%</p>
-                    </div>
-                    <div class="crypto-rates__box d-flex align-items-center">
-                        <div class="crypto-rates__logo mr-1">
-                            <img src="{{ asset('img/ethereum.png') }}" alt="">
-                        </div>
-                        <p class="crypto-rates__title mb-0 mr-1 font-weight-bold">ETH</p>
-                        <p class="crypto-rates__value mb-0 px-1 rounded-lg down" style="">$3,562.75<i class="fa fa-caret-down" aria-hidden="true"></i> 0.79%</p>
-                    </div>
-                    <div class="crypto-rates__box d-flex align-items-center">
-                        <div class="crypto-rates__logo mr-1">
-                            <img src="{{ asset('img/usdt.png') }}" alt="">
-                        </div>
-                        <p class="crypto-rates__title mb-0 mr-1 font-weight-bold">USDT</p>
-                        <p class="crypto-rates__value mb-0 px-1 rounded-lg down" style="">$1.00 <i class="fa fa-caret-down" aria-hidden="true"></i> 0.79%</p>
-                    </div>
-                    <div class="crypto-rates__box d-flex align-items-center">
-                        <div class="crypto-rates__logo mr-1">
-                            <img src="{{ asset('img/bnb.png') }}" alt="">
-                        </div>
-                        <p class="crypto-rates__title mb-0 mr-1 font-weight-bold">BNB</p>
-                        <p class="crypto-rates__value mb-0 px-1 rounded-lg up" style="">$577.71 <i class="fa fa-caret-down" aria-hidden="true"></i> 0.79%</p>
-                    </div>
-                    <div class="crypto-rates__box d-flex align-items-center">
-                        <div class="crypto-rates__logo mr-1">
-                            <img src="{{ asset('img/bitcoin.png') }}" alt="">
-                        </div>
-                        <p class="crypto-rates__title mb-0 mr-1 font-weight-bold">BTC</p>
-                        <p class="crypto-rates__value mb-0 px-1 rounded-lg down" style="">$69,740.80  <i class="fa fa-caret-down" aria-hidden="true"></i> 0.79%</p>
-                    </div>
-                    <div class="crypto-rates__box d-flex align-items-center">
-                        <div class="crypto-rates__logo mr-1">
-                            <img src="{{ asset('img/ethereum.png') }}" alt="">
-                        </div>
-                        <p class="crypto-rates__title mb-0 mr-1 font-weight-bold">ETH</p>
-                        <p class="crypto-rates__value mb-0 px-1 rounded-lg down" style="">$3,562.75 <i class="fa fa-caret-down" aria-hidden="true"></i> 0.79%</p>
-                    </div>
-                    <div class="crypto-rates__box d-flex align-items-center">
-                        <div class="crypto-rates__logo mr-1">
-                            <img src="{{ asset('img/usdt.png') }}" alt="">
-                        </div>
-                        <p class="crypto-rates__title mb-0 mr-1 font-weight-bold">USDT</p>
-                        <p class="crypto-rates__value mb-0 px-1 rounded-lg down" style="">$1.00 <i class="fa fa-caret-down" aria-hidden="true"></i> 0.79%</p>
-                    </div>
-                    <div class="crypto-rates__box d-flex align-items-center">
-                        <div class="crypto-rates__logo mr-1">
-                            <img src="{{ asset('img/bnb.png') }}" alt="">
-                        </div>
-                        <p class="crypto-rates__title mb-0 mr-1 font-weight-bold">BNB</p>
-                        <p class="crypto-rates__value mb-0 px-1 rounded-lg up" style="">$577.71 <i class="fa fa-caret-down" aria-hidden="true"></i> 0.79%</p>
-                    </div>
-                </div> -->
+                
             </div>
         </div>
     </div>

@@ -1637,16 +1637,6 @@
 
     /* Crypto Rates Nav */
     
-    .container-fluid.crypto-rates .livecoinwatch-widget-5 {
-        height: 38px !important;
-        margin: 0 !important;
-    }
-
-    .container-fluid.crypto-rates .livecoinwatch-widget-5 img {
-        padding: 0 !important;
-        margin: 9px 5px 0 0 !important;
-        height: 20px !important;
-    }
     
     .crypto-rates__boxes {
         gap: 10px;
