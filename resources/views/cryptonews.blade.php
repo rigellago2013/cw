@@ -16,14 +16,14 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <h1 class="font-weight-bold">Trending News</h1>
             <div class="tab-header mb-5">
                 <ul class="nav nav-tabs">
-                    <li class="nav-item"><a href="#" class="nav-link align-middle"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img.png') }}" alt=""> News</a>
+                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img.png') }}" alt=""> News</a>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link align-middle"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (1).png') }}" alt=""> CW's Picks</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link align-middle"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (2).png') }}" alt=""> Technology</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link align-middle"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (3).png') }}" alt=""> NFTs</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link align-middle"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (4).png') }}" alt=""> Coins</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link align-middle"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (5).png') }}" alt=""> DeFi</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link align-middle"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (5).png') }}" alt=""> DEX</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (1).png') }}" alt=""> CW's Picks</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (2).png') }}" alt=""> Technology</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (3).png') }}" alt=""> NFTs</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (4).png') }}" alt=""> Coins</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (5).png') }}" alt=""> DeFi</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (5).png') }}" alt=""> DEX</a></li>
                 </ul>
             </div>
             <div class="featured-news-container">

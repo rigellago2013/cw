@@ -274,7 +274,9 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 <div class="col-md-3 mb-4">
                     <div class="card cw-bg-card border-0 h-100">
                         <div class="px-2 ">
-                            <img class="w-100 cw-landing-latest-news-image" src="{{ $news->title_img }}" class="card-img-top rounded" alt="...">
+                            <a href="{{ url('/cryptonews/'.$news->blog_id) }}">
+                                <img class="w-100 cw-landing-latest-news-image" src="{{ $news->title_img }}" class="card-img-top rounded" alt="...">
+                            </a>
                         </div>
                         <div class="card-body pb-0">
                             <h5 class="font-weight-bold"> <a class="text-dark" href="{{ url('/cryptonews/'.$news->blog_id) }}">{{ $news->blog_title }}    </a></h5>
