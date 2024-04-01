@@ -57,7 +57,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 <div class="col-lg-12 mt-auto px-0 flex-fill">
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 p-0">
                 <div class="card h-100">
                     <div class="cw-landing-main-card-bg overflow-hidden position-relative">
                         <div class="mask-center-big">
