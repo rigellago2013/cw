@@ -281,7 +281,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                             </a>
                         </div>
                         <div class="card-body pb-0">
-                            <h5 class="font-weight-bold"> <a class="text-dark" href="{{ url('/cryptonews/'.$news->blog_id) }}">{{ $news->blog_title }}    </a></h5>
+                            <h5 class=""> <a class="text-dark" href="{{ url('/cryptonews/'.$news->blog_id) }}" style="font-weight:500;">{{ $news->blog_title }}    </a></h5>
                         </div>
                         <div class="d-flex flex-row card-footer border-0 cw-bg-card pt-0">
                             <!-- <p>13 hours ago </p> -->
@@ -346,10 +346,10 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                     {!! $video->video !!}
                                 </div>
                                 <div class="d-flex justify-content-between">
-                                    <h5 class="mt-3 px-3">{{ $video->channel_name }}</h5>
+                                    <h5 class="mt-3 px-3"  style="font-weight:500;">{{ $video->channel_name }}</h5>
                                 </div>
                                 <div class="text-bold px-3">
-                                    <h4> <strong> {{ $video->title }} </strong></h4>
+                                    <h4 style="font-weight:500;">{{ $video->title }}</h4>
                                 </div>
                             </div>
                         </div>
@@ -401,7 +401,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                         <img class="rounded img-fluid" src="{{ $pressrelease->title_img }}" alt="Image">
                                     </div>
                                     <div class="mt-3 flex-grow-1">
-                                        <h4 class="font-weight-bold mb-2"> <a class="text-dark" href="{{ url('/cryptonews/'.$pressrelease->blog_id) }}">{{ $pressrelease->blog_title }}</a></h4>
+                                        <h4 class="mb-2"> <a class="text-dark" href="{{ url('/cryptonews/'.$pressrelease->blog_id) }}"  style="font-weight:500;">{{ $pressrelease->blog_title }}</a></h4>
                                     </div>
                                     <div class="d-flex card-footer border-0 cw-bg-card p-0" style="margin-top: auto;">
                                         <p class="mb-0">{{ $blog->published_on_formatted }} &nbsp;  &nbsp; {{ $blog->published_on_formatted_date_string }} </p>
