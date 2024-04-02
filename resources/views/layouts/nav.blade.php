@@ -22,22 +22,22 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item {{ request()->routeIs('index') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('index') }}">Home</a>
+                                <a class="nav-link {{ request()->routeIs('index') ? 'font-weight-bold text-primary' : '' }}" href="{{ route('index') }}">Home</a>
                             </li>
                             <li class="nav-item {{ request()->routeIs('cryptonews') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('cryptonews') }}">Crypto News</a>
+                                <a class="nav-link {{ request()->routeIs('cryptonews') ? 'font-weight-bold text-primary' : '' }}" href="{{ route('cryptonews') }}">Crypto News</a>
                             </li>
                             <li class="nav-item {{ request()->routeIs('cryptoyoutube') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('cryptoyoutube') }}">Crypto Youtube</a>
+                                <a class="nav-link  {{ request()->routeIs('cryptoyoutube') ? 'font-weight-bold text-primary' : '' }}" href="{{ route('cryptoyoutube') }}">Crypto Youtube</a>
                             </li>
                             <li class="nav-item {{ request()->routeIs('investor-zone') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('investor-zone') }}">Investor Zone</a>
+                                <a class="nav-link {{ request()->routeIs('investor-zone') ? 'font-weight-bold text-primary' : '' }}" href="{{ route('investor-zone') }}">Investor Zone</a>
                             </li>
                             <li class="nav-item {{ request()->routeIs('news-letter') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('news-letter') }}">Newsletter</a>
+                                <a class="nav-link  {{ request()->routeIs('news-letter') ? 'font-weight-bold text-primary' : '' }}" href="{{ route('news-letter') }}">Newsletter</a>
                             </li>
                             <li class="nav-item {{ request()->routeIs('funding-deals') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('funding-deals') }}">Funding Deals</a>
+                                <a class="nav-link {{ request()->routeIs('funding-deals') ? 'font-weight-bold text-primary' : '' }}" href="{{ route('funding-deals') }}">Funding Deals</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -66,18 +66,10 @@
             </div>       
         </div>
     </div>
-<<<<<<< HEAD
-    <div class="container-fluid crypto-rates pb-2" style="background-color: #F3F8FD; border-top:1px solid #C0C0C0; border-bottom:1px solid #C0C0C0;">
-        <div class="row">
-            <div class="col">
-                <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script> <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#999999" lcw-marquee-1="coins" lcw-marquee-2="none" lcw-marquee-items="10" ></div>
-                
-=======
-    <div class="container-fluid crypto-rates py-2" style="background-color: #F3F8FD; border-top:1px solid #C0C0C0; border-bottom:1px solid #C0C0C0; ">
+    <div class="container-fluid crypto-rates" style="background-color: #F3F8FD; border-top:1px solid #C0C0C0; border-bottom:1px solid #C0C0C0; ">
         <div class="row">
             <div class="col">
                 <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#999999" lcw-marquee-1="coins" lcw-marquee-2="none" lcw-marquee-items="10"></div>
->>>>>>> 259fcb8e831e00e1ac4da6f5d17be1d364cc8a8f
             </div>
         </div>
     </div>

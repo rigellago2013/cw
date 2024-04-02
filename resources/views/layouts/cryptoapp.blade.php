@@ -67,21 +67,7 @@
   <!-- End Constant Contact Active Forms -->
   <!-- <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=6075696eae08f90011442daf&product=sticky-share-buttons" async="async"></script> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
 </head>
-    <style>
-      
-    .container-fluid.crypto-rates .livecoinwatch-widget-5 {
-        height: 38px !important;
-        margin: 0 auto !important;
-    }
-
-    .container-fluid.crypto-rates .livecoinwatch-widget-5 img {
-        padding: 0 !important;
-        margin: 9px 5px 0 0 !important;
-        height: 20px !important;
-    }
-    </style>
 
 <body>
   <div id="app" class="bg-white">
