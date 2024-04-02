@@ -274,7 +274,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <div class="latest-news d-flex flex-wrap">
                 @foreach($latest_news as $news)
                 <div class="col-md-3 mb-4">
-                    <div class="card cw-bg-card border-0 h-100">
+                    <div class="card cw-bg-card rounded-lg h-100 blue-hover">
                         <div class="px-2 ">
                             <a href="{{ url('/cryptonews/'.$news->blog_id) }}">
                                 <img class="w-100 cw-landing-latest-news-image" src="{{ $news->title_img }}" class="card-img-top rounded" alt="...">
@@ -340,7 +340,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <div class="crypto-videos d-flex flex-wrap">
                 @foreach ($cryptovideos as $video)
                     <div class="col-md-3 mb-4 d-flex flex-column justify-content-between">
-                        <div class="cw-bg-card rounded h-100">
+                        <div class="cw-bg-card rounded-lg h-100 blue-hover">
                             <div class="pb-1">
                                 <div class="px-2 embed-responsive embed-responsive-1by1 rounded">
                                     {!! $video->video !!}
@@ -395,7 +395,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         @foreach($pressreleases as $pressrelease)
                         @if($index > 0)
                         <div class="col-md-6 d-flex mb-4">
-                            <div class="cw-bg-card rounded w-100">
+                            <div class="cw-bg-card rounded-lg w-100 blue-hover">
                                 <div class="px-2 pb-2 d-flex flex-column h-100">
                                     <div>
                                         <img class="rounded img-fluid" src="{{ $pressrelease->title_img }}" alt="Image">

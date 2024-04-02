@@ -4,6 +4,17 @@
         display: block;
         max-width: 100%;
     }
+
+    .blue-hover {
+        border: 1px solid transparent;
+        transition: 0.3s;
+    }
+
+    .blue-hover:hover {
+        border: 1px solid #1663FF;
+    }
+
+
     
     /*Nav Bar*/
 
@@ -217,7 +228,6 @@
         margin: 5px;
         padding: 5px;
         background-color: white;
-
         border-radius: 10px;
     }
 
@@ -1639,7 +1649,7 @@
         
     .container-fluid.crypto-rates .livecoinwatch-widget-5 {
         height: 44px !important;
-        margin: 0 !important;
+        margin: 0 auto !important;
     }
 
     .container-fluid.crypto-rates .livecoinwatch-widget-5 img {
