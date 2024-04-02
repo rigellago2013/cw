@@ -22,39 +22,39 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item {{ request()->routeIs('index') ? 'active' : '' }}">
-                                <a class="nav-link {{ request()->routeIs('index') ? 'font-weight-bold text-primary' : '' }}" href="{{ route('index') }}">Home</a>
+                                <a class="nav-link {{ request()->routeIs('index') ? 'text-primary nav-text' : '' }}" href="{{ route('index') }}">Home</a>
                             </li>
                             <li class="nav-item {{ request()->routeIs('cryptonews') ? 'active' : '' }}">
-                                <a class="nav-link {{ request()->routeIs('cryptonews') ? 'font-weight-bold text-primary' : '' }}" href="{{ route('cryptonews') }}">Crypto News</a>
+                                <a class="nav-link {{ request()->routeIs('cryptonews') ? 'text-primary nav-text' : '' }}" href="{{ route('cryptonews') }}">Crypto News</a>
                             </li>
                             <li class="nav-item {{ request()->routeIs('cryptoyoutube') ? 'active' : '' }}">
-                                <a class="nav-link  {{ request()->routeIs('cryptoyoutube') ? 'font-weight-bold text-primary' : '' }}" href="{{ route('cryptoyoutube') }}">Crypto Youtube</a>
+                                <a class="nav-link  {{ request()->routeIs('cryptoyoutube') ? 'text-primary nav-text' : '' }}" href="{{ route('cryptoyoutube') }}">Crypto Youtube</a>
                             </li>
                             <li class="nav-item {{ request()->routeIs('investor-zone') ? 'active' : '' }}">
-                                <a class="nav-link {{ request()->routeIs('investor-zone') ? 'font-weight-bold text-primary' : '' }}" href="{{ route('investor-zone') }}">Investor Zone</a>
+                                <a class="nav-link {{ request()->routeIs('investor-zone') ? 'text-primary nav-text' : '' }}" href="{{ route('investor-zone') }}">Investor Zone</a>
                             </li>
                             <li class="nav-item {{ request()->routeIs('news-letter') ? 'active' : '' }}">
-                                <a class="nav-link  {{ request()->routeIs('news-letter') ? 'font-weight-bold text-primary' : '' }}" href="{{ route('news-letter') }}">Newsletter</a>
+                                <a class="nav-link  {{ request()->routeIs('news-letter') ? 'text-primary nav-text' : '' }}" href="{{ route('news-letter') }}">Newsletter</a>
                             </li>
                             <li class="nav-item {{ request()->routeIs('funding-deals') ? 'active' : '' }}">
-                                <a class="nav-link {{ request()->routeIs('funding-deals') ? 'font-weight-bold text-primary' : '' }}" href="{{ route('funding-deals') }}">Funding Deals</a>
+                                <a class="nav-link {{ request()->routeIs('funding-deals') ? 'text-primary nav-text' : '' }}" href="{{ route('funding-deals') }}">Funding Deals</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Awards & Lists
+                                    Awards & Lists
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item {{ request()->routeIs('top-100-people') ? 'active' : '' }}" href="{{ route('top-100-people') }}">Top 100 People</a>
-                                <a class="dropdown-item {{ request()->routeIs('top-250-organisations') ? 'active' : '' }}" href="{{ route('top-250-organisations') }}">Top 250 Organisations</a>
-                                <a class="dropdown-item {{ request()->routeIs('top-50-defi-projects') ? 'active' : '' }}" href="{{ route('top-50-defi-projects') }}">Top 50 Defi Projects</a>
-                                <a class="dropdown-item {{ request()->routeIs('top-50-females') ? 'active' : '' }}" href="{{ route('top-50-females') }}">Top 50 Females</a>
-                                <a class="dropdown-item {{ request()->routeIs('top-20-youtubers') ? 'active' : '' }}" href="{{ route('top-20-youtubers') }}">Top 20 Youtubers</a>
+                                    <a class="dropdown-item {{ request()->routeIs('top-100-people') ? 'cw-active' : '' }}" href="{{ route('top-100-people') }}">Top 100 People</a>
+                                    <a class="dropdown-item border-top {{ request()->routeIs('top-250-organisations') ? 'cw-active' : '' }}" href="{{ route('top-250-organisations') }}">Top 250 Organisations</a>
+                                    <a class="dropdown-item border-top {{ request()->routeIs('top-50-defi-projects') ? 'cw-active' : '' }}" href="{{ route('top-50-defi-projects') }}">Top 50 Defi Projects</a>
+                                    <a class="dropdown-item border-top {{ request()->routeIs('top-50-females') ? 'cw-active' : '' }}" href="{{ route('top-50-females') }}">Top 50 Females</a>
+                                    <a class="dropdown-item border-top {{ request()->routeIs('top-20-youtubers') ? 'cw-active' : '' }}" href="{{ route('top-20-youtubers') }}">Top 20 Youtubers</a>
                                 </div>
                             </li>
-                    
+
                         </ul>
                     </div>
-                    
+
                     <!-- <div class="crypto-youtube">
                         <ul class="navbar-nav">
                             <li class="nav-item">
@@ -63,7 +63,7 @@
                         </ul>
                     </div> -->
                 </nav>
-            </div>       
+            </div>
         </div>
     </div>
     <div class="container-fluid crypto-rates" style="background-color: #F3F8FD; border-top:1px solid #C0C0C0; border-bottom:1px solid #C0C0C0; ">

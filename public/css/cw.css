@@ -14,12 +14,12 @@
     }
 
     .blue-hover {
-        border: 1px solid transparent;
+        border: 2px solid transparent;
         transition: 0.3s;
     }
 
     .blue-hover:hover {
-        border: 1px solid #1663FF;
+        border: 2px solid #1663FF;
     }
 
     p {
@@ -31,14 +31,14 @@
         line-height: 20px;
     }
 
-    h1,
+    h1, 
     h2,
     h3,
     h4,
     h5,
     h6 {
         font-family: 'NeueMontreal', sans-serif !important;
-        font-weight: 700;
+        font-weight: 700 !important;
     }
 
 
@@ -1817,4 +1817,38 @@
             width: 50%;
         }
 
+    }
+
+    .cw-active {
+        background: #CCE5FD;
+    }
+
+    .dropdown-menu .border-top {
+        border-top: 2px solid #000; /* Adjust the border color and width as needed */
+        margin-top: -2px; /* Adjust the negative margin to control the border length */
+    }
+
+    .nav-text {
+        font-family: 'NeueMontreal', sans-serif !important;
+        font-weight: 800 !important;
+    }
+
+    .inter-funding-deals{
+        font-family: "Inter", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-variation-settings:
+          "slnt" 0;
+    }
+
+    .fw-700 {
+        font-weight: 700 !important;
+    }
+
+    .fs-14{
+        font-size: 14px !important;
+    }
+      
+    .bg-advertise {
+        background: linear-gradient(90.03deg, #1663FF -1.42%, #3297F8 98.06%) !important;
     }

@@ -33,7 +33,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
 </div>
 <div class="container-fluid site-width">
     <div class="row">
-        <div class="col-lg-12 bg-blue text-white rounded d-flex justify-content-between align-items-center">
+        <div class="col-lg-12  bg-advertise text-white rounded d-flex justify-content-between align-items-center">
             <div>
                 <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
             </div>
@@ -51,9 +51,9 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
         @foreach($top50 as $index => $woman)
         @if($index == 20 || $index == 40)
         <div style="width: 98.9%;" class="mx-auto">
-            <div class="col-lg-12 bg-blue text-white rounded d-flex justify-content-between align-items-center mt-2 mb-4 mx-auto">
+            <div class="col-lg-12  bg-advertise text-white rounded d-flex justify-content-between align-items-center mt-2 mb-4 mx-auto">
                 <div>
-                    <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
+                    <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="" onerror='this.onerror=null; this.src=`{{ asset("img/Crypto-Female-50.png") }}`'>
                 </div>
                 <div class="mt-2 ml-3">
                     <h1> >>>>> Advertise Here </h1>

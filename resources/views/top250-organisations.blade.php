@@ -46,7 +46,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
 </div>
 <div class="container-fluid site-width">
     <div class="row">
-        <div class="col-lg-12 bg-blue text-white rounded d-flex justify-content-between align-items-center">
+        <div class="col-lg-12 bg-advertise text-white rounded d-flex justify-content-between align-items-center">
             <div>
                 <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
             </div>
@@ -66,7 +66,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
     
     @if(($index + 1) % 32 == 0)
     <div style="width: 98.9%;" class="mx-auto">
-    <div class="col-lg-12 bg-blue text-white rounded d-flex justify-content-between align-items-center mt-2 mb-4 mx-auto">
+    <div class="col-lg-12 bg-advertise text-white rounded d-flex justify-content-between align-items-center mt-2 mb-4 mx-auto">
             <div>
                 <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
             </div>
@@ -87,7 +87,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
         <div class="col-md-3 mb-4">
             <div class="company-ranking-box box-shadow-gray pt-4 pb-0 d-flex flex-column justify-content-between" style="border-radius: 8px; height: 100%;">
                 <div class="company-ranking-box__image ">
-                    <img src="{{ $organization->logo }}" alt="">
+                    <img src="{{ $organization->logo }}" alt="" onerror='this.onerror=null; this.src=`{{ asset("img/Top 250 Badge Gold.png") }}`'>
                 </div>
                 <a href="{{ $organization->url }}" class="company-ranking-box__title d-flex text-center text-light font-weight-bold p-2 justify-content-center" style="border-radius: 8px; background-color: #1663FF; margin-top: auto;">{{$organization->company_name }}</a>
             </div>

@@ -33,7 +33,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
 </div>
 <div class="container-fluid site-width">
     <div class="row">
-        <div class="col-lg-12 bg-blue text-white rounded d-flex justify-content-between align-items-center">
+        <div class="col-lg-12  bg-advertise text-white rounded d-flex justify-content-between align-items-center">
             <div>
                 <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
             </div>
@@ -51,7 +51,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
         @foreach($top50 as $index => $project)
         @if($index == 20 || $index == 40)
         <div style="width: 98.9%;" class="mx-auto">
-            <div class="col-lg-12 bg-blue text-white rounded d-flex justify-content-between align-items-center mt-2 mb-4 mx-auto">
+            <div class="col-lg-12 bg-advertise text-white rounded d-flex justify-content-between align-items-center mt-2 mb-4 mx-auto">
                 <div>
                     <img src="{{ asset('img/svg/advertise-atom.svg') }}" alt="">
                 </div>
@@ -66,7 +66,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
                 <div class="ranking-box__header d-flex justify-content-between mb-3">
                     <div class="ranking-box__info d-flex align-items-center">
                         <div class="ranking-box__image mr-3">
-                            <img src="{{ $project->head_url }}" alt="">
+                            <img src="{{ $project->head_url }}" alt="" onerror='this.onerror=null; this.src=`{{ asset("img/DEFI 50 Badge.png") }}`'>
                         </div>
                         <div class="ranking-box__title">
                             <h5 class="m-0" style="color: #1662FF; font-weight: 500;">{{ $project->company_name }}</h5>
