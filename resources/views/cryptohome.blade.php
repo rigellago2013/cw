@@ -87,7 +87,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                             <a href="{{ $deal->c_website }}" type="button">
                                                 <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">
                                             </a>
-                                            <p> <a class="text-primary" href="{{ $deal->c_website }}">{{ $deal->company }} </a></p>
+                                            <p> <u> <a class="text-primary" href="{{ $deal->c_website }}">{{ $deal->company }} </a> </u></p>
                                             <div class="ml-auto text-dark">
                                                 {{ $deal->funding}}
                                                 <a data-toggle="collapse" data-target="#collapseDeal{{ $index }}" aria-expanded="false" aria-controls="collapseDeal{{ $index }}"> <i class="fa fa-angle-down"></i> </a>
@@ -115,8 +115,8 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                                     <div>
                                                         Lead Investor:
                                                     </div>
-                                                    <div class="ml-auto">
-                                                        {{ $deal->lead_investor }}
+                                                    <div class="ml-auto text-primary">
+                                                       <u>  <a class="text-primary" href="{{ $deal->i_website }}">  {{ $deal->lead_investor }} </a> </u>
                                                     </div>
                                                 </div>
                                                 <div class="d-flex">
@@ -185,7 +185,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                         <a href="{{ $deal->c_website }}" type="button">
                                                 <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">
                                             </a>
-                                            <p> <a class="text-primary" href="{{ $deal->c_website }}">{{ $deal->company }} </a></p>
+                                            <p> <u> <a class="text-primary" href="{{ $deal->c_website }}">{{ $deal->company }} </a></u></p>
                                             <div class="ml-auto text-dark">
                                                 {{ $deal->funding}}
                                                 <a data-toggle="collapse" data-target="#collapseDeal{{ $index }}" aria-expanded="false" aria-controls="collapseDeal{{ $index }}"> <i class="fa fa-angle-down"></i> </a>
@@ -339,8 +339,8 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <h1 class="cryptohome-header-text mb-4">Crypto Videos</h1>
             <div class="crypto-videos d-flex flex-wrap">
                 @foreach ($cryptovideos as $video)
-                    <div class="col-md-3 mb-4 d-flex flex-column justify-content-between">
-                        <div class="cw-bg-card rounded-lg h-100 blue-hover">
+                    <div class="col-md-3 mb-4 d-flex flex-column justify-content-between blue-hover">
+                        <div class="cw-bg-card rounded-lg h-100 ">
                             <div class="pb-1">
                                 <div class="px-2 embed-responsive embed-responsive-1by1 rounded">
                                     {!! $video->video !!}

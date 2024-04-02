@@ -44,11 +44,11 @@
                                 Awards & Lists
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('top-100-people') }}">Top 100 People</a>
-                                <a class="dropdown-item" href="{{ route('top-250-organisations') }}">Top 250 Organisations</a>
-                                <a class="dropdown-item" href="{{ route('top-50-defi-projects') }}">Top 50 Defi Projects</a>
-                                <a class="dropdown-item" href="{{ route('top-50-females') }}">Top 50 Females</a>
-                                <a class="dropdown-item" href="{{ route('top-20-youtubers') }}">Top 20 Youtubers</a>
+                                <a class="dropdown-item {{ request()->routeIs('top-100-people') ? 'active' : '' }}" href="{{ route('top-100-people') }}">Top 100 People</a>
+                                <a class="dropdown-item {{ request()->routeIs('top-250-organisations') ? 'active' : '' }}" href="{{ route('top-250-organisations') }}">Top 250 Organisations</a>
+                                <a class="dropdown-item {{ request()->routeIs('top-50-defi-projects') ? 'active' : '' }}" href="{{ route('top-50-defi-projects') }}">Top 50 Defi Projects</a>
+                                <a class="dropdown-item {{ request()->routeIs('top-50-females') ? 'active' : '' }}" href="{{ route('top-50-females') }}">Top 50 Females</a>
+                                <a class="dropdown-item {{ request()->routeIs('top-20-youtubers') ? 'active' : '' }}" href="{{ route('top-20-youtubers') }}">Top 20 Youtubers</a>
                                 </div>
                             </li>
                     
