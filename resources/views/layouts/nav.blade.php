@@ -24,8 +24,8 @@
                             <li class="nav-item {{ request()->routeIs('index') ? 'active' : '' }}">
                                 <a class="nav-link {{ request()->routeIs('index') ? 'text-primary nav-text' : '' }}" href="{{ route('index') }}">Home</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('cryptonews') ? 'active' : '' }}">
-                                <a class="nav-link {{ request()->routeIs('cryptonews') ? 'text-primary nav-text' : '' }}" href="{{ route('cryptonews') }}">Crypto News</a>
+                            <li class="nav-item {{ request()->routeIs('cryptonews') || request()->routeIs('cryptonews.get') ? 'active' : '' }}">
+                                <a class="nav-link {{ request()->routeIs('cryptonews') || request()->routeIs('cryptonews.get') ? 'text-primary nav-text' : '' }}" href="{{ route('cryptonews') }}">Crypto News</a>
                             </li>
                             <li class="nav-item {{ request()->routeIs('cryptoyoutube') ? 'active' : '' }}">
                                 <a class="nav-link  {{ request()->routeIs('cryptoyoutube') ? 'text-primary nav-text' : '' }}" href="{{ route('cryptoyoutube') }}">Crypto Youtube</a>

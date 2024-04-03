@@ -15,7 +15,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
             <div class="news-breadcrumb">
                 <nav aria-label="breadcrumb ">
                     <ol class="breadcrumb ">
-                        <li class="breadcrumb-item"><a href="#">News</a></li>
+                        <li class="breadcrumb-item"><a href="/cryptonews">News</a></li>
                         <li class="breadcrumb-item font-weight-bold" aria-current="page"> {{ $blog->blog_title}} </li>
                     </ol>
                 </nav>
@@ -81,7 +81,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="mb-3 d-flex">
-                                            <img src="{{ asset('img/png/cw-icon.png') }}" alt="cw-icon"> {{ $blog->published_on_formatted }}
+                                            <img class="ff-nm" src="{{ asset('img/png/cw-icon.png') }}" alt="cw-icon"> {{ $blog->published_on_formatted }}
                                         </div>
                                     </div>
                                 </div>
@@ -89,7 +89,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
                                     <div class="col-md-12">
                                         <div class="mb-3 ml-2 pl-3 pt-0 border-left border-info border-1">
                                             <!-- put data here -->
-                                            <a href="{{ url('/cryptonews/'.$blog->blog_id) }}">{{ $blog->blog_title }}</a>
+                                            <a class="text-dark ff-nm" href="{{ url('/cryptonews/'.$blog->blog_id) }}">{{ $blog->blog_title }}</a>
 
                                         </div>
                                     </div>
@@ -101,7 +101,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
                     </div>
                     
                 </div>
-                <a href="#" class="read-more-link font-weight-bold ml-3">Read more latest news <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                <a href="{{ route('cryptonews') }}" class="read-more-link font-weight-bold ml-3 d-flex flex-wrap" style="margin: auto 0 20px;">Read more latest news <img class="ml-1" style="width: 10px; height: 10px; margin-top: 7px;" src="{{ asset('img/svg/vector.svg') }}"> </a>
             </div>
         </div>
     </div>
@@ -110,15 +110,15 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
             <h4 class="font-weight-bold pt-3 border-top">More From The News</h4>
             <div class="row mt-3">
                 @foreach($newslist as $news)
-                <div class="col-lg-6 mb-4">
+                <div class="col-lg-6 mb-4 blue-hover">
                     <div class="card border-0 rounded-lg px-2 gray-bg d-flex flex-column justify-content-between h-100">
-                        <img src="{{ $news->title_img }}" class="card-img-top mb-4 rounded" alt="...">
+                    <a href="{{ url('/cryptonews/'.$news->blog_id) }}"> <img src="{{ $news->title_img }}" class="card-img-top mb-4 rounded" alt="..."> </a>
                         <div class="card-body p-2">
                             @foreach ($news->categories->where('name', 'News') as $category)
                                 <a href="" class="cat-btn px-2 py-1">{{ $category->name }}</a>
                             @endforeach
                             <h5 class="card-title mt-3 mb-2 font-weight-bold"><a class="text-dark" href="{{ url('/cryptonews/'.$news->blog_id) }}">{{ $news->blog_title }}</a></h5>
-                            <p class="date-time d-flex align-items-center justify-content-between"><span>{{ $news->published_on_formatted }} <span class="ml-4">{{ $news->published_on_formatted_date_string }}</span></span><a href="{{ url('/cryptonews/'.$news->blog_id) }}" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
+                            <p class="date-time d-flex align-items-center justify-content-between fs-14"><span>{{ $news->published_on_formatted }} <span class="ml-4">{{ $news->published_on_formatted_date_string }}</span></span><a href="{{ url('/cryptonews/'.$news->blog_id) }}" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
                         </div>
                     </div>
                 </div>
@@ -140,8 +140,8 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
                             <div class="card-body pt-0 pb-0">
                                 <h5 class="card-title font-weight-bold" style="color: #1663FF;">{{ preg_replace('/[^A-Za-z0-9 ]/', '', Str::words($news->keywords, 1, '')) }}</h5>
                                 <h5 class="card-title mt-3 mb-2 font-weight-bold"><a class="text-dark" href="{{ url('/cryptonews/'.$news->blog_id) }}">{{Str::words(strip_tags($news->blog_title),7,'')}}</a></h5>
-                                <p class="date-time d-flex align-items-center justify-content-between"><span>{{ $news->published_on_formatted }} <span class="ml-4">{{ $news->published_on_formatted_date_string }}</span></span><a href="{{ url('/cryptonews/'.$news->blog_id) }}" class="news-link"></a></p>
-                                <p class="card-text">{{Str::limit(strip_tags($news->blog),35)}}<span class="font-weight-bold" style="color: #1663FF;"> <a href="{{ url('/cryptonews/'.$news->blog_id) }}">Read more</a> </span></p>
+                                <p class="date-time d-flex align-items-center justify-content-between fs-14 ff-nm"><span>{{ $news->published_on_formatted }} <span class="ml-4">{{ $news->published_on_formatted_date_string }}</span></span><a href="{{ url('/cryptonews/'.$news->blog_id) }}" class="news-link"></a></p>
+                                <p class="card-text fs-14 ff-nm">{{Str::limit(strip_tags($news->blog),35)}}<span class="font-weight-bold" style="color: #1663FF;"> <a href="{{ url('/cryptonews/'.$news->blog_id) }}">Read more</a> </span></p>
                             </div>
                         </div>
                     </div>

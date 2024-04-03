@@ -43,7 +43,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                             </div>
                         </div>
                     </div>
-                    <a href="{{ route('cryptonews') }}" class="read-more-link font-weight-bold ml-3 d-flex flex-wrap" style="margin: auto 0 20px;">Read more latest news <img class="ml-1" style="width: 10px; height: 10px; margin-top: 7px;" src="{{ asset('img/crypto_news/arrow-upright.png') }}"> </a>
+                    <a href="{{ route('cryptonews') }}" class="read-more-link font-weight-bold ml-3 d-flex flex-wrap" style="margin: auto 0 20px;">Read more latest news <img class="ml-1" style="width: 10px; height: 10px; margin-top: 7px;" src="{{ asset('img/svg/vector.svg') }}"> </a>
                     <div class="card border-0 bg-blue text-white">
                         <img class="card-img-top" src="{{asset('/img/OGI 1.png')}}" alt="Card image cap">
                         <div class="card-body">
@@ -115,7 +115,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                                         Lead Investor:
                                                     </div>
                                                     <div class="ml-auto text-primary">
-                                                       <u>  <a class="text-primary" href="{{ $deal->i_website }}">  {{ $deal->lead_investor }} </a> </u>
+                                                       <u><a class="text-primary" href="{{ $deal->i_website }}">  {{ $deal->lead_investor }} </a></u>
                                                     </div>
                                                 </div>
                                                 <div class="d-flex">
@@ -184,7 +184,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                         <a href="{{ $deal->c_website }}" type="button">
                                                 <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">
                                             </a>
-                                            <p> <u> <a class="text-primary" href="{{ $deal->c_website }}">{{ $deal->company }} </a></u></p>
+                                            <p> <u> <a class="text-primary inter-funding-deals" href="{{ $deal->c_website }}">{{ $deal->company }} </a></u></p>
                                             <div class="ml-auto text-dark">
                                                 {{ $deal->funding}}
                                                 <a data-toggle="collapse" data-target="#collapseDeal{{ $index }}" aria-expanded="false" aria-controls="collapseDeal{{ $index }}"> <i class="fa fa-angle-down"></i> </a>
@@ -213,7 +213,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                                         Lead Investor:
                                                     </div>
                                                     <div class="ml-auto">
-                                                        {{ $deal->lead_investor }}
+                                                        <u><a class="text-primary" href="{{ $deal->i_website }}">  {{ $deal->lead_investor }} </a></u>
                                                     </div>
                                                 </div>
                                                 <div class="d-flex">
@@ -285,7 +285,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         <div class="d-flex flex-row card-footer border-0 cw-bg-card pt-0">
                             <!-- <p>13 hours ago </p> -->
                             <p class="fs-14">{{ $news->published_on_formatted }} &nbsp; {{ $news->published_on_formatted_date_string }} </p>
-                            <a href="{{ url('/cryptonews/'.$news->blog_id) }}" class="ml-auto"> <img class="pt-2" src="{{ asset('img/crypto_news/arrow-upright.png') }}"> </a>
+                            <a href="{{ url('/cryptonews/'.$news->blog_id) }}" class="ml-auto"> <img class="pt-2" src="{{ asset('img/svg/vector.svg') }}"> </a>
                         </div>
                     </div>
                 </div>
@@ -354,7 +354,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         </div>
                         <div class="d-flex flex-row card-footer border-0 cw-bg-card pt-0">
                             <p class="fs-14"> {{ $video['upload_date_format'] }} </p>
-                            <a href="{{ route('cryptoyoutube') }}" class="ml-auto"> <img class="pt-2" src="{{ asset('img/crypto_news/arrow-upright.png') }}">  </a>
+                            <a href="{{ route('cryptoyoutube') }}" class="ml-auto"> <img class="pt-2" src="{{ asset('img/svg/vector.svg') }}">  </a>
                         </div>
                     </div>
                 @endforeach
@@ -375,7 +375,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 <div class="col-md-6 cw-bg-card rounded mb-4">
                     <div class="px-3 pt-4">
                         <div>
-                            <img class="rounded img-fluid" src="{{ $pressreleases[0]['title_img'] }}" alt="Image">
+                           <a href="{{ url('/cryptonews/'.$pressreleases[0]['blog_id']) }}">  <img class="rounded img-fluid" src="{{ $pressreleases[0]['title_img'] }}" alt="Image"> </a>
                         </div>
                         <div class="mt-3 pb-3">
                             <h2 class="font-weight-bold"> <a class="text-dark" href="{{ url('/cryptonews/'.$pressreleases[0]['blog_id']) }}"> {{ $pressreleases[0]['blog_title'] }} </a></h2>
@@ -397,14 +397,14 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                             <div class="cw-bg-card rounded-lg w-100 blue-hover">
                                 <div class="px-2 pb-2 d-flex flex-column h-100">
                                     <div>
-                                        <img class="rounded img-fluid" src="{{ $pressrelease->title_img }}" alt="Image">
+                                        <a href="{{ url('/cryptonews/'.$pressrelease->blog_id) }}" class="ml-auto"> <img class="rounded img-fluid" src="{{ $pressrelease->title_img }}" alt="Image">  </a>
                                     </div>
                                     <div class="mt-3 flex-grow-1">
                                         <h4 class="font-weight-bold mb-2"> <a class="text-dark" href="{{ url('/cryptonews/'.$pressrelease->blog_id) }}">{{ $pressrelease->blog_title }}</a></h4>
                                     </div>
                                     <div class="d-flex card-footer border-0 cw-bg-card p-0" style="margin-top: auto;">
                                         <p class="mb-0 fs-14">{{ $blog->published_on_formatted }} &nbsp;  &nbsp; {{ $blog->published_on_formatted_date_string }} </p>
-                                        <a href="{{ url('/cryptonews/'.$pressrelease->blog_id) }}" class="ml-auto"> <img class="pt-2" src="{{ asset('img/crypto_news/arrow-upright.png') }}">  </a>
+                                        <a href="{{ url('/cryptonews/'.$pressrelease->blog_id) }}" class="ml-auto"> <img class="pt-2" src="{{ asset('img/svg/vector.svg') }}">  </a>
                                     </div>
                                 </div>
                             </div>

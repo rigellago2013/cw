@@ -125,22 +125,21 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             var html = '';
             data.data.forEach(function (video) {
                 // Construct HTML for each video
-                html += '<div class="col-lg-3 mb-3">';
-                html += '<div class="card border-0 rounded-lg px-2 gray-bg  flex-fill h-100">';
+                html += '<div class="col-lg-3 mb-3 blue-hover px-1 rounded">';
+                html += '<div class="card border-0 rounded-lg px-2 gray-bg flex-fill h-100">';
                 html += '<div class="embed-responsive embed-responsive-4by3 rounded">';
                 html += video.video; // Assuming video is a HTML string
                 html += '</div>';
                 html += '<div class="card-body p-2 d-flex flex-column justify-content-between">';
                 html += '<div class="author d-flex align-items-center">';
                 html += '<div class="author__avatar">';
-                html += '<img src="{{ asset("img/pp.png") }}" class="rounded-circle" alt="...">';
                 html += '</div>';
-                html += '<div class="author__info ml-2">';
-                html += '<h5 class="author__name m-0 font-weight-bold">' + video.channel_name + '</h5>';
+                html += '<div class="author__info mt-2">';
+                html += '<p class="author__name m-0 fs-14">' + video.channel_name + '</p>';
                 html += '</div>';
                 html += '</div>';
                 html += '<h5 class="card-title mt-3 mb-2 font-weight-bold">' + video.title + '</h5>';
-                html += '<p class="views-date d-flex align-items-center justify-content-between">' + video.upload_date_format + '<a href="#" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>';
+                html += '<p class="views-date d-flex align-items-center justify-content-between ff-nm fs-14">' + video.upload_date_format + '<a href="#" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>';
                 html += '</div>';
                 html += '</div>';
                 html += '</div>';

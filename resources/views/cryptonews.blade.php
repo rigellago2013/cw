@@ -30,17 +30,17 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     <div class="col-lg-6 d-flex">
                         <div class="featured-news-main mb-4 flex-column d-flex">
                             <div class="card bg-dark text-white p-0 rounded-lg flex-grow-1 h-100 position-relative">
-                                <img style="object-fit:cover;" src="{{ $top5[0]['title_img'] }}" alt="">
+                                <img style="object-fit:cover;" src="{{ $top5[0]['title_img'] }}" alt=""> 
                                 <div class="h-100 rounded-lg flex-grow-1 position-absolute d-flex flex-column justify-content-between" style="bottom:0;">
                                     <div class="meta-box p-4">
                                         @foreach($top5[0]['categories'] as $category)
-                                        <a class="cat-btn px-2 py-1">{{ $category['name'] }}</a>
+                                        <a class="cat-btn px-2 py-1 ff-nm">{{ $category['name'] }}</a>
                                         @endforeach
                                     </div>
-                                    <div class="info-box p-4">
+                                    <div class="info-box p-4 ">
                                         <h3 class="card-title"> <a class="text-light" href="{{ url('/cryptonews/'.$top5[0]['blog_id']) }}">{{ $top5[0]['blog_title'] }} </a> </h3>
-                                        <p class="card-text" >{{Str::words(strip_tags($top5[0]['blog']),50,'')}}...<a href="{{ url('/cryptonews/'.$top5[0]['blog_id']) }}">Read more</a></p>
-                                        <p class="card-text">{{ $top5[0]['published_on_formatted']}}<span class="pl-4"> {{ $top5[0]['published_on_formatted_date_string']}} </span></p>
+                                        <p class="card-text ff-nm" >{{Str::words(strip_tags($top5[0]['blog']),50,'')}}...<a href="{{ url('/cryptonews/'.$top5[0]['blog_id']) }}">Read more</a></p>
+                                        <p class="card-text ff-nm">{{ $top5[0]['published_on_formatted']}}<span class="pl-4"> {{ $top5[0]['published_on_formatted_date_string']}} </span></p>
                                     </div>
                                 </div>
                             </div>
@@ -52,21 +52,21 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                         @endphp
                         @foreach($top5 as $top)
                         @if($index > 0)
-                        <div class="card mb-4 border-0 ">
+                        <div class="card mb-4 border-0">
                             <div class="d-flex align-items-start tablet-flex-column">
                                 <div class="img-col">
                                     <div class="top-news-img">
-                                        <img src="{{ $top->title_img }}" class="card-img" alt="...">
+                                    <a href="{{ url('/cryptonews/'.$top->blog_id) }}">  <img src="{{ $top->title_img }}" class="card-img" alt="..."> </a>
                                     </div>
                                 </div>
                                 <div class="content-col">
                                     <div class="card-body pt-0 pb-0">
-                                        <h5 class="card-title font-weight-bold" style="color: #1663FF;">
+                                        <h5 class="card-title font-weight-bold ff-nm" style="color: #1663FF;">
                                         {{ preg_replace('/[^A-Za-z0-9 ]/', '', Str::words($top->keywords, 1, '')) }}
                                         </h5>
-                                        <p class="card-title font-weight-bold" style="font-size: 12px !important;"><a class="text-dark" href="{{ url('/cryptonews/'.$top->blog_id) }}">{{ $top->blog_title }} </a></p>
-                                        <p class="card-text" style="font-size: 12px !important;"><small class="text-muted">{{ $top->published_on_formatted }} <span class="pl-4"> {{ $top->published_on_formatted_date_string }}</span></small></p>
-                                        <p class="card-text" style="font-size: 12px !important;">{{Str::words(strip_tags($top->blog),7,'')}}...<span class="font-weight-bold" style="color: #1663FF;"> <a href="{{ url('/cryptonews/'.$top->blog_id) }}">Read more</a> </span></p>
+                                        <p class="card-title font-weight-bold fs-18 ff-nm"><a class="text-dark" href="{{ url('/cryptonews/'.$top->blog_id) }}">{{ $top->blog_title }} </a></p>
+                                        <p class="card-text fs-14 ff-nm"><small class="text-muted">{{ $top->published_on_formatted }} <span class="pl-4"> {{ $top->published_on_formatted_date_string }}</span></small></p>
+                                        <p class="card-text fs-14 ff-nm">{{Str::words(strip_tags($top->blog),5,'')}}...<span class="font-weight-bold" style="color: #1663FF;"> <a href="{{ url('/cryptonews/'.$top->blog_id) }}">Read more</a> </span></p>
                                     </div>
                                 </div>
                             </div>
@@ -86,17 +86,18 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
     <div class="row pb-5 border-bottom">
         <div class="d-flex mobile-flex-column">
             @foreach($top4 as $blog)
-            <div class="col-md-3">
-                <div class="card mb-4 border-0 rounded-lg px-2 flex-fill h-100">
-                    <img src="{{ $blog->title_img }}" class="card-img-top rounded" alt="...">
+            <div class="col-md-3 px-1 blue-hover">
+                <div class="card mb-4 border-0 rounded-lg flex-fill h-100">
+                <a href="{{ url('/cryptonews/'.$blog->blog_id) }}"> <img src="{{ $blog->title_img }}" class="card-img-top rounded" alt="..."></a>
+             
                     <div class="card-body px-2 py-3 cw-bg-card d-flex flex-column justify-content-between">
                         <div class="cat-buttons d-flex flex-wrap">
                             @foreach($blog->categories as $key => $category)
-                            <a href="" class="cat-btn px-2 py-1">{{ $category->name }}@if($key < count($blog->categories) - 1) @endif </a>
+                            <a href="#" class="cat-btn px-2 py-1 ff-nm">{{ $category->name }}@if($key < count($blog->categories) - 1) @endif </a>
                             @endforeach
                         </div>
-                        <h5 class="card-title mt-3 mb-2 font-weight-bold"><a class="text-dark" href="{{ url('/cryptonews/'.$blog->blog_id) }}">     {{ $blog->blog_title }}</a></h5>
-                        <p class="date-time d-flex align-items-center justify-content-between"><span>{{ $blog->published_on_formatted }} <span class="ml-4">{{ $blog->published_on_formatted_date_string }}</span></span><a href="{{ url('/cryptonews/'.$blog->blog_id) }}" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
+                        <h5 class="card-title mt-3 mb-2 font-weight-bold"><a class="text-dark" href="{{ url('/cryptonews/'.$blog->blog_id) }}">{{ $blog->blog_title }}</a></h5>
+                        <p class="date-time d-flex align-items-center justify-content-between ff-nm fs-14"><span>{{ $blog->published_on_formatted }} <span class="ml-4">{{ $blog->published_on_formatted_date_string }}</span></span><a href="{{ url('/cryptonews/'.$blog->blog_id) }}" class="news-link"><img src="{{ asset('img/crypto_news/arrow-upright.png') }}" class="" alt="..."></a></p>
                     </div>
                 </div>
             </div>
@@ -113,7 +114,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     <div class="d-flex align-items-start tablet-flex-column">
                         <div class="img-col">
                             <div class="news-img">
-                                <img src="{{ $blog->title_img }}" class="card-img" alt="...">
+                            <a href="{{ url('/cryptonews/'.$blog->blog_id) }}">  <img src="{{ $blog->title_img }}" class="card-img" alt="..."> </a>
                             </div>
                         </div>
                         <div class="content-col">
@@ -122,8 +123,8 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                 {{ preg_replace('/[^A-Za-z0-9 ]/', '', Str::words($blog->keywords, 1, '')) }}
                                 </h5>
                                 <h5 class="card-title font-weight-bold"> <a class="text-dark" href="{{ url('/cryptonews/'.$blog->blog_id) }}">{{ $blog->blog_title }}</a> </h5>
-                                <p class="card-text"><small class="text-muted">{{ $blog->published_on_formatted }}<span class="pl-4">{{ $blog->published_on_formatted_date_string }}</span></small></p>
-                                <p class="card-text">{{Str::words(strip_tags($blog->blog),7,'')}}...<span class="font-weight-bold" style="color: #1663FF;"> <a href="{{ url('/cryptonews/'.$blog->blog_id) }}">Read more</a> </span></p>
+                                <p class="card-text ff-nm"><small class="text-muted">{{ $blog->published_on_formatted }}<span class="pl-4">{{ $blog->published_on_formatted_date_string }}</span></small></p>
+                                <p class="card-text ff-nm">{{Str::words(strip_tags($blog->blog),7,'')}}...<span class="font-weight-bold" style="color: #1663FF;"> <a href="{{ url('/cryptonews/'.$blog->blog_id) }}">Read more</a> </span></p>
                             </div>
                         </div>
                     </div>
