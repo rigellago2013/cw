@@ -16,14 +16,13 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
             <h1 class="font-weight-bold">Trending News</h1>
             <div class="tab-header mb-5">
                 <ul class="nav nav-tabs">
-                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img.png') }}" alt=""> News</a>
-                    </li>
-                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (1).png') }}" alt=""> CW's Picks</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (2).png') }}" alt=""> Technology</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (3).png') }}" alt=""> NFTs</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (4).png') }}" alt=""> Coins</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (5).png') }}" alt=""> DeFi</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ asset('img/crypto_news_icon/img (5).png') }}" alt=""> DEX</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ 'public/img/crypto_news_icon/news.png' }}" alt=""> News</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ 'public/img/crypto_news_icon/star.png' }}" alt=""> CW's Picks</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ 'public/img/crypto_news_icon/settings.png' }}" alt=""> Technology</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ 'public/img/crypto_news_icon/paint.png' }}" alt=""> NFTs</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ 'public/img/crypto_news_icon/database.png' }}" alt=""> Coins</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ 'public/img/crypto_news_icon/covid.png' }}" alt=""> DeFi</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link align-middle d-flex align-items-center"><img class="mr-2" src="{{ 'public/img/crypto_news_icon/covid.png' }}" alt=""> DEX</a></li>
                 </ul>
             </div>
             <div class="featured-news-container">
@@ -40,7 +39,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                     </div>
                                     <div class="info-box p-4">
                                         <h3 class="card-title"> <a class="text-light" href="{{ url('/cryptonews/'.$top5[0]['blog_id']) }}">{{ $top5[0]['blog_title'] }} </a> </h3>
-                                        <p class="card-text">{{Str::words(strip_tags($top5[0]['blog']),50,'')}}...<a href="{{ url('/cryptonews/'.$top5[0]['blog_id']) }}">Read more</a></p>
+                                        <p class="card-text" >{{Str::words(strip_tags($top5[0]['blog']),50,'')}}...<a href="{{ url('/cryptonews/'.$top5[0]['blog_id']) }}">Read more</a></p>
                                         <p class="card-text">{{ $top5[0]['published_on_formatted']}}<span class="pl-4"> {{ $top5[0]['published_on_formatted_date_string']}} </span></p>
                                     </div>
                                 </div>
@@ -65,9 +64,9 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                         <h5 class="card-title font-weight-bold" style="color: #1663FF;">
                                         {{ preg_replace('/[^A-Za-z0-9 ]/', '', Str::words($top->keywords, 1, '')) }}
                                         </h5>
-                                        <p class="card-title font-weight-bold"><a class="text-dark" href="{{ url('/cryptonews/'.$top->blog_id) }}">{{ $top->blog_title }} </a></p>
-                                        <p class="card-text"><small class="text-muted">{{ $top->published_on_formatted }} <span class="pl-4"> {{ $top->published_on_formatted_date_string }}</span></small></p>
-                                        <p class="card-text">{{Str::words(strip_tags($top->blog),7,'')}}...<span class="font-weight-bold" style="color: #1663FF;"> <a href="{{ url('/cryptonews/'.$top->blog_id) }}">Read more</a> </span></p>
+                                        <p class="card-title font-weight-bold" style="font-size: 12px !important;"><a class="text-dark" href="{{ url('/cryptonews/'.$top->blog_id) }}">{{ $top->blog_title }} </a></p>
+                                        <p class="card-text" style="font-size: 12px !important;"><small class="text-muted">{{ $top->published_on_formatted }} <span class="pl-4"> {{ $top->published_on_formatted_date_string }}</span></small></p>
+                                        <p class="card-text" style="font-size: 12px !important;">{{Str::words(strip_tags($top->blog),7,'')}}...<span class="font-weight-bold" style="color: #1663FF;"> <a href="{{ url('/cryptonews/'.$top->blog_id) }}">Read more</a> </span></p>
                                     </div>
                                 </div>
                             </div>

@@ -43,7 +43,7 @@
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Awards & Lists
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu px-2" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item {{ request()->routeIs('top-100-people') ? 'cw-active' : '' }}" href="{{ route('top-100-people') }}">Top 100 People</a>
                                     <a class="dropdown-item border-top {{ request()->routeIs('top-250-organisations') ? 'cw-active' : '' }}" href="{{ route('top-250-organisations') }}">Top 250 Organisations</a>
                                     <a class="dropdown-item border-top {{ request()->routeIs('top-50-defi-projects') ? 'cw-active' : '' }}" href="{{ route('top-50-defi-projects') }}">Top 50 Defi Projects</a>

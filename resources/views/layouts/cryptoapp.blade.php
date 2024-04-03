@@ -60,7 +60,7 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="{{ asset('css/brand_header_footer.css') }}" rel="stylesheet">
   <link href="{{ asset('css/home_page.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/cw.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('css/cw.css') }}" rel="stylesheet">
 
   <!-- Begin Constant Contact Active Forms -->
     <!-- <script>

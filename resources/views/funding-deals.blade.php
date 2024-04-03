@@ -46,7 +46,7 @@ CryptoList | Cryptocurrency Databases of Top Crypto Companies, Investors and Lea
                 <tbody>
                 @foreach($fundingdeals as $deal)
                     <tr>
-                        <td ><img src="{{ $deal->logo }}" class="fundingdeal-logo"  onerror='this.onerror=null; this.src=`{{ asset("img/popup-logo.png") }}`'></td>
+                        <td ><img src="{{ $deal->logo }}" class="fundingdeal-logo" onerror='this.onerror=null; this.src=`{{ asset("img/popup-logo.png") }}`'></td>
                         <td class="font-weight-bold" style="color: #1662FF;">{{ $deal->company }}</td>
                         <td class="font-weight-bold">{{ $deal->country }}</td>
                         <td class="font-weight-bold">{{ $deal->funding }}</td>
