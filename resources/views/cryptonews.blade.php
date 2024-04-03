@@ -30,9 +30,9 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 <div class="row">
                     <div class="col-lg-6 d-flex">
                         <div class="featured-news-main mb-4 flex-column d-flex">
-                            <div class="card bg-dark text-white p-0 rounded-lg flex-grow-1 h-100">
-                                <img class="h-100" src="{{ $top5[0]['title_img'] }}" alt="">
-                                <div class="h-100 rounded-lg flex-grow-1 position-absolute d-flex flex-column justify-content-between">
+                            <div class="card bg-dark text-white p-0 rounded-lg flex-grow-1 h-100 position-relative">
+                                <img style="object-fit:cover;" src="{{ $top5[0]['title_img'] }}" alt="">
+                                <div class="h-100 rounded-lg flex-grow-1 position-absolute d-flex flex-column justify-content-between" style="bottom:0;">
                                     <div class="meta-box p-4">
                                         @foreach($top5[0]['categories'] as $category)
                                         <a class="cat-btn px-2 py-1">{{ $category['name'] }}</a>
