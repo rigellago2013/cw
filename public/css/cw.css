@@ -1673,6 +1673,7 @@
     .container-fluid.crypto-rates .livecoinwatch-widget-5 {
         height: 44px !important;
         margin: 0 auto !important;
+        width: 100% !important;
     }
 
     .container-fluid.crypto-rates .livecoinwatch-widget-5 img {
