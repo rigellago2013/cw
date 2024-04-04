@@ -66,7 +66,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid crypto-rates" style="background-color: #F3F8FD; border-top:1px solid #C0C0C0; border-bottom:1px solid #C0C0C0; ">
+    <div class="container-fluid crypto-rates overflow-hidden" style="background-color: #F3F8FD; border-top:1px solid #C0C0C0; border-bottom:1px solid #C0C0C0; ">
         <div class="row">
             <div class="col">
                 <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#999999" lcw-marquee-1="coins" lcw-marquee-2="none" lcw-marquee-items="10"></div>

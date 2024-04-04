@@ -31,7 +31,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     <div class="col-lg-6 d-flex">
                         <div class="featured-news-main mb-4 flex-column d-flex">
                             <div class="card bg-dark text-white p-0 rounded-lg flex-grow-1 h-100 position-relative">
-                                <img style="object-fit:cover;" src="{{ $top5[0]['title_img'] }}" alt="">
+                                <img class="w-100" style="object-fit:cover; height:100%" src="{{ $top5[0]['title_img'] }}" alt="">
                                 <div class="h-100 rounded-lg flex-grow-1 position-absolute d-flex flex-column justify-content-between" style="bottom:0;">
                                     <div class="meta-box p-4">
                                         @foreach($top5[0]['categories'] as $category)
@@ -88,7 +88,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
         <div class="d-flex mobile-flex-column">
             @foreach($top4 as $blog)
             <div class="col-md-3">
-                <div class="card mb-4 border-0 rounded-lg px-2 flex-fill h-100">
+                <div class="card mb-4 rounded-lg flex-fill h-100 blue-hover">
                     <img src="{{ $blog->title_img }}" class="card-img-top rounded" alt="...">
                     <div class="card-body px-2 py-3 cw-bg-card d-flex flex-column justify-content-between">
                         <div class="cat-buttons d-flex flex-wrap">
