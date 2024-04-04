@@ -24,8 +24,8 @@
                             <li class="nav-item {{ request()->routeIs('index') ? 'active' : '' }}">
                                 <a class="nav-link {{ request()->routeIs('index') ? 'text-primary nav-text' : '' }}" href="{{ route('index') }}">Home</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('cryptonews') ? 'active' : '' }}">
-                                <a class="nav-link {{ request()->routeIs('cryptonews') ? 'text-primary nav-text' : '' }}" href="{{ route('cryptonews') }}">Crypto News</a>
+                            <li class="nav-item {{ request()->routeIs('cryptonews') || request()->routeIs('cryptonews.get') ? 'active' : '' }}">
+                                <a class="nav-link {{ request()->routeIs('cryptonews') || request()->routeIs('cryptonews.get') ? 'text-primary nav-text' : '' }}" href="{{ route('cryptonews') }}">Crypto News</a>
                             </li>
                             <li class="nav-item {{ request()->routeIs('cryptoyoutube') ? 'active' : '' }}">
                                 <a class="nav-link  {{ request()->routeIs('cryptoyoutube') ? 'text-primary nav-text' : '' }}" href="{{ route('cryptoyoutube') }}">Crypto Youtube</a>
@@ -43,7 +43,7 @@
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Awards & Lists
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu px-2" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item {{ request()->routeIs('top-100-people') ? 'cw-active' : '' }}" href="{{ route('top-100-people') }}">Top 100 People</a>
                                     <a class="dropdown-item border-top {{ request()->routeIs('top-250-organisations') ? 'cw-active' : '' }}" href="{{ route('top-250-organisations') }}">Top 250 Organisations</a>
                                     <a class="dropdown-item border-top {{ request()->routeIs('top-50-defi-projects') ? 'cw-active' : '' }}" href="{{ route('top-50-defi-projects') }}">Top 50 Defi Projects</a>

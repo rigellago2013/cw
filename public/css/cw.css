@@ -1673,6 +1673,7 @@
     .container-fluid.crypto-rates .livecoinwatch-widget-5 {
         height: 44px !important;
         margin: 0 auto !important;
+        width: 100% !important;
     }
 
     .container-fluid.crypto-rates .livecoinwatch-widget-5 img {
@@ -1852,7 +1853,22 @@
     .fs-14{
         font-size: 14px !important;
     }
+
+    
+    .fs-16{
+        font-size: 16px !important;
+    }
+
+
+    .fs-18{
+        font-size: 18px !important;
+    }
       
     .bg-advertise {
         background: linear-gradient(90.03deg, #1663FF -1.42%, #3297F8 98.06%) !important;
     }
+
+    .ff-nm {
+        font-family: 'NeueMontreal', sans-serif !important;
+    }
+
