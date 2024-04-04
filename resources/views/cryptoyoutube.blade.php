@@ -56,7 +56,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
         </div>
     </div>
 </div>
-<div class="container-fluid site-width py-5">
+<div class="container-fluid site-width py-5" style="min-height: 500px;">
     <div class="row">
         <div class="col-lg-12">
             <h2 class="font-weight-bold mb-4">Crypto Videos</h2>

@@ -86,16 +86,10 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
     <div class="row pb-5 border-bottom">
         <div class="d-flex mobile-flex-column">
             @foreach($top4 as $blog)
-<<<<<<< HEAD
-            <div class="col-md-3">
-                <div class="card mb-4 rounded-lg flex-fill h-100 blue-hover">
-                    <img src="{{ $blog->title_img }}" class="card-img-top rounded" alt="...">
-=======
             <div class="col-md-3 px-1 blue-hover">
                 <div class="card mb-4 border-0 rounded-lg flex-fill h-100">
                 <a href="{{ url('/cryptonews/'.$blog->blog_id) }}"> <img src="{{ $blog->title_img }}" class="card-img-top rounded" alt="..."></a>
              
->>>>>>> dfb820cddee8d963082b92a4b4e41d0c6be9fde7
                     <div class="card-body px-2 py-3 cw-bg-card d-flex flex-column justify-content-between">
                         <div class="cat-buttons d-flex flex-wrap">
                             @foreach($blog->categories as $key => $category)

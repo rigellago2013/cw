@@ -186,5 +186,5 @@ Route::get("crypto-blog/{id}","BlogView@single_blog_view")->name("blog.blog_view
 
 Route::get("/blog-edit/{id}","BlogController@updateview")->name("blog.updateview");
 
-
+Route::get('/old-index','StaticSiteController@oldCryptoHome')->name('old-index');
 

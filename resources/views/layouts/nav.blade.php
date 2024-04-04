@@ -40,7 +40,7 @@
                                 <a class="nav-link {{ request()->routeIs('funding-deals') ? 'text-primary nav-text' : '' }}" href="{{ route('funding-deals') }}">Funding Deals</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle  {{ request()->routeIs('top-100-people') || request()->routeIs('top-250-organisations') || request()->routeIs('top-50-defi-projects') || request()->routeIs('top-50-females') || request()->routeIs('top-20-youtubers') ? 'font-weight-bold' : '' }} " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Awards & Lists
                                 </a>
                                 <div class="dropdown-menu px-2" aria-labelledby="navbarDropdown">

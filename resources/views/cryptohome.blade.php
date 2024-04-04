@@ -9,7 +9,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
 @section('revisit-after', 'content="3 days')
 
 @section('content')
-<div class="container-fluid site-width bg-white d-none d-lg-block py-5 px-0">
+<div class="container-fluid site-width bg-white d-none d-lg-block py-5">
     <div class="row">
         <div class="col d-flex p-0 align-items-stretch">
             <div class="col-lg-3">
@@ -56,19 +56,17 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 <div class="col-lg-12 mt-auto px-0 flex-fill">
                 </div>
             </div>
-            <div class="col-lg-6 p-0">
+            <div class="col-lg-6 p-0 rounded-lg">
                 <div class="card h-100">
                     <div class="cw-landing-main-card-bg overflow-hidden position-relative">
-                        <div class="mask-center-big">
-                            <div class="mask-center-small ">
-                                <img clas="w-100" style="height: 100%; object-fit:cover;" src="{{ $newshighlight->title_img }}" alt="">
-                            </div> 
+                        <div>
+                            <img class="img-fluid" src="{{ $newshighlight->title_img }}" alt="">
                         </div>
-                        <h3 class="card-title cryptohome-header-text news-highlight fw-700">News Highlight</h3>
                     </div>
                     <div class="card-body cw-landing-main-card-bg">
+                        <h3 class="card-title cryptohome-header-text news-highlight fw-700">News Highlight</h3>
                         <h2 class="cryptohome-header-text mt-3 news-highlight-blog-title fw-700">{{ $newshighlight->blog_title }}</h2>
-                        <p class="card-text">{{ Str::words(strip_tags($newshighlight->blog),150,'') }}...<a href="{{ url('/cryptonews/'.$newshighlight->blog_id) }}">Read more</a></p>
+                        <p class="card-text">{{ Str::words(str_replace('&nbsp;', '', strip_tags($newshighlight->blog)), 200, '') }}...<a href="{{ url('/cryptonews/'.$newshighlight->blog_id) }}">Read more</a></p>
           
                     </div>
                 </div>
@@ -87,7 +85,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                                 <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">
                                             </a>
                                             <p> <u> <a class="text-primary inter-funding-deals" href="{{ $deal->c_website }}">{{ $deal->company }} </a> </u></p>
-                                            <div class="ml-auto text-dark">
+                                            <div class="ml-auto text-dark inter-funding-deals">
                                                 {{ $deal->funding}}
                                                 <a data-toggle="collapse" data-target="#collapseDeal{{ $index }}" aria-expanded="false" aria-controls="collapseDeal{{ $index }}"> <i class="fa fa-angle-down"></i> </a>
                                             </div>
@@ -95,14 +93,14 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                         <div id="collapseDeal{{ $index }}" class="collapse" data-parent="#fundingDealCollapse">
                                             <div class="card card-body border-left-0 border-right-0 border-bottom-0 rounded-0">
                                                 <div class="d-flex border-bottom border-bottom-gray ">
-                                                    <div>
+                                                    <div class="inter-funding-deals">
                                                         Country:
                                                     </div>
-                                                    <div class="ml-auto">
+                                                    <div class="ml-auto inter-funding-deals">
                                                         {{ $deal->country}}
                                                     </div>
                                                 </div>
-                                                <div class="d-flex border-bottom border-bottom-gray ">
+                                                <div class="d-flex border-bottom border-bottom-gray inter-funding-deals">
                                                     <div>
                                                         Funding Type:
                                                     </div>
@@ -110,7 +108,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                                         {{ $deal->funding_type}}
                                                     </div>
                                                 </div>
-                                                <div class="d-flex border-bottom border-bottom-gray ">
+                                                <div class="d-flex border-bottom border-bottom-gray inter-funding-deals">
                                                     <div>
                                                         Lead Investor:
                                                     </div>
@@ -118,7 +116,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                                        <u><a class="text-primary" href="{{ $deal->i_website }}">  {{ $deal->lead_investor }} </a></u>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex">
+                                                <div class="d-flex inter-funding-deals">
                                                     <div>
                                                         Completion Date:
                                                     </div>
@@ -157,18 +155,12 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 <div class="tab-pane active" id="tabs-1" role="tabpanel">
                     <div class="card h-100">
                         <div class="cw-landing-main-card-bg overflow-hidden position-relative">
-                            <div class="mask-center-big">
-                                <div class="mask-center-small ">
-                                    <img class="" src="{{ $newshighlight->title_img }}" alt="">
-                                </div>
-                            </div>
-                            <h3 class="card-title cryptohome-header-text news-highlight d-none d-sm-block">News Highlight</h3>
+                            <img class="img-fluid" src="{{ $newshighlight->title_img }}" alt="">      
                         </div>
                         <div class="card-body cw-landing-main-card-bg">
-                            <h3 class="card-title cryptohome-header-text news-highlight d-block d-sm-none position-relative fw-700">News Highlight</h3>
+                        <h3 class="card-title cryptohome-header-text news-highlight">News Highlight</h3>
                             <h2 class="cryptohome-header-text mt-3 news-highlight-blog-title fw-700">{{ $newshighlight->blog_title }}</h2>
-                            <p class="card-text">{{ Str::limit(strip_tags($newshighlight->blog), 400) }}</p>
-                            <a href="">Read more</a>
+                            <p class="card-text">{{ Str::words(str_replace('&nbsp;', '', strip_tags($newshighlight->blog)), 200, '') }}...<a href="{{ url('/cryptonews/'.$newshighlight->blog_id) }}">Read more</a></p>
                         </div>
                     </div>
                 </div>
@@ -185,22 +177,22 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                                 <img src="{{ $deal->logo }}" alt="funding-deal-icon" style="width: 25px; height: 25px;" class="mr-2">
                                             </a>
                                             <p> <u> <a class="text-primary inter-funding-deals" href="{{ $deal->c_website }}">{{ $deal->company }} </a></u></p>
-                                            <div class="ml-auto text-dark">
+                                            <div class="ml-auto text-dark inter-funding-deals">
                                                 {{ $deal->funding}}
                                                 <a data-toggle="collapse" data-target="#collapseDeal{{ $index }}" aria-expanded="false" aria-controls="collapseDeal{{ $index }}"> <i class="fa fa-angle-down"></i> </a>
                                             </div>
                                         </div>
                                         <div id="collapseDeal{{ $index }}" class="collapse" data-parent="#fundingDealCollapse">
-                                            <div class="card card-body border-left-0 border-right-0 border-bottom-0 rounded-0">
-                                                <div class="d-flex border-bottom border-bottom-gray ">
-                                                    <div>
+                                            <div class="card card-body border-left-0 border-right-0 border-bottom-0 rounded-0 ">
+                                                <div class="d-flex border-bottom border-bottom-gray inter-funding-deals">
+                                                    <div >
                                                         Country:
                                                     </div>
                                                     <div class="ml-auto">
                                                         {{ $deal->country}}
                                                     </div>
                                                 </div>
-                                                <div class="d-flex border-bottom border-bottom-gray ">
+                                                <div class="d-flex border-bottom border-bottom-gray inter-funding-deals">
                                                     <div>
                                                         Funding Type:
                                                     </div>
@@ -208,7 +200,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                                         {{ $deal->funding_type}}
                                                     </div>
                                                 </div>
-                                                <div class="d-flex border-bottom border-bottom-gray ">
+                                                <div class="d-flex border-bottom border-bottom-gray inter-funding-deals">
                                                     <div>
                                                         Lead Investor:
                                                     </div>
@@ -216,7 +208,7 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                                                         <u><a class="text-primary" href="{{ $deal->i_website }}">  {{ $deal->lead_investor }} </a></u>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex">
+                                                <div class="d-flex inter-funding-deals">
                                                     <div>
                                                         Completion Date:
                                                     </div>
@@ -291,8 +283,8 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                 </div>
                 @endforeach
             </div>
-            <div class="col d-flex mt-4">
-                <a href="{{ route('cryptonews') }}" class="mx-auto"> <img src="{{  asset('img/svg/read-all-btn.svg') }}" alt=""> </a>
+            <div class="col d-flex mt-4 justify-content-center">
+                <a href="{{ route('cryptonews') }}" class="blue-outline-light-bg-btn d-flex flex-row align-items-center btn-readall fw-700">Read All <img class="ml-1" src="{{  asset('img/svg/streamline-emojis_open-book.svg') }}" alt=""> </a>
             </div>
         </div>
     </div>
@@ -310,8 +302,8 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                             <h4 class="actual-price align-items-center d-flex"><strong class="mr-2">Actual Price</strong> <s style="color: #828282;">$249</s></h4>
                             <h3 class="offer-price mb-4 align-items-center d-flex font-weight-bold"><span class="mr-2" style="#3297F8">Offer Price</span> <span style="color: #1662FF; font-size: 48px;">$149</span></h3>
                             <div class="pricing__buttons d-flex">
-                                <a href="" class="blue-outline-btn">Learn More</a>
-                                <a href="" class="blue-outline-light-bg-btn">Buy Now</a>
+                                <a href="" class="blue-outline-btn d-flex flex-row align-items-center btn-learnmore font-weight-bold">Learn More</a>
+                                <a href="https://commerce.coinbase.com/checkout/e5c3ec44-3f6c-4418-b07f-f209c62595ee" class="blue-outline-light-bg-btn d-flex flex-row align-items-center btn-buynow font-weight-bold">Buy Now <img src="{{  asset('img/svg/emojione_credit-card.svg') }}" alt=""> </a>
                             </div>
                         </div>
                         <div class="features">
@@ -359,8 +351,8 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     </div>
                 @endforeach
             </div>
-            <div class="col d-flex mt-3">
-                <a href="{{ route('cryptoyoutube') }}" class=" mx-auto"> <img src="{{  asset('img/svg/view-all-btn.svg') }}" alt=""> </a>
+            <div class="col d-flex mt-3 justify-content-center">
+            <a href="{{ route('cryptoyoutube') }}" class="blue-outline-light-bg-btn d-flex flex-row align-items-center btn-readall fw-700 ff-nm py-2">View All<img class="ml-1" src="{{  asset('img/svg/logos_youtube-icon.svg') }}" alt=""></a>
             </div>
         </div>
     </div>
@@ -417,8 +409,8 @@ The #1 Cryptocurrency Intelligence Platform | Crypto Experts | CryptoWeekly
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 d-flex mt-3 mb-3">
-                <a href="{{ url('cryptonews') }}" class=" mx-auto"> <img src="{{  asset('img/svg/read-all-btn.svg') }}" alt=""> </a>
+            <div class="col d-flex mt-4 justify-content-center">
+                <a href="{{ route('cryptonews') }}" class="blue-outline-light-bg-btn d-flex flex-row align-items-center btn-readall fw-700">Read All <img class="ml-1" src="{{  asset('img/svg/streamline-emojis_open-book.svg') }}" alt=""> </a>
             </div>
         </div>
     </div>

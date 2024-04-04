@@ -1340,7 +1340,7 @@
           height: 200px;
         }
     } */
-    .news-highlight {
+    /* .news-highlight {
         z-index: 15;
         bottom: -10px;
         position: absolute;
@@ -1351,7 +1351,7 @@
             left: 0px;
             margin-top: -10px;
         }
-    }
+    } */
     
 
     /* @media screen and (min-width: 1920px) {
@@ -1850,6 +1850,11 @@
         font-weight: 700 !important;
     }
 
+    .fs-12{
+        font-size: 12px !important;
+    }
+
+
     .fs-14{
         font-size: 14px !important;
     }
@@ -1872,3 +1877,98 @@
         font-family: 'NeueMontreal', sans-serif !important;
     }
 
+    .btn-buynow { 
+        transition: box-shadow 0.3s, transform 0.3s, color 0.3s;
+        box-shadow: 3px 3px #1663FF; /* Solid white shadow on bottom on hover */
+    }
+
+    .btn-buynow:hover { 
+        background-color: #1663FF !important;
+        color: white;
+        box-shadow: 3px 3px white; /* Solid white shadow on bottom on hover */
+        text-decoration: none !important;
+        font-family: 'NeueMontreal', sans-serif !important;
+    }
+
+    .btn-learnmore {
+        box-shadow: 1px 1px #1663FF;
+        text-decoration: none !important;
+        font-family: 'NeueMontreal', sans-serif !important;
+    }
+    
+    
+    .btn-readall { 
+        transition: box-shadow 0.3s, transform 0.3s, color 0.3s;
+        box-shadow: 1px 1px #1663FF; /* Solid white shadow on bottom on hover */
+    }
+
+    .btn-readall:hover { 
+        background-color: #1663FF !important;
+        color: white;
+        box-shadow: 1px 3px #3297F8; /* Solid white shadow on bottom on hover */
+        text-decoration: none !important;
+        font-family: 'NeueMontreal', sans-serif !important;
+    }
+
+    .fw-700{
+        font-weight: 700;
+    }
+    
+    .btn-buynow-investor-zone{
+        background-color: #fff;
+        color: #1663FF;
+        border: 1px solid;
+        border-radius: 8px;
+        padding: 5px 10px;
+        font-weight: 500;
+        max-width: 120px;
+    }
+
+    .btn-download-investor-zone{
+        background-color: #fff;
+        color: #1663FF;
+        border: 1px solid;
+        border-radius: 8px;
+        padding: 8px 10px;
+        font-weight: 500;
+        box-shadow: 1px 3px transparent !important;;
+    }
+    
+    .btn-buynow-investor-zone-transfomer { /** OOOOOOAAAAAAAA **/
+        background-color: #1663FF !important;
+        color: #fff !important;
+        border: 1px solid #fff;
+        box-shadow: 1px 3px #fff;
+        padding: 8px 10px;
+        border-radius: 8px;
+        text-decoration: none !important;
+        margin-top: -5px;
+    }
+
+
+    .flip-container {
+        perspective: 1000px;
+        min-height: 250px;
+    }
+    
+    .flipper {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+    }
+    
+    .flip-container:hover .flipper {
+        transform: rotateY(180deg);
+    }
+    
+    .front,
+    .back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .back {
+        transform: rotateY(180deg);
+    }
+    
